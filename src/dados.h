@@ -11,8 +11,9 @@
 typedef struct Casa
 {
     char c;
+    int linha;
+    int coluna;
+    int efeitoNefasto;
     struct Casa *prox;
     struct Casa *ant;
 }Casa;
-#define true 1
-#define false 0

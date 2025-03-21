@@ -12,11 +12,20 @@
 
 
 #include"dados.h"
-Casa* AdicionarCasa(Casa *n);
 void CriaMapa(char* ficheiro);
-Casa *CriaCasa(char c);
-Casa* CriaAdiciona(char c);
+Casa *CriaCasa(char c,int linha,int coluna);
+Casa* CriaAdicionaFim(char c,int linha, int coluna);
 void MostraLista();
 void LimpaMemoria();
-Casa* AdicionarAntena(char c, int linha, int coluna);
+Casa* TrocarCasaInicial(Casa *n);
+Casa* TrocarCasaMeio(Casa *n);
+Casa* TrocarCasaFinal(Casa *n);
+Casa* TrocarCasa(Casa *n);
 Casa* RemoverAntena(int linha, int coluna);
+Casa* AdicionaCasaInicio(Casa *n);
+Casa* AdicionarCasaMeio(Casa *n);
+Casa* AdicionarCasaFim(Casa *n);
+Casa* CalculaEfeitoNefastoFrente();
+Casa* CalculaEfeitoNefastoTras();
+int Posicao(Casa* c);  
+ 
