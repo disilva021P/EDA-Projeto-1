@@ -19,7 +19,6 @@ int main(int argc, char const *argv[])
     else{
         CriaMapaCasas((char*)argv[1]);
     }
-    CriaA();
     MostraListaNovo();
     RemoverCasa(5,5);
     MostraListaNovo();

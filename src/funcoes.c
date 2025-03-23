@@ -41,38 +41,13 @@ Casa* CriaMapaCasas(char* nome){
     fclose(ficheiro);
     return mapa;
 }
-void EscreveMapa(char* ficheiro){
-    FILE* arquivo = fopen(ficheiro, "r");
-    if (arquivo == NULL) {
-        printf("Erro ao abrir o arquivo %s\n", ficheiro);
-        return;
-    }
-    
-    int c=0;
-    while ((c = fgetc(arquivo)) != EOF) {
-        
-        if (c == '\n') {
-            y++;
-            x=0;
-        } else {
-            x++;
-            CriaAdicionaFim(c,y,x);
-        }
-
-    }
-    
-    fclose(arquivo);
-
-}
 Casa *CriaCasa(char c,int linha,int coluna){
     if(coluna<1 || coluna>x || linha<1 || linha>y)return NULL;
     Casa* aux = (Casa*)malloc(sizeof(Casa));
     aux->c=c;
     aux->linha=linha;
     aux->coluna=coluna;
-    aux->efeitoNefasto=0;
     aux->prox=NULL;
-    aux->ant=NULL;
     return aux;
 }
 int Posicao(Casa* c){

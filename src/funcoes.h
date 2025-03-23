@@ -12,8 +12,6 @@
 
 
 #include"dados.h"
-void criaMapaFicheiro();
-void EscreveMapa(char* ficheiro);
 Casa *RemoverCasa(int linha, int coluna);
 void MostraListaC();
 Casa* AdicionaCasa(Casa* n);
