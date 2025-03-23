@@ -12,20 +12,18 @@
 
 
 #include"dados.h"
-void CriaMapa(char* ficheiro);
+void criaMapaFicheiro();
+void EscreveMapa(char* ficheiro);
+Casa *RemoverCasa(int linha, int coluna);
+void MostraListaC();
+Casa* AdicionaCasa(Casa* n);
+int ExisteEfeitoEfeitoNefasto(int coluna, int linha);
+void MostraListaNovo();
 Casa *CriaCasa(char c,int linha,int coluna);
-Casa* CriaAdicionaFim(char c,int linha, int coluna);
-void MostraLista();
+Casa* CriaMapaCasas(char* nome);
+Casa* AdicionaCasa(Casa* n);
+Casa *CriaAdiciona(char c, int linha, int coluna);
+void criaMapaFicheiro();
 void LimpaMemoria();
-Casa* TrocarCasaInicial(Casa *n);
-Casa* TrocarCasaMeio(Casa *n);
-Casa* TrocarCasaFinal(Casa *n);
-Casa* TrocarCasa(Casa *n);
-Casa* RemoverAntena(int linha, int coluna);
-Casa* AdicionaCasaInicio(Casa *n);
-Casa* AdicionarCasaMeio(Casa *n);
-Casa* AdicionarCasaFim(Casa *n);
-Casa* CalculaEfeitoNefastoFrente();
-Casa* CalculaEfeitoNefastoTras();
 int Posicao(Casa* c);  
  

@@ -14,18 +14,16 @@
 int main(int argc, char const *argv[])
 {
     if(argc==1){
-        CriaMapa("mapa.txt");
+        CriaMapaCasas("mapa.txt");
     }
     else{
-        CriaMapa((char*)argv[1]);
+        CriaMapaCasas((char*)argv[1]);
     }
-    /*
-    Casa* ola = CriaCasa('W',1,1);
-    TrocarCasa(ola);
-    */
-    CalculaEfeitoNefastoFrente();
-    CalculaEfeitoNefastoTras();
-    MostraLista();    
+    CriaA();
+    MostraListaNovo();
+    RemoverCasa(5,5);
+    MostraListaNovo();
+    criaMapaFicheiro();
     LimpaMemoria();               
     return 0;
 }
