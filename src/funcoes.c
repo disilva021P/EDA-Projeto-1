@@ -13,34 +13,11 @@
 #include"funcoes.h"
 #include<stdio.h>
 #include<stdlib.h>
-Casa *mapa;
-int x=0,y=1;
 
-Casa* CriaMapaCasas(char* nome){
-    FILE* ficheiro = fopen(nome, "r");
-    if (ficheiro == NULL) {
-        printf("Erro ao abrir o arquivo %s\n", nome);
-        return NULL;
-    }
-    if(mapa!=NULL){
-        LimpaMemoria();
-    }
-    mapa=NULL;
-    int c=0;
-    while ((c = fgetc(ficheiro)) != EOF) {
-        if (c == '\n') {
-            y++;
-            x=0;
-        } else {
-            x++;
-            if(c!=vazio){
-                mapa=CriaAdiciona(c,y,x);
-            }
-        }
-    }
-    fclose(ficheiro);
-    return mapa;
-}
+int x=0,y=1;
+//TODO: VALIDAÇÕES GERAIS
+
+#pragma region Criacao
 Casa *CriaCasa(char c,int linha,int coluna){
     if(coluna<1 || coluna>x || linha<1 || linha>y)return NULL;
     Casa* aux = (Casa*)malloc(sizeof(Casa));
@@ -50,51 +27,39 @@ Casa *CriaCasa(char c,int linha,int coluna){
     aux->prox=NULL;
     return aux;
 }
-int Posicao(Casa* c){
-    int posicao=0, linha= c->linha, coluna= c->coluna;
-    posicao=((linha-1)*x)+coluna-1;
-    return posicao;
+CasaF *CriaCasaF(char c,int linha,int coluna){
+    if(coluna<1 || coluna>x || linha<1 || linha>y)return NULL;
+    CasaF* aux = (CasaF*)malloc(sizeof(CasaF));
+    aux->c=c;
+    aux->linha=linha;
+    aux->coluna=coluna;
+    return aux;
 }
-void LimpaMemoria(){
-    Casa *atual = mapa;
-    Casa *proximo=NULL;
-    while (atual)
-    {
-        proximo=atual->prox;
-        free(atual);
-        atual = proximo;
-    }
-    mapa=NULL;
+EfeitoNefasto *CriaEfeitoNefasto(int linha,int coluna,Casa* x1, Casa* x2){
+    if(coluna<1 || coluna>x || linha<1 || linha>y)return NULL;
+    EfeitoNefasto* aux = (EfeitoNefasto*)malloc(sizeof(EfeitoNefasto));
+    aux->linha= linha;
+    aux->coluna= coluna;
+    aux->antenas[0]= x1;
+    aux->antenas[1]= x2;
+    aux->prox=NULL;
+    return aux;
 }
-void MostraListaNovo(){
-    Casa* atual=mapa;
-    for(int i=1;i<=y;i++){
-        for (int j = 1; j <= x; j++)
-        {
-            if(atual && atual->linha==i && atual->coluna==j){
-                if(ExisteEfeitoEfeitoNefasto(i,j)){
-                    printf("\033[0;33m%c\033[0m",atual->c);
-                }else{
-                    printf("%c",atual->c);
-                }
-                atual=atual->prox;
-            }else{
-                if(ExisteEfeitoEfeitoNefasto(i,j)){
-                    printf("#");
-                }
-                else{
-                    printf("%c",vazio);
-                }
-            }
-            if(j==x){
-                printf("\n");
-            }
-            
+#pragma endregion
+
+
+int ExisteEfeitoEfeitoNefasto(EfeitoNefasto *mapa, int linha, int coluna){
+    EfeitoNefasto* atual= mapa;
+    while(atual){
+        if(atual->linha==linha && atual->coluna == coluna){
+            return 1;
         }
-        
+        atual=atual->prox;
     }
+    return 0;
 }
-int ExisteEfeitoEfeitoNefasto(int linha, int coluna){
+EfeitoNefasto* CriaListaEfeitoEfeitoNefasto(EfeitoNefasto* cabeca, Casa *mapa){
+    LimpaMemoriaEfeito(cabeca);
     Casa* atual= mapa,*prox = atual->prox;
     int difC, difL;
     while(atual){
@@ -102,33 +67,42 @@ int ExisteEfeitoEfeitoNefasto(int linha, int coluna){
         while (prox)
         {
             if(prox->c==atual->c){
-                difL=abs(atual->linha-prox->linha);
+                difL=prox->linha-atual->linha;
                 difC=abs(atual->coluna-prox->coluna);
-                if(prox->coluna+difC<x && prox->linha+difL<y){//efeito nefasto para frente
-                    if(coluna==prox->coluna+difC && linha==prox->linha+difL){
-                        return 1;
+                if(atual->coluna<prox->coluna){
+                    if(prox->coluna+difC<=x && prox->linha+difL<=y){//efeito nefasto para frente
+                        cabeca=CriaAdicionaEfeito(cabeca,prox->linha+difL,prox->coluna+difC,atual,prox);
+                    }
+                    if(atual->coluna-difC>0 && atual->linha-difL>0){//efeito nefasto para trás
+                        cabeca=CriaAdicionaEfeito(cabeca,atual->linha-difL,atual->coluna-difC,atual,prox);
+                    }
+                }else{
+                    if(prox->coluna-difC>0 && prox->linha+difL<=y){//efeito nefasto para frente
+                        cabeca=CriaAdicionaEfeito(cabeca,prox->linha+difL,prox->coluna-difC,atual,prox);
+                    }
+                    if(atual->coluna+difC<=x && atual->linha-difL>0){//efeito nefasto para trás
+                        cabeca=CriaAdicionaEfeito(cabeca,atual->linha-difL,atual->coluna+difC,atual,prox);
                     }
                 }
-                if(atual->coluna-difC<x && atual->linha-difL<y && atual->coluna-difC>0 && atual->linha-difL>0){//efeito nefasto para trás
-                    if(coluna==atual->coluna-difC && linha==atual->linha-difL){
-                        return 1;
-                    }
-                }
+                
+                
             }
             prox=prox->prox;
         }
         atual=atual->prox;
     }
-    return 0;  
+    return cabeca;
 }
-Casa* AdicionaCasa(Casa* n){
+
+Casa* AdicionaCasa(Casa *mapa,Casa* n,EfeitoNefasto* cabeca){
+
 
     if(!n) return mapa;
     if(!mapa){//cria mapa
         mapa=n;
         return mapa;
     }
-    if(ExisteEfeitoEfeitoNefasto(n->linha,n->coluna)){
+    if(ExisteEfeitoEfeitoNefasto(cabeca,n->linha,n->coluna)){
         printf("Existe efeito nefasto na posição deseja mesmo inserir?[Y/n]:");
         char resposta;
         scanf("%c",&resposta);
@@ -161,14 +135,50 @@ Casa* AdicionaCasa(Casa* n){
         }
         atual=atual->prox;
     }
-    printf("Erro inesperado\n");
     return mapa;
-    
 }
-Casa *CriaAdiciona(char c, int linha, int coluna){
-    return AdicionaCasa(CriaCasa(c,linha,coluna));
+EfeitoNefasto* AdicionaCasaEfeitoNefasto(EfeitoNefasto* cabeca,EfeitoNefasto* n){
+
+    if(!n) return cabeca;
+    if(!cabeca){//cria mapa
+        cabeca=n;
+        return cabeca;
+    }
+    EfeitoNefasto *atual=cabeca;
+    while (atual)
+    {
+        if(PosicaoEfeitoNefasto(n)==PosicaoEfeitoNefasto(atual)){
+            return cabeca;
+        }
+        if(PosicaoEfeitoNefasto(n)<PosicaoEfeitoNefasto(atual)){
+            //adicionar inicio
+            n->prox=atual;
+            cabeca=n;          
+            return cabeca;
+        }else if(atual->prox && PosicaoEfeitoNefasto(n)<PosicaoEfeitoNefasto(atual->prox)){
+            //adicionar ao meio
+            n->prox=atual->prox;
+            atual->prox=n;
+            return cabeca;
+        }
+        if(atual->prox==NULL){
+            //adicionar ao fim
+            atual->prox=n;
+            return cabeca;
+        }
+        atual=atual->prox;
+    }
+    return cabeca;
 }
-Casa *RemoverCasa(int linha, int coluna){
+
+Casa *CriaAdiciona(Casa *mapa,char c, int linha, int coluna,EfeitoNefasto* cabeca){
+    return AdicionaCasa(mapa,CriaCasa(c,linha,coluna),cabeca);
+}
+EfeitoNefasto *CriaAdicionaEfeito(EfeitoNefasto *cabeca, int linha, int coluna, Casa* x1,Casa* x2){
+    return AdicionaCasaEfeitoNefasto(cabeca,CriaEfeitoNefasto(linha,coluna,x1,x2));
+}
+
+Casa *RemoverCasa(Casa *mapa, int linha, int coluna){
     if(coluna<1 || coluna>x || linha<1 || linha>y)return mapa;
     Casa *atual=mapa;
     if(atual && atual->coluna==coluna && atual->linha==linha){
@@ -190,7 +200,80 @@ Casa *RemoverCasa(int linha, int coluna){
     return mapa;
     
 }
-void criaMapaFicheiro(){
+
+#pragma region Prints
+void MostraListaNovo(Casa *mapa,EfeitoNefasto* cabeca){
+    Casa* atual=mapa;
+    for(int i=1;i<=y;i++){
+        for (int j = 1; j <= x; j++)
+        {
+            if(atual && atual->linha==i && atual->coluna==j){
+                if(ExisteEfeitoEfeitoNefasto(cabeca,i,j)){
+                    printf("\033[0;33m%c\033[0m",atual->c);
+                }else{
+                    printf("%c",atual->c);
+                }
+                atual=atual->prox;
+            }else{
+                if(ExisteEfeitoEfeitoNefasto(cabeca,i,j)){
+                    printf("#");
+                }
+                else{
+                    printf("%c",vazio);
+                }
+            }
+            if(j==x){
+                printf("\n");
+            }
+            
+        }
+        
+    }
+}
+void MostraListaCasas(Casa *mapa,EfeitoNefasto* cabeca){
+    Casa* atual=mapa;
+    EfeitoNefasto*  efeito=cabeca;
+    printf("Frequência | Linha | Coluna |\n");
+    while (atual)
+    {
+        printf("     %c     |  %d   |   %d   |\n",atual->c,atual->linha,atual->coluna);
+        atual=atual->prox;
+    }
+    while (efeito)
+    {
+        printf("     %c     |  %d   |   %d   |\n",'#',efeito->linha,efeito->coluna);
+        efeito=efeito->prox;
+    }
+}
+#pragma endregion
+
+#pragma region LerEscreverFicheiros
+
+Casa* CriaMapaCasas(char* nome,Casa *mapa,EfeitoNefasto* hE){
+    FILE* ficheiro = fopen(nome, "r");
+    if (ficheiro == NULL) {
+        printf("Erro ao abrir o arquivo %s\n", nome);
+        return NULL;
+    }
+    if(mapa!=NULL){
+        mapa=LimpaMemoria(mapa);
+    }
+    int c=0;
+    while ((c = fgetc(ficheiro)) != EOF) {
+        if (c == '\n') {
+            y++;
+            x=0;
+        } else {
+            x++;
+            if(c!=vazio){
+                mapa=CriaAdiciona(mapa,c,y,x,hE);
+            }
+        }
+    }
+    fclose(ficheiro);
+    return mapa;
+}
+void criaMapaFicheiro(Casa *mapa){
     FILE* ficheiro;
     Casa* atual=mapa;
     ficheiro = fopen("mapa.txt", "w");
@@ -217,12 +300,68 @@ void criaMapaFicheiro(){
     
     fclose(ficheiro);
 }
-void MostraListaC(){
-    Casa* atual=mapa;
+Casa* LerListaFicheiro(Casa *mapa,EfeitoNefasto* cabeca){
+    mapa=LimpaMemoria(mapa);
+    FILE* ficheiro= fopen("ListaCasas.bin","rb");
+    CasaF aux;
+    while (fread(&aux,sizeof(aux),1,ficheiro)==1)
+    {
+        mapa= CriaAdiciona(mapa,aux.c,aux.linha,aux.coluna,cabeca);
+    }
+    fclose(ficheiro);
+    return mapa;
+}
+Casa* EscreverListaFicheiro(Casa *mapa){
+    FILE* ficheiro= fopen("ListaCasas.bin","wb");
+    Casa* atual= mapa;
+    CasaF aux;
     while (atual)
     {
-        printf("%c",atual->c);
-        atual=atual->prox;
+        aux.c=atual->c;
+        aux.coluna =atual->coluna;
+        aux.linha = atual->linha;
+        fwrite(&aux,sizeof(aux),1,ficheiro);
     }
-    
+    fclose(ficheiro);
+    return mapa;
 }
+#pragma endregion
+
+#pragma region CálculoPosições
+int Posicao(Casa* c){
+    int posicao=0, linha= c->linha, coluna= c->coluna;
+    posicao=((linha-1)*x)+coluna-1;
+    return posicao;
+}
+int PosicaoEfeitoNefasto(EfeitoNefasto* c){
+    int posicao=0, linha= c->linha, coluna= c->coluna;
+    posicao=((linha-1)*x)+coluna-1;
+    return posicao;
+}
+#pragma endregion 
+#pragma region LimpaMemória
+Casa* LimpaMemoria(Casa* mapa){
+    Casa *atual = mapa;
+    Casa *proximo=NULL;
+    while (atual)
+    {
+        proximo=atual->prox;
+        free(atual);
+        atual = proximo;
+    }
+    mapa=NULL;
+    return mapa;
+}
+EfeitoNefasto* LimpaMemoriaEfeito(EfeitoNefasto* efeito){
+    EfeitoNefasto *atual = efeito;
+    EfeitoNefasto *proximo=NULL;
+    while (atual)
+    {
+        proximo=atual->prox;
+        free(atual);
+        atual = proximo;
+    }
+    efeito=NULL;
+    return efeito;
+}
+#pragma endregion

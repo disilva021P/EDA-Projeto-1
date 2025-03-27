@@ -15,3 +15,16 @@ typedef struct Casa
     int coluna;
     struct Casa *prox;
 }Casa;
+typedef struct CasaF
+{
+    char c;
+    int linha;
+    int coluna;
+}CasaF;
+typedef struct EfeitoNefasto
+{
+    int linha;
+    int coluna;
+    struct Casa *antenas[2];//Antenas que causam o efeito
+    struct EfeitoNefasto* prox;
+}EfeitoNefasto;
