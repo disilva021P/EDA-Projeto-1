@@ -1,44 +1,32 @@
 
-.idea/                    # JetBrains (IntelliJ, PyCharm, etc.)
-.vscode/                  # Visual Studio Code
-*.swp                     # Arquivos temporários do Vim
-*.suo                     # Arquivos do Visual Studio
-*.user                    # Arquivos do Visual Studio
-*.userosscache            # Arquivos do Visual Studio
-*.sln                     # Arquivos do Visual Studio (solução)
-*.csproj                  # Arquivos de projeto C#
-*.vcxproj                 # Arquivos de projeto C++
+.idea/                   
+.vscode/                 
+*.swp                    
+*.suo                    
+*.user                   
+*.userosscache           
+*.sln                    
+*.csproj                 
+*.vcxproj                
 
-.DS_Store                 # Arquivo do macOS
-Thumbs.db                # Arquivo do Windows
-
-*.log                     # Arquivos de log
-*.tmp                     # Arquivos temporários
-*.bak                     # Arquivos de backup
-*.swp                     # Arquivos temporários do Vim
-*.swo                     # Arquivos temporários do Vim
+*.log                    
+*.tmp                    
+programaCompilado                
 
 
-node_modules/             # Dependências do Node.js
-bower_components/         # Dependências do Bower
-*.dmg                     # Arquivos de imagem do macOS
-*.pkg                     # Arquivos de pacotes do macOS
-*.tar.gz                  # Arquivos compactados
-*.tar.bz2                 # Arquivos compactados
-*.tgz                     # Arquivos compactados
+bin/                     
+obj/                     
+dist/                    
+*.o                      
+*.a
+*.bin
+*.so                     
+*.dll                   
+*.exe                    
+*.out                    
 
-bin/                      # Arquivos binários gerados
-obj/                      # Arquivos de objetos (C, C++, etc.)
-dist/                     # Arquivos de distribuição
-*.o                       # Arquivos de objetos
-*.a                       # Arquivos de bibliotecas estáticas
-*.so                      # Arquivos de bibliotecas compartilhadas
-*.dll                     # Arquivos de bibliotecas DLL no Windows
-*.exe                     # Arquivos executáveis
-*.out                     # Arquivos de saída (C/C++)
-
-*.aux                     # Arquivos auxiliares LaTeX
-*.log                     # Arquivos de log LaTeX
-*.toc                     # Arquivos de tabela de conteúdo LaTeX
-*.out                     # Arquivos de saída LaTeX
+*.aux                    
+*.log                    
+*.toc                   
+*.out                    
 
