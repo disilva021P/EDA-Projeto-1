@@ -25,16 +25,6 @@
 Casa* CriaCasa(char c, int linha, int coluna);
 
 /**
- * @brief Função que cria um espaço na memória para guardar Antenas no ficheiro
- * 
- * @param c: Frequência
- * @param linha: Linha no mapa
- * @param coluna: Coluna no mapa
- * @return CasaF* -> endereço de memória da Antena(alterada para ficheiro)
- */
-CasaF* CriaCasaF(char c, int linha, int coluna);
-
-/**
  * @brief Função que cria um espaço na mememória para guardar o efeito nefasto
  * 
  * @param linha: Linha do efeito
@@ -52,7 +42,7 @@ EfeitoNefasto* CriaEfeitoNefasto(int linha, int coluna, Casa* x1, Casa* x2);
  * @param cabeca: Cabeça da lista de efeito nefasto
  * @return Casa* -> Cabeçalho da lista de antenas depois da adição
  */
-Casa* AdicionaCasa(Casa *mapa,Casa* n,EfeitoNefasto* cabeca);
+Casa* AdicionaCasa(Casa *mapa,Casa* n,EfeitoNefasto** cabeca);
 /**
  * @brief Função que simplifica o processo de criar e adicionar antenas
  * 
@@ -63,8 +53,8 @@ Casa* AdicionaCasa(Casa *mapa,Casa* n,EfeitoNefasto* cabeca);
  * @param cabeca: Cabeça da lista de efeito nefasto
  * @return Casa* -> Cabeçalho da lista de antenas depois da adição
  */
-Casa *CriaAdiciona(Casa *mapa,char c, int linha, int coluna,EfeitoNefasto* cabeca);
-/**
+Casa *CriaAdiciona(Casa *mapa,char c, int linha, int coluna,EfeitoNefasto** cabeca);
+    /**
  * @brief Função que remove uma casa da lista de antenas
  * 
  * @param[in,out] mapa Cabeçalho da lista de antenas
@@ -73,8 +63,16 @@ Casa *CriaAdiciona(Casa *mapa,char c, int linha, int coluna,EfeitoNefasto* cabec
  * @param cabeca: Cabeça da lista de efeito nefasto
  * @return Casa* -> Cabeçalho da lista de antenas depois da remoção
  */
-Casa* RemoverCasa(Casa *mapa, int linha, int coluna);
-
+Casa *RemoverCasa(Casa *mapa, int linha, int coluna,EfeitoNefasto** cabeca);
+/**
+ * @brief Função que remove efeito nefasto que foi causado por uma antena que estava na coluna linha,coluna
+ * 
+ * @param[in,out] cabeca: Cabeçalho da lista de efeito nefasto
+ * @param linha: Linha da antena que vai remover
+ * @param coluna: Coluna da antena que vai remover 
+ * @return EfeitoNefasto* -> Cabeçalho da lista de efeito nefasto depois de remover
+ */
+EfeitoNefasto *RemoverNefasto(EfeitoNefasto* cabeca, int linha, int coluna);
 /**
  * @brief Função que verifica se existe efeito nefaste em certa linha e coluna
  * 
@@ -138,7 +136,7 @@ void MostraListaCasas(Casa *mapa, EfeitoNefasto* cabeca);
  * @param hE: Cabeça da lista de efeito nefasto
  * @return Casa* -> Cabeça da lista das antenas depois da leitura
  */
-Casa* CriaMapaCasas(char* nome,Casa *mapa,EfeitoNefasto* hE);
+Casa* CriaMapaCasas(char* nome,Casa *mapa,EfeitoNefasto** hE);
 /**
  * @brief Função que escreve num ficheiro de texto o mapa sem efeito nefasto
  * 
@@ -152,7 +150,7 @@ void criaMapaFicheiro(Casa *mapa);
  * @param[in,out] cabeca: Cabeça da lista de efeito nefasto
  * @return Casa* -> Cabeça da lista das antenas
  */
-Casa* LerListaFicheiro(Casa *mapa,EfeitoNefasto* cabeca);
+Casa* LerListaFicheiro(Casa *mapa,EfeitoNefasto** cabeca);
 /**
  * @brief Função que escreve lista de antenas em ficheiro binário
  * 
@@ -191,5 +189,22 @@ Casa* LimpaMemoria(Casa* mapa);
  * @return EfeitoNefasto* -> Cabeça da lista de efeito nefasto depois da limpeza (NULL)
  */
 EfeitoNefasto* LimpaMemoriaEfeito(EfeitoNefasto* efeito);
-
-#endif // FUNCOES_H
+/**
+ * @brief Função que vai adicionar uma casa apenas se não causar efeito nefasto
+ * 
+ * @param mapa: Cabeça da lista de antenas 
+ * @param n: antena a adicionar
+ * @param cabeca: Cabeça da lista de efeito nefasto
+ * @return Casa* -> Cabeça da lista de antenas 
+ */
+Casa* AdicionaCasaSemCausarNefasto(Casa *mapa,Casa* n,EfeitoNefasto* cabeca);
+/**
+ * @brief Função que vai adicionar uma casa apenas se não estiver com efeito nefasto na casa
+ * 
+ * @param mapa: Cabeça da lista de antenas 
+ * @param n: antena a adicionar
+ * @param cabeca: Cabeça da lista de efeito nefasto
+ * @return Casa* -> Cabeça da lista de antenas 
+ */
+Casa* AdicionaCasaSemSobreposicao(Casa *mapa,Casa* n,EfeitoNefasto* cabeca);
+#endif 

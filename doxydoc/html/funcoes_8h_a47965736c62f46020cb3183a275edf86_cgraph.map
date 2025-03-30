@@ -1,0 +1,5 @@
+<map id="AdicionaCasaEfeitoNefasto" name="AdicionaCasaEfeitoNefasto">
+<area shape="rect" id="Node000001" title="Função que adiciona efeito nefasto á lista." alt="" coords="5,5,188,32"/>
+<area shape="rect" id="Node000002" href="$funcoes_8c.html#ac23460e361b882e6156a1929ac4b5532" title="Devolve a posição do efeito nefasto no mapa [1&#45;n*m]." alt="" coords="236,5,384,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,16,220,16,220,21,188,21"/>
+</map>

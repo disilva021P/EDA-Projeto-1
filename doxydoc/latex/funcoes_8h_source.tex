@@ -1,0 +1,43 @@
+\doxysection{funcoes.\+h}
+\hypertarget{funcoes_8h_source}{}\label{funcoes_8h_source}\index{/home/disilva021/UNI/EDA/Projeto1/src/funcoes.h@{/home/disilva021/UNI/EDA/Projeto1/src/funcoes.h}}
+\mbox{\hyperlink{funcoes_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00012}00012\ \textcolor{preprocessor}{\#ifndef\ FUNCOES\_H}}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00013}00013\ \textcolor{preprocessor}{\#define\ FUNCOES\_H}}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include"{}\mbox{\hyperlink{dados_8h}{dados.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00015}00015\ \textcolor{preprocessor}{\#define\ vazio\ '.'}}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00025}00025\ \mbox{\hyperlink{structCasa}{Casa}}*\ \mbox{\hyperlink{funcoes_8h_adaf457eee17c8a537cfa5d6f1c079d37}{CriaCasa}}(\textcolor{keywordtype}{char}\ c,\ \textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00036}00036\ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ \mbox{\hyperlink{funcoes_8h_afc8624f491f409a238fac8478fe49201}{CriaEfeitoNefasto}}(\textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna,\ \mbox{\hyperlink{structCasa}{Casa}}*\ x1,\ \mbox{\hyperlink{structCasa}{Casa}}*\ x2);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00045}00045\ \mbox{\hyperlink{structCasa}{Casa}}*\ \mbox{\hyperlink{funcoes_8h_a547e745c0d5dd6e76884bbb1c2514ace}{AdicionaCasa}}(\mbox{\hyperlink{structCasa}{Casa}}\ *mapa,\mbox{\hyperlink{structCasa}{Casa}}*\ n,\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}**\ cabeca);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00056}00056\ \mbox{\hyperlink{structCasa}{Casa}}\ *\mbox{\hyperlink{funcoes_8h_ab271e06653f850456c8bb6d6c8be0555}{CriaAdiciona}}(\mbox{\hyperlink{structCasa}{Casa}}\ *mapa,\textcolor{keywordtype}{char}\ c,\ \textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna,\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}**\ cabeca);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00066}00066\ \mbox{\hyperlink{structCasa}{Casa}}\ *\mbox{\hyperlink{funcoes_8h_aeace5f1282a34495044ffe7ec32f923f}{RemoverCasa}}(\mbox{\hyperlink{structCasa}{Casa}}\ *mapa,\ \textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna,\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}**\ cabeca);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00075}00075\ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}\ *\mbox{\hyperlink{funcoes_8h_a56c88f4c5181a3856ab46b20a80d3b3c}{RemoverNefasto}}(\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ cabeca,\ \textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00084}00084\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{funcoes_8h_ab49c65857453b4befb3a8e804bc6668f}{ExisteEfeitoEfeitoNefasto}}(\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}\ *mapa,\ \textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00093}00093\ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ \mbox{\hyperlink{funcoes_8h_aab1e64b8be3669c4102e89eb0b077f60}{CriaListaEfeitoEfeitoNefasto}}(\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ cabeca,\ \mbox{\hyperlink{structCasa}{Casa}}\ *mapa);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00103}00103\ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ \mbox{\hyperlink{funcoes_8h_a47965736c62f46020cb3183a275edf86}{AdicionaCasaEfeitoNefasto}}(\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ cabeca,\ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ n);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00115}00115\ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ \mbox{\hyperlink{funcoes_8h_add96e8555a1fa4ce7049a1f12c4aa03c}{CriaAdicionaEfeito}}(\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}\ *cabeca,\ \textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna,\ \mbox{\hyperlink{structCasa}{Casa}}*\ x1,\ \mbox{\hyperlink{structCasa}{Casa}}*\ x2);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00122}00122\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{funcoes_8h_a71229908ffc3c2ec1671978310aba197}{MostraListaNovo}}(\mbox{\hyperlink{structCasa}{Casa}}\ *mapa,\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ cabeca);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00129}00129\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{funcoes_8h_a4914b094e27584ea7ff257408c302ee8}{MostraListaCasas}}(\mbox{\hyperlink{structCasa}{Casa}}\ *mapa,\ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ cabeca);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00139}00139\ \mbox{\hyperlink{structCasa}{Casa}}*\ \mbox{\hyperlink{funcoes_8h_a1c8b8099d4e4db9da99f6573596e35e4}{CriaMapaCasas}}(\textcolor{keywordtype}{char}*\ nome,\mbox{\hyperlink{structCasa}{Casa}}\ *mapa,\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}**\ hE);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00145}00145\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{funcoes_8h_aa4605e798ac2fd2c97202449584eca0b}{criaMapaFicheiro}}(\mbox{\hyperlink{structCasa}{Casa}}\ *mapa);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00153}00153\ \mbox{\hyperlink{structCasa}{Casa}}*\ \mbox{\hyperlink{funcoes_8h_af8d3c506f21e8f02909dc64f438b9eff}{LerListaFicheiro}}(\mbox{\hyperlink{structCasa}{Casa}}\ *mapa,\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ cabeca);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00160}00160\ \mbox{\hyperlink{structCasa}{Casa}}*\ \mbox{\hyperlink{funcoes_8h_a89b623810060cd11fd075aa3605593d2}{EscreverListaFicheiro}}(\mbox{\hyperlink{structCasa}{Casa}}\ *mapa);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00168}00168\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{funcoes_8h_a4bda839cdef05932876ae4612622e531}{Posicao}}(\mbox{\hyperlink{structCasa}{Casa}}*\ c);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00175}00175\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{funcoes_8h_ac23460e361b882e6156a1929ac4b5532}{PosicaoEfeitoNefasto}}(\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ c);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00184}00184\ \mbox{\hyperlink{structCasa}{Casa}}*\ \mbox{\hyperlink{funcoes_8h_ac3047c35234c5d91be31629239e8a94d}{LimpaMemoria}}(\mbox{\hyperlink{structCasa}{Casa}}*\ mapa);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00191}00191\ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ \mbox{\hyperlink{funcoes_8h_aafb91a30a66792a37dfa04968a207468}{LimpaMemoriaEfeito}}(\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ efeito);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00200}00200\ \mbox{\hyperlink{structCasa}{Casa}}*\ \mbox{\hyperlink{funcoes_8h_acdf82a4f86eecfad326f7b543b7d4f25}{AdicionaCasaSemCausarNefasto}}(\mbox{\hyperlink{structCasa}{Casa}}\ *mapa,\mbox{\hyperlink{structCasa}{Casa}}*\ n,\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ cabeca);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00209}00209\ \mbox{\hyperlink{structCasa}{Casa}}*\ \mbox{\hyperlink{funcoes_8h_a04e92ae67c065eb6773ee065aa5a2732}{AdicionaCasaSemSobreposicao}}(\mbox{\hyperlink{structCasa}{Casa}}\ *mapa,\mbox{\hyperlink{structCasa}{Casa}}*\ n,\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ cabeca);}
+\DoxyCodeLine{\Hypertarget{funcoes_8h_source_l00210}00210\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FUNCOES\_H}}
+
+\end{DoxyCode}

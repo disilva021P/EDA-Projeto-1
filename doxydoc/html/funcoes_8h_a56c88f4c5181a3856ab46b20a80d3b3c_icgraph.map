@@ -1,0 +1,8 @@
+<map id="RemoverNefasto" name="RemoverNefasto">
+<area shape="rect" id="Node000001" title="Função que remove efeito nefasto que foi causado por uma antena que estava na coluna linha,..." alt="" coords="424,29,544,56"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="511,16,502,10,484,8,468,10,459,15,457,20,461,28,456,30,451,21,455,11,466,5,484,3,504,5,514,12"/>
+<area shape="rect" id="Node000002" href="$funcoes_8c.html#aeace5f1282a34495044ffe7ec32f923f" title="Função que remove uma casa da lista de antenas." alt="" coords="271,29,376,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="408,45,377,45,377,40,408,40"/>
+<area shape="rect" id="Node000003" href="$funcoes_8c.html#acdf82a4f86eecfad326f7b543b7d4f25" title="Função que vai adicionar uma casa apenas se não causar efeito nefasto." alt="" coords="5,29,223,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="255,45,223,45,223,40,255,40"/>
+</map>

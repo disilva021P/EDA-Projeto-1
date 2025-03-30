@@ -1,0 +1,7 @@
+<map id="EfeitoNefasto" name="EfeitoNefasto">
+<area shape="rect" id="Node000001" title="Struct que guarda os efeitos nefastos." alt="" coords="5,96,107,123"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="124,101,133,109,125,118,108,120,107,115,123,113,128,109,121,105"/>
+<area shape="rect" id="Node000002" href="$structCasa.html" title="Struct que guarda as antenas." alt="" coords="30,5,82,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,48,59,95,53,95,53,48"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="98,9,106,12,109,19,100,28,83,30,82,24,98,23,104,18,102,16,96,14"/>
+</map>

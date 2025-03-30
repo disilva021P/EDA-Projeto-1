@@ -1,0 +1,25 @@
+<map id="LerListaFicheiro" name="LerListaFicheiro">
+<area shape="rect" id="Node000001" title="Função que le lista de antenas de ficheiros binários." alt="" coords="5,132,119,159"/>
+<area shape="rect" id="Node000002" href="$funcoes_8c.html#ab271e06653f850456c8bb6d6c8be0555" title="Função que simplifica o processo de criar e adicionar antenas." alt="" coords="172,107,268,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="118,134,156,127,157,133,119,139"/>
+<area shape="rect" id="Node000012" href="$funcoes_8c.html#ac3047c35234c5d91be31629239e8a94d" title="Função que Limpa a memória da lista de Antenas." alt="" coords="167,157,273,184"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="119,152,152,157,151,162,118,157"/>
+<area shape="rect" id="Node000003" href="$funcoes_8c.html#a547e745c0d5dd6e76884bbb1c2514ace" title="Função que adiciona uma dada casa à lista de antenas." alt="" coords="321,81,423,108"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="268,109,305,103,306,108,269,115"/>
+<area shape="rect" id="Node000011" href="$funcoes_8c.html#adaf457eee17c8a537cfa5d6f1c079d37" title="Função que cria um espaço de memória para as antenas." alt="" coords="334,132,410,159"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="269,125,319,134,318,139,268,131"/>
+<area shape="rect" id="Node000004" href="$funcoes_8c.html#aab1e64b8be3669c4102e89eb0b077f60" title="Função que verifica se existe efeito nefaste em certa linha e coluna." alt="" coords="471,56,659,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="424,85,455,81,456,86,424,91"/>
+<area shape="rect" id="Node000010" href="$funcoes_8c.html#a4bda839cdef05932876ae4612622e531" title="Devolve a posição da antena no mapa [1&#45;n*m]." alt="" coords="531,107,599,133"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="424,99,516,111,515,116,424,104"/>
+<area shape="rect" id="Node000005" href="$funcoes_8c.html#add96e8555a1fa4ce7049a1f12c4aa03c" title="Função que simplifica o processo de criar e adicionar efeitos nefastos." alt="" coords="712,31,842,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="659,55,696,51,697,56,660,61"/>
+<area shape="rect" id="Node000009" href="$funcoes_8c.html#aafb91a30a66792a37dfa04968a207468" title="Função que Limpa a memória da lista de efejto nefasto." alt="" coords="707,81,847,108"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="660,78,691,82,691,87,659,83"/>
+<area shape="rect" id="Node000006" href="$funcoes_8c.html#a47965736c62f46020cb3183a275edf86" title="Função que adiciona efeito nefasto á lista." alt="" coords="895,5,1077,32"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="842,34,879,29,880,34,842,39"/>
+<area shape="rect" id="Node000008" href="$funcoes_8c.html#afc8624f491f409a238fac8478fe49201" title="Função que cria um espaço na mememória para guardar o efeito nefasto." alt="" coords="924,56,1049,83"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="842,49,909,57,908,63,842,54"/>
+<area shape="rect" id="Node000007" href="$funcoes_8c.html#ac23460e361b882e6156a1929ac4b5532" title="Devolve a posição do efeito nefasto no mapa [1&#45;n*m]." alt="" coords="1125,5,1274,32"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1077,16,1110,16,1110,21,1077,21"/>
+</map>

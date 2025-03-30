@@ -1,0 +1,900 @@
+\doxysection{/home/disilva021/\+UNI/\+EDA/\+Projeto1/src/funcoes.c File Reference}
+\hypertarget{funcoes_8c}{}\label{funcoes_8c}\index{/home/disilva021/UNI/EDA/Projeto1/src/funcoes.c@{/home/disilva021/UNI/EDA/Projeto1/src/funcoes.c}}
+
+
+CORPO da biblioteca funcoes que contêm as funções para as operações da lista linkada.  
+
+
+{\ttfamily \#include "{}funcoes.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for funcoes.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{funcoes_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{funcoes_8c_aff18f83815b5bab42f35fdd72f44256a}{vazio}}~\textquotesingle{}.\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_adaf457eee17c8a537cfa5d6f1c079d37}{Cria\+Casa}} (char c, int linha, int coluna)
+\begin{DoxyCompactList}\small\item\em Função que cria um espaço de memória para as antenas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_afc8624f491f409a238fac8478fe49201}{Cria\+Efeito\+Nefasto}} (int linha, int coluna, \mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}x1, \mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}x2)
+\begin{DoxyCompactList}\small\item\em Função que cria um espaço na mememória para guardar o efeito nefasto. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{funcoes_8c_a3eac0f7ac01dfccf0368f829bbf4a0c9}{Existe\+Efeito\+Efeito\+Nefasto}} (\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}cabeca, int linha, int coluna)
+\begin{DoxyCompactList}\small\item\em Função que verifica se existe efeito nefaste em certa linha e coluna. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_aab1e64b8be3669c4102e89eb0b077f60}{Cria\+Lista\+Efeito\+Efeito\+Nefasto}} (\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}cabeca, \mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}mapa)
+\begin{DoxyCompactList}\small\item\em Função que verifica se existe efeito nefaste em certa linha e coluna. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_acae1a941c0b223575333e4ab0c5805c8}{Antena\+Causa\+Nefasto}} (\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}cabeca, \mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}c)
+\item 
+\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_a04e92ae67c065eb6773ee065aa5a2732}{Adiciona\+Casa\+Sem\+Sobreposicao}} (\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}mapa, \mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}n, \mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}cabeca)
+\begin{DoxyCompactList}\small\item\em Função que vai adicionar uma casa apenas se não estiver com efeito nefasto na casa. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_a547e745c0d5dd6e76884bbb1c2514ace}{Adiciona\+Casa}} (\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}mapa, \mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}n, \mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}cabeca)
+\begin{DoxyCompactList}\small\item\em Função que adiciona uma dada casa à lista de antenas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_acdf82a4f86eecfad326f7b543b7d4f25}{Adiciona\+Casa\+Sem\+Causar\+Nefasto}} (\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}mapa, \mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}n, \mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}cabeca)
+\begin{DoxyCompactList}\small\item\em Função que vai adicionar uma casa apenas se não causar efeito nefasto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_a47965736c62f46020cb3183a275edf86}{Adiciona\+Casa\+Efeito\+Nefasto}} (\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}cabeca, \mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}n)
+\begin{DoxyCompactList}\small\item\em Função que adiciona efeito nefasto á lista. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_ab271e06653f850456c8bb6d6c8be0555}{Cria\+Adiciona}} (\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}mapa, char c, int linha, int coluna, \mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}cabeca)
+\begin{DoxyCompactList}\small\item\em Função que simplifica o processo de criar e adicionar antenas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_add96e8555a1fa4ce7049a1f12c4aa03c}{Cria\+Adiciona\+Efeito}} (\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}cabeca, int linha, int coluna, \mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}x1, \mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}x2)
+\begin{DoxyCompactList}\small\item\em Função que simplifica o processo de criar e adicionar efeitos nefastos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_aeace5f1282a34495044ffe7ec32f923f}{Remover\+Casa}} (\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}mapa, int linha, int coluna, \mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}cabeca)
+\begin{DoxyCompactList}\small\item\em Função que remove uma casa da lista de antenas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_a56c88f4c5181a3856ab46b20a80d3b3c}{Remover\+Nefasto}} (\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}cabeca, int linha, int coluna)
+\begin{DoxyCompactList}\small\item\em Função que remove efeito nefasto que foi causado por uma antena que estava na coluna linha,coluna. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcoes_8c_a71229908ffc3c2ec1671978310aba197}{Mostra\+Lista\+Novo}} (\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}mapa, \mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}cabeca)
+\begin{DoxyCompactList}\small\item\em Função que printa o mapa com antenas e efeito nefasto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcoes_8c_a4914b094e27584ea7ff257408c302ee8}{Mostra\+Lista\+Casas}} (\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}mapa, \mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}cabeca)
+\begin{DoxyCompactList}\small\item\em Função que printa de forma tabular as antenas e o efeito nefasto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_a1c8b8099d4e4db9da99f6573596e35e4}{Cria\+Mapa\+Casas}} (char \texorpdfstring{$\ast$}{*}nome, \mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}mapa, \mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}hE)
+\begin{DoxyCompactList}\small\item\em Função que lẽ as antenas de um ficheiro txt com o mapa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{funcoes_8c_aa4605e798ac2fd2c97202449584eca0b}{cria\+Mapa\+Ficheiro}} (\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}mapa)
+\begin{DoxyCompactList}\small\item\em Função que escreve num ficheiro de texto o mapa sem efeito nefasto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_af8d3c506f21e8f02909dc64f438b9eff}{Ler\+Lista\+Ficheiro}} (\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}mapa, \mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}cabeca)
+\begin{DoxyCompactList}\small\item\em Função que le lista de antenas de ficheiros binários. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_a89b623810060cd11fd075aa3605593d2}{Escrever\+Lista\+Ficheiro}} (\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}mapa)
+\begin{DoxyCompactList}\small\item\em Função que escreve lista de antenas em ficheiro binário. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{funcoes_8c_a4bda839cdef05932876ae4612622e531}{Posicao}} (\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}c)
+\begin{DoxyCompactList}\small\item\em Devolve a posição da antena no mapa \mbox{[}1-\/n\texorpdfstring{$\ast$}{*}m\mbox{]}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{funcoes_8c_ac23460e361b882e6156a1929ac4b5532}{Posicao\+Efeito\+Nefasto}} (\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}c)
+\begin{DoxyCompactList}\small\item\em Devolve a posição do efeito nefasto no mapa \mbox{[}1-\/n\texorpdfstring{$\ast$}{*}m\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_ac3047c35234c5d91be31629239e8a94d}{Limpa\+Memoria}} (\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}mapa)
+\begin{DoxyCompactList}\small\item\em Função que Limpa a memória da lista de Antenas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{funcoes_8c_aafb91a30a66792a37dfa04968a207468}{Limpa\+Memoria\+Efeito}} (\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}efeito)
+\begin{DoxyCompactList}\small\item\em Função que Limpa a memória da lista de efejto nefasto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{funcoes_8c_a6150e0515f7202e2fb518f7206ed97dc}{x}} =0
+\item 
+int \mbox{\hyperlink{funcoes_8c_a0a2f84ed7838f07779ae24c5a9086d33}{y}} =1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+CORPO da biblioteca funcoes que contêm as funções para as operações da lista linkada. 
+
+\begin{DoxyAuthor}{Author}
+Diogo SIlva (\href{mailto:a31504@alunos.ipca.pt}{\texttt{ a31504@alunos.\+ipca.\+pt}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/03-\/17
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{funcoes_8c_aff18f83815b5bab42f35fdd72f44256a}\index{funcoes.c@{funcoes.c}!vazio@{vazio}}
+\index{vazio@{vazio}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{vazio}{vazio}}
+{\footnotesize\ttfamily \label{funcoes_8c_aff18f83815b5bab42f35fdd72f44256a} 
+\#define vazio~\textquotesingle{}.\textquotesingle{}}
+
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00012}{12}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{funcoes_8c_a547e745c0d5dd6e76884bbb1c2514ace}\index{funcoes.c@{funcoes.c}!AdicionaCasa@{AdicionaCasa}}
+\index{AdicionaCasa@{AdicionaCasa}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{AdicionaCasa()}{AdicionaCasa()}}
+{\footnotesize\ttfamily \label{funcoes_8c_a547e745c0d5dd6e76884bbb1c2514ace} 
+\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*} Adiciona\+Casa (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{mapa}{, }\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{n}{, }\item[{\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{cabeca}{}\end{DoxyParamCaption})}
+
+
+
+Função que adiciona uma dada casa à lista de antenas. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em mapa} & Cabeçalho da lista de antenas \\
+\hline
+ & {\em n} & Antena a adicionar na lista \\
+\hline
+ & {\em cabeca} & Cabeça da lista de efeito nefasto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Casa\texorpdfstring{$\ast$}{*} -\/\texorpdfstring{$>$}{>} Cabeçalho da lista de antenas depois da adição 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00117}{117}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_a547e745c0d5dd6e76884bbb1c2514ace_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_a547e745c0d5dd6e76884bbb1c2514ace_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcoes_8c_a47965736c62f46020cb3183a275edf86}\index{funcoes.c@{funcoes.c}!AdicionaCasaEfeitoNefasto@{AdicionaCasaEfeitoNefasto}}
+\index{AdicionaCasaEfeitoNefasto@{AdicionaCasaEfeitoNefasto}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{AdicionaCasaEfeitoNefasto()}{AdicionaCasaEfeitoNefasto()}}
+{\footnotesize\ttfamily \label{funcoes_8c_a47965736c62f46020cb3183a275edf86} 
+\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*} Adiciona\+Casa\+Efeito\+Nefasto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}}]{cabeca}{, }\item[{\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Função que adiciona efeito nefasto á lista. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em cabeca} & Cabeçalho da lista de efeito nefasto \\
+\hline
+ & {\em mapa} & Cabeça da lista das antenas \\
+\hline
+ & {\em n} & Efeito nefasto que vai adicionar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Casa\texorpdfstring{$\ast$}{*} -\/\texorpdfstring{$>$}{>} Cabeça da lista de efeito nefasto depois de adicionar 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00162}{162}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_a47965736c62f46020cb3183a275edf86_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_a47965736c62f46020cb3183a275edf86_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcoes_8c_acdf82a4f86eecfad326f7b543b7d4f25}\index{funcoes.c@{funcoes.c}!AdicionaCasaSemCausarNefasto@{AdicionaCasaSemCausarNefasto}}
+\index{AdicionaCasaSemCausarNefasto@{AdicionaCasaSemCausarNefasto}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{AdicionaCasaSemCausarNefasto()}{AdicionaCasaSemCausarNefasto()}}
+{\footnotesize\ttfamily \label{funcoes_8c_acdf82a4f86eecfad326f7b543b7d4f25} 
+\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*} Adiciona\+Casa\+Sem\+Causar\+Nefasto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{mapa}{, }\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{n}{, }\item[{\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}}]{cabeca}{}\end{DoxyParamCaption})}
+
+
+
+Função que vai adicionar uma casa apenas se não causar efeito nefasto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mapa} & Cabeça da lista de antenas \\
+\hline
+{\em n} & antena a adicionar \\
+\hline
+{\em cabeca} & Cabeça da lista de efeito nefasto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Casa\texorpdfstring{$\ast$}{*} -\/\texorpdfstring{$>$}{>} Cabeça da lista de antenas 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00153}{153}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_acdf82a4f86eecfad326f7b543b7d4f25_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcoes_8c_a04e92ae67c065eb6773ee065aa5a2732}\index{funcoes.c@{funcoes.c}!AdicionaCasaSemSobreposicao@{AdicionaCasaSemSobreposicao}}
+\index{AdicionaCasaSemSobreposicao@{AdicionaCasaSemSobreposicao}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{AdicionaCasaSemSobreposicao()}{AdicionaCasaSemSobreposicao()}}
+{\footnotesize\ttfamily \label{funcoes_8c_a04e92ae67c065eb6773ee065aa5a2732} 
+\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*} Adiciona\+Casa\+Sem\+Sobreposicao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{mapa}{, }\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{n}{, }\item[{\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}}]{cabeca}{}\end{DoxyParamCaption})}
+
+
+
+Função que vai adicionar uma casa apenas se não estiver com efeito nefasto na casa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mapa} & Cabeça da lista de antenas \\
+\hline
+{\em n} & antena a adicionar \\
+\hline
+{\em cabeca} & Cabeça da lista de efeito nefasto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Casa\texorpdfstring{$\ast$}{*} -\/\texorpdfstring{$>$}{>} Cabeça da lista de antenas 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00104}{104}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_a04e92ae67c065eb6773ee065aa5a2732_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcoes_8c_acae1a941c0b223575333e4ab0c5805c8}\index{funcoes.c@{funcoes.c}!AntenaCausaNefasto@{AntenaCausaNefasto}}
+\index{AntenaCausaNefasto@{AntenaCausaNefasto}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{AntenaCausaNefasto()}{AntenaCausaNefasto()}}
+{\footnotesize\ttfamily \label{funcoes_8c_acae1a941c0b223575333e4ab0c5805c8} 
+\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*} Antena\+Causa\+Nefasto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}}]{cabeca}{, }\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00093}{93}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+\Hypertarget{funcoes_8c_ab271e06653f850456c8bb6d6c8be0555}\index{funcoes.c@{funcoes.c}!CriaAdiciona@{CriaAdiciona}}
+\index{CriaAdiciona@{CriaAdiciona}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{CriaAdiciona()}{CriaAdiciona()}}
+{\footnotesize\ttfamily \label{funcoes_8c_ab271e06653f850456c8bb6d6c8be0555} 
+\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*} Cria\+Adiciona (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{mapa}{, }\item[{char}]{c}{, }\item[{int}]{linha}{, }\item[{int}]{coluna}{, }\item[{\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{cabeca}{}\end{DoxyParamCaption})}
+
+
+
+Função que simplifica o processo de criar e adicionar antenas. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em mapa} & Cabeçalho da lista de antenas \\
+\hline
+ & {\em c} & Fequência \\
+\hline
+ & {\em linha} & Linha no mapa \\
+\hline
+ & {\em coluna} & Coluna no mapa \\
+\hline
+ & {\em cabeca} & Cabeça da lista de efeito nefasto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Casa\texorpdfstring{$\ast$}{*} -\/\texorpdfstring{$>$}{>} Cabeçalho da lista de antenas depois da adição 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00199}{199}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_ab271e06653f850456c8bb6d6c8be0555_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_ab271e06653f850456c8bb6d6c8be0555_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcoes_8c_add96e8555a1fa4ce7049a1f12c4aa03c}\index{funcoes.c@{funcoes.c}!CriaAdicionaEfeito@{CriaAdicionaEfeito}}
+\index{CriaAdicionaEfeito@{CriaAdicionaEfeito}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{CriaAdicionaEfeito()}{CriaAdicionaEfeito()}}
+{\footnotesize\ttfamily \label{funcoes_8c_add96e8555a1fa4ce7049a1f12c4aa03c} 
+\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*} Cria\+Adiciona\+Efeito (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}}]{cabeca}{, }\item[{int}]{linha}{, }\item[{int}]{coluna}{, }\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{x1}{, }\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{x2}{}\end{DoxyParamCaption})}
+
+
+
+Função que simplifica o processo de criar e adicionar efeitos nefastos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cabeca} & Cabeça da lista de efeito nefasto \\
+\hline
+{\em linha} & Linha onde inserir \\
+\hline
+{\em coluna} & Coluna onde inserir \\
+\hline
+{\em x1} & 1ª Antena causadora \\
+\hline
+{\em x2} & 2ª Antena causadora \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Efeito\+Nefasto\texorpdfstring{$\ast$}{*} -\/\texorpdfstring{$>$}{>} Cabeça da lista de efeito nefasto depois da inserção 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00202}{202}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_add96e8555a1fa4ce7049a1f12c4aa03c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_add96e8555a1fa4ce7049a1f12c4aa03c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcoes_8c_adaf457eee17c8a537cfa5d6f1c079d37}\index{funcoes.c@{funcoes.c}!CriaCasa@{CriaCasa}}
+\index{CriaCasa@{CriaCasa}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{CriaCasa()}{CriaCasa()}}
+{\footnotesize\ttfamily \label{funcoes_8c_adaf457eee17c8a537cfa5d6f1c079d37} 
+\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*} Cria\+Casa (\begin{DoxyParamCaption}\item[{char}]{c}{, }\item[{int}]{linha}{, }\item[{int}]{coluna}{}\end{DoxyParamCaption})}
+
+
+
+Função que cria um espaço de memória para as antenas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Frequência \\
+\hline
+{\em linha} & Linha no mapa \\
+\hline
+{\em coluna} & Coluna no mapa \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Casa\texorpdfstring{$\ast$}{*} -\/\texorpdfstring{$>$}{>} endereço de memória da antena 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00020}{20}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_adaf457eee17c8a537cfa5d6f1c079d37_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcoes_8c_afc8624f491f409a238fac8478fe49201}\index{funcoes.c@{funcoes.c}!CriaEfeitoNefasto@{CriaEfeitoNefasto}}
+\index{CriaEfeitoNefasto@{CriaEfeitoNefasto}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{CriaEfeitoNefasto()}{CriaEfeitoNefasto()}}
+{\footnotesize\ttfamily \label{funcoes_8c_afc8624f491f409a238fac8478fe49201} 
+\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*} Cria\+Efeito\+Nefasto (\begin{DoxyParamCaption}\item[{int}]{linha}{, }\item[{int}]{coluna}{, }\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{x1}{, }\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{x2}{}\end{DoxyParamCaption})}
+
+
+
+Função que cria um espaço na mememória para guardar o efeito nefasto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em linha} & Linha do efeito \\
+\hline
+{\em coluna} & Coluna do efeito \\
+\hline
+{\em x1} & Primeira antena que causou o efeito \\
+\hline
+{\em x2} & Segunda antena que causou o efeito \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Efeito\+Nefasto\texorpdfstring{$\ast$}{*} -\/\texorpdfstring{$>$}{>} endereço de memória do efeito nefasto 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00032}{32}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_afc8624f491f409a238fac8478fe49201_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcoes_8c_aab1e64b8be3669c4102e89eb0b077f60}\index{funcoes.c@{funcoes.c}!CriaListaEfeitoEfeitoNefasto@{CriaListaEfeitoEfeitoNefasto}}
+\index{CriaListaEfeitoEfeitoNefasto@{CriaListaEfeitoEfeitoNefasto}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{CriaListaEfeitoEfeitoNefasto()}{CriaListaEfeitoEfeitoNefasto()}}
+{\footnotesize\ttfamily \label{funcoes_8c_aab1e64b8be3669c4102e89eb0b077f60} 
+\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*} Cria\+Lista\+Efeito\+Efeito\+Nefasto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}}]{cabeca}{, }\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{mapa}{}\end{DoxyParamCaption})}
+
+
+
+Função que verifica se existe efeito nefaste em certa linha e coluna. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em cabeca} & Cabeçalho da lista de efeito nefasto \\
+\hline
+ & {\em mapa} & Cabeçalho da lista de antenas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Efeito\+Nefasto\texorpdfstring{$\ast$}{*} -\/\texorpdfstring{$>$}{>} Cabeçalho da lista de efeito nefasto depois de verificar 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00059}{59}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_aab1e64b8be3669c4102e89eb0b077f60_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_aab1e64b8be3669c4102e89eb0b077f60_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcoes_8c_a1c8b8099d4e4db9da99f6573596e35e4}\index{funcoes.c@{funcoes.c}!CriaMapaCasas@{CriaMapaCasas}}
+\index{CriaMapaCasas@{CriaMapaCasas}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{CriaMapaCasas()}{CriaMapaCasas()}}
+{\footnotesize\ttfamily \label{funcoes_8c_a1c8b8099d4e4db9da99f6573596e35e4} 
+\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*} Cria\+Mapa\+Casas (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{nome}{, }\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{mapa}{, }\item[{\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{hE}{}\end{DoxyParamCaption})}
+
+
+
+Função que lẽ as antenas de um ficheiro txt com o mapa. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em nome} & Nome do ficheiro \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em mapa} & Cabeça da lista das antenas \\
+\hline
+ & {\em hE} & Cabeça da lista de efeito nefasto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Casa\texorpdfstring{$\ast$}{*} -\/\texorpdfstring{$>$}{>} Cabeça da lista das antenas depois da leitura 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00313}{313}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_a1c8b8099d4e4db9da99f6573596e35e4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcoes_8c_aa4605e798ac2fd2c97202449584eca0b}\index{funcoes.c@{funcoes.c}!criaMapaFicheiro@{criaMapaFicheiro}}
+\index{criaMapaFicheiro@{criaMapaFicheiro}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{criaMapaFicheiro()}{criaMapaFicheiro()}}
+{\footnotesize\ttfamily \label{funcoes_8c_aa4605e798ac2fd2c97202449584eca0b} 
+void cria\+Mapa\+Ficheiro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{mapa}{}\end{DoxyParamCaption})}
+
+
+
+Função que escreve num ficheiro de texto o mapa sem efeito nefasto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mapa} & Cabeça da lista das antenas \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00337}{337}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+\Hypertarget{funcoes_8c_a89b623810060cd11fd075aa3605593d2}\index{funcoes.c@{funcoes.c}!EscreverListaFicheiro@{EscreverListaFicheiro}}
+\index{EscreverListaFicheiro@{EscreverListaFicheiro}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{EscreverListaFicheiro()}{EscreverListaFicheiro()}}
+{\footnotesize\ttfamily \label{funcoes_8c_a89b623810060cd11fd075aa3605593d2} 
+\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*} Escrever\+Lista\+Ficheiro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{mapa}{}\end{DoxyParamCaption})}
+
+
+
+Função que escreve lista de antenas em ficheiro binário. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em mapa} & Cabeça da lista de antenas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Casa\texorpdfstring{$\ast$}{*} -\/\texorpdfstring{$>$}{>} Cabeça da lista de antenas 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00375}{375}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+\Hypertarget{funcoes_8c_a3eac0f7ac01dfccf0368f829bbf4a0c9}\index{funcoes.c@{funcoes.c}!ExisteEfeitoEfeitoNefasto@{ExisteEfeitoEfeitoNefasto}}
+\index{ExisteEfeitoEfeitoNefasto@{ExisteEfeitoEfeitoNefasto}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{ExisteEfeitoEfeitoNefasto()}{ExisteEfeitoEfeitoNefasto()}}
+{\footnotesize\ttfamily \label{funcoes_8c_a3eac0f7ac01dfccf0368f829bbf4a0c9} 
+int Existe\+Efeito\+Efeito\+Nefasto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}}]{mapa}{, }\item[{int}]{linha}{, }\item[{int}]{coluna}{}\end{DoxyParamCaption})}
+
+
+
+Função que verifica se existe efeito nefaste em certa linha e coluna. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mapa} & Cabeçalho da lista de efeito nefasto \\
+\hline
+{\em linha} & Linha a verificar \\
+\hline
+{\em coluna} & Coluna a verificar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 se não existe 1 se existe 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00048}{48}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_a3eac0f7ac01dfccf0368f829bbf4a0c9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcoes_8c_af8d3c506f21e8f02909dc64f438b9eff}\index{funcoes.c@{funcoes.c}!LerListaFicheiro@{LerListaFicheiro}}
+\index{LerListaFicheiro@{LerListaFicheiro}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{LerListaFicheiro()}{LerListaFicheiro()}}
+{\footnotesize\ttfamily \label{funcoes_8c_af8d3c506f21e8f02909dc64f438b9eff} 
+\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*} Ler\+Lista\+Ficheiro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{mapa}{, }\item[{\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}}]{cabeca}{}\end{DoxyParamCaption})}
+
+
+
+Função que le lista de antenas de ficheiros binários. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em mapa} & Cabeça da lista de antenas \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em cabeca} & Cabeça da lista de efeito nefasto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Casa\texorpdfstring{$\ast$}{*} -\/\texorpdfstring{$>$}{>} Cabeça da lista das antenas 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00364}{364}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_af8d3c506f21e8f02909dc64f438b9eff_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcoes_8c_ac3047c35234c5d91be31629239e8a94d}\index{funcoes.c@{funcoes.c}!LimpaMemoria@{LimpaMemoria}}
+\index{LimpaMemoria@{LimpaMemoria}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{LimpaMemoria()}{LimpaMemoria()}}
+{\footnotesize\ttfamily \label{funcoes_8c_ac3047c35234c5d91be31629239e8a94d} 
+\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*} Limpa\+Memoria (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{mapa}{}\end{DoxyParamCaption})}
+
+
+
+Função que Limpa a memória da lista de Antenas. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em efeito} & Cabeça da lista de efeito nefasto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Efeito\+Nefasto\texorpdfstring{$\ast$}{*} -\/\texorpdfstring{$>$}{>} Cabeça da lista de efeito nefasto depois da limpeza (NULL) 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00404}{404}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{funcoes_8c_ac3047c35234c5d91be31629239e8a94d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcoes_8c_aafb91a30a66792a37dfa04968a207468}\index{funcoes.c@{funcoes.c}!LimpaMemoriaEfeito@{LimpaMemoriaEfeito}}
+\index{LimpaMemoriaEfeito@{LimpaMemoriaEfeito}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{LimpaMemoriaEfeito()}{LimpaMemoriaEfeito()}}
+{\footnotesize\ttfamily \label{funcoes_8c_aafb91a30a66792a37dfa04968a207468} 
+\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*} Limpa\+Memoria\+Efeito (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}}]{efeito}{}\end{DoxyParamCaption})}
+
+
+
+Função que Limpa a memória da lista de efejto nefasto. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em efeito} & Cabeça da lista de efeito nefasto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Efeito\+Nefasto\texorpdfstring{$\ast$}{*} -\/\texorpdfstring{$>$}{>} Cabeça da lista de efeito nefasto depois da limpeza (NULL) 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00416}{416}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_aafb91a30a66792a37dfa04968a207468_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcoes_8c_a4914b094e27584ea7ff257408c302ee8}\index{funcoes.c@{funcoes.c}!MostraListaCasas@{MostraListaCasas}}
+\index{MostraListaCasas@{MostraListaCasas}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{MostraListaCasas()}{MostraListaCasas()}}
+{\footnotesize\ttfamily \label{funcoes_8c_a4914b094e27584ea7ff257408c302ee8} 
+void Mostra\+Lista\+Casas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{mapa}{, }\item[{\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}}]{cabeca}{}\end{DoxyParamCaption})}
+
+
+
+Função que printa de forma tabular as antenas e o efeito nefasto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mapa} & Cabeça da lista das antenas \\
+\hline
+{\em cabeca} & Cabeça da lista de efeito nefasto \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00293}{293}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+\Hypertarget{funcoes_8c_a71229908ffc3c2ec1671978310aba197}\index{funcoes.c@{funcoes.c}!MostraListaNovo@{MostraListaNovo}}
+\index{MostraListaNovo@{MostraListaNovo}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{MostraListaNovo()}{MostraListaNovo()}}
+{\footnotesize\ttfamily \label{funcoes_8c_a71229908ffc3c2ec1671978310aba197} 
+void Mostra\+Lista\+Novo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{mapa}{, }\item[{\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}}]{cabeca}{}\end{DoxyParamCaption})}
+
+
+
+Função que printa o mapa com antenas e efeito nefasto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mapa} & Cabeça da lista das antenas \\
+\hline
+{\em cabeca} & Cabeça da lista de efeito nefasto \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00265}{265}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{funcoes_8c_a71229908ffc3c2ec1671978310aba197_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcoes_8c_a4bda839cdef05932876ae4612622e531}\index{funcoes.c@{funcoes.c}!Posicao@{Posicao}}
+\index{Posicao@{Posicao}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{Posicao()}{Posicao()}}
+{\footnotesize\ttfamily \label{funcoes_8c_a4bda839cdef05932876ae4612622e531} 
+int Posicao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Devolve a posição da antena no mapa \mbox{[}1-\/n\texorpdfstring{$\ast$}{*}m\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Antena \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/\texorpdfstring{$>$}{>} Posição no mapa 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00392}{392}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_a4bda839cdef05932876ae4612622e531_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcoes_8c_ac23460e361b882e6156a1929ac4b5532}\index{funcoes.c@{funcoes.c}!PosicaoEfeitoNefasto@{PosicaoEfeitoNefasto}}
+\index{PosicaoEfeitoNefasto@{PosicaoEfeitoNefasto}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{PosicaoEfeitoNefasto()}{PosicaoEfeitoNefasto()}}
+{\footnotesize\ttfamily \label{funcoes_8c_ac23460e361b882e6156a1929ac4b5532} 
+int Posicao\+Efeito\+Nefasto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Devolve a posição do efeito nefasto no mapa \mbox{[}1-\/n\texorpdfstring{$\ast$}{*}m\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Efeito nefasto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/\texorpdfstring{$>$}{>} Posição no mapa 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00397}{397}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_ac23460e361b882e6156a1929ac4b5532_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcoes_8c_aeace5f1282a34495044ffe7ec32f923f}\index{funcoes.c@{funcoes.c}!RemoverCasa@{RemoverCasa}}
+\index{RemoverCasa@{RemoverCasa}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{RemoverCasa()}{RemoverCasa()}}
+{\footnotesize\ttfamily \label{funcoes_8c_aeace5f1282a34495044ffe7ec32f923f} 
+\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*} Remover\+Casa (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCasa}{Casa}} \texorpdfstring{$\ast$}{*}}]{mapa}{, }\item[{int}]{linha}{, }\item[{int}]{coluna}{, }\item[{\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{cabeca}{}\end{DoxyParamCaption})}
+
+
+
+Função que remove uma casa da lista de antenas. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em mapa} & Cabeçalho da lista de antenas \\
+\hline
+ & {\em linha} & Linha da antena a remover \\
+\hline
+ & {\em coluna} & Coluna da antena a remover \\
+\hline
+ & {\em cabeca} & Cabeça da lista de efeito nefasto \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Casa\texorpdfstring{$\ast$}{*} -\/\texorpdfstring{$>$}{>} Cabeçalho da lista de antenas depois da remoção 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00206}{206}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{funcoes_8c_aeace5f1282a34495044ffe7ec32f923f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_aeace5f1282a34495044ffe7ec32f923f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{funcoes_8c_a56c88f4c5181a3856ab46b20a80d3b3c}\index{funcoes.c@{funcoes.c}!RemoverNefasto@{RemoverNefasto}}
+\index{RemoverNefasto@{RemoverNefasto}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{RemoverNefasto()}{RemoverNefasto()}}
+{\footnotesize\ttfamily \label{funcoes_8c_a56c88f4c5181a3856ab46b20a80d3b3c} 
+\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*} Remover\+Nefasto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structEfeitoNefasto}{Efeito\+Nefasto}} \texorpdfstring{$\ast$}{*}}]{cabeca}{, }\item[{int}]{linha}{, }\item[{int}]{coluna}{}\end{DoxyParamCaption})}
+
+
+
+Função que remove efeito nefasto que foi causado por uma antena que estava na coluna linha,coluna. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em cabeca} & Cabeçalho da lista de efeito nefasto \\
+\hline
+ & {\em linha} & Linha da antena que vai remover \\
+\hline
+ & {\em coluna} & Coluna da antena que vai remover \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Efeito\+Nefasto\texorpdfstring{$\ast$}{*} -\/\texorpdfstring{$>$}{>} Cabeçalho da lista de efeito nefasto depois de remover 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00231}{231}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{funcoes_8c_a56c88f4c5181a3856ab46b20a80d3b3c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funcoes_8c_a56c88f4c5181a3856ab46b20a80d3b3c_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{funcoes_8c_a6150e0515f7202e2fb518f7206ed97dc}\index{funcoes.c@{funcoes.c}!x@{x}}
+\index{x@{x}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \label{funcoes_8c_a6150e0515f7202e2fb518f7206ed97dc} 
+int x =0}
+
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00017}{17}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+
+\Hypertarget{funcoes_8c_a0a2f84ed7838f07779ae24c5a9086d33}\index{funcoes.c@{funcoes.c}!y@{y}}
+\index{y@{y}!funcoes.c@{funcoes.c}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \label{funcoes_8c_a0a2f84ed7838f07779ae24c5a9086d33} 
+int y =1}
+
+
+
+Definition at line \mbox{\hyperlink{funcoes_8c_source_l00017}{17}} of file \mbox{\hyperlink{funcoes_8c_source}{funcoes.\+c}}.
+

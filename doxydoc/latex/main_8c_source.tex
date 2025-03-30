@@ -1,0 +1,29 @@
+\doxysection{main.\+c}
+\hypertarget{main_8c_source}{}\label{main_8c_source}\index{/home/disilva021/UNI/EDA/Projeto1/src/main.c@{/home/disilva021/UNI/EDA/Projeto1/src/main.c}}
+\mbox{\hyperlink{main_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00011}00011\ \textcolor{preprocessor}{\#include<stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00012}00012\ \textcolor{preprocessor}{\#include<stdio.h>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00013}00013\ \textcolor{preprocessor}{\#include"{}\mbox{\hyperlink{funcoes_8h}{funcoes.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00014}00014\ \textcolor{keywordtype}{int}\ main(\textcolor{keywordtype}{int}\ argc,\ \textcolor{keywordtype}{char}\ \textcolor{keyword}{const}\ *argv[])}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00015}00015\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{structCasa}{Casa}}*\ h=NULL;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ hE=NULL;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00018}00018\ \ \ \ \ \textcolor{keywordflow}{if}(argc==1)\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00019}00019\ \ \ \ \ \ \ \ \ h=\mbox{\hyperlink{funcoes_8c_a1c8b8099d4e4db9da99f6573596e35e4}{CriaMapaCasas}}(\textcolor{stringliteral}{"{}mapa.txt"{}},h,\&hE);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00020}00020\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00022}00022\ \ \ \ \ \ \ \ \ h=\mbox{\hyperlink{funcoes_8c_a1c8b8099d4e4db9da99f6573596e35e4}{CriaMapaCasas}}((\textcolor{keywordtype}{char}*)argv[1],h,\&hE);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00023}00023\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00024}00024\ \ \ \ \ \mbox{\hyperlink{funcoes_8c_a4914b094e27584ea7ff257408c302ee8}{MostraListaCasas}}(h,hE);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00025}00025\ \ \ \ \ \mbox{\hyperlink{funcoes_8c_a71229908ffc3c2ec1671978310aba197}{MostraListaNovo}}(h,hE);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00026}00026\ \ \ \ \ h=\mbox{\hyperlink{funcoes_8c_aeace5f1282a34495044ffe7ec32f923f}{RemoverCasa}}(h,10,10,\&hE);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{funcoes_8c_a4914b094e27584ea7ff257408c302ee8}{MostraListaCasas}}(h,hE);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00028}00028\ \ \ \ \ \mbox{\hyperlink{funcoes_8c_a71229908ffc3c2ec1671978310aba197}{MostraListaNovo}}(h,hE);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00029}00029\ \ \ \ \ hE=\mbox{\hyperlink{funcoes_8c_aafb91a30a66792a37dfa04968a207468}{LimpaMemoriaEfeito}}(hE);\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00030}00030\ \ \ \ \ h=\mbox{\hyperlink{funcoes_8c_ac3047c35234c5d91be31629239e8a94d}{LimpaMemoria}}(h);\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00032}00032\ \}}
+
+\end{DoxyCode}

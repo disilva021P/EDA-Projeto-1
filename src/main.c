@@ -15,22 +15,18 @@ int main(int argc, char const *argv[])
 {
     Casa* h=NULL;
     EfeitoNefasto* hE=NULL;
-    printf("ola\n");
     if(argc==1){
-        h=CriaMapaCasas("mapa.txt",h,hE);
+        h=CriaMapaCasas("mapa.txt",h,&hE);
     }
     else{
-        h=CriaMapaCasas((char*)argv[1],h,hE);
+        h=CriaMapaCasas((char*)argv[1],h,&hE);
     }
-    printf("ola1\n");
-    MostraListaNovo(h,hE);
-    printf("ola2\n");
-    hE= CriaListaEfeitoEfeitoNefasto(hE,h);
-    printf("ola3\n");
     MostraListaNovo(h,hE);
     MostraListaCasas(h,hE);
-    printf("ola4\n");
-    LimpaMemoria(h);    
-    LimpaMemoriaEfeito(hE);           
+    h=EscreverListaFicheiro(h);
+    h=LerListaFicheiro(h,&hE);
+    MostraListaNovo(h,hE);
+    hE=LimpaMemoriaEfeito(hE);           
+    h=LimpaMemoria(h);    
     return 0;
 }

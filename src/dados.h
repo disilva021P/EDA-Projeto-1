@@ -8,23 +8,40 @@
  * @copyright Copyright (c) 2025
  * 
  */
+#ifndef DADOS_H
+#define DADOS_H
+ /**
+  * @brief Struct que guarda as antenas
+  * 
+  */    
 typedef struct Casa
 {
-    char c;
-    int linha;
-    int coluna;
-    struct Casa *prox;
+    char c; //Frequência
+    int linha; //linha no mapa
+    int coluna; //coluna no mapa
+    struct Casa *prox; //proxima antena na lista
 }Casa;
+
+/**
+ * @brief Struct que ajuda a salvar as antenas
+ * 
+ */
 typedef struct CasaF
 {
-    char c;
-    int linha;
-    int coluna;
+    char c; //Frequência
+    int linha; //linha no mapa
+    int coluna; //coluna no mapa
 }CasaF;
+
+/**
+ * @brief Struct que guarda os efeitos nefastos
+ * 
+ */
 typedef struct EfeitoNefasto
 {
-    int linha;
-    int coluna;
+    int linha; //linha no mapa
+    int coluna; //coluna no mapa
     struct Casa *antenas[2];//Antenas que causam o efeito
-    struct EfeitoNefasto* prox;
+    struct EfeitoNefasto* prox; // //proximo efeito nefasto na lista
 }EfeitoNefasto;
+#endif DADOS_H

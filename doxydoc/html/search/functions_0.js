@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['adicionacasa_0',['AdicionaCasa',['../funcoes_8c.html#a547e745c0d5dd6e76884bbb1c2514ace',1,'AdicionaCasa(Casa *mapa, Casa *n, EfeitoNefasto **cabeca):&#160;funcoes.c'],['../funcoes_8h.html#a547e745c0d5dd6e76884bbb1c2514ace',1,'AdicionaCasa(Casa *mapa, Casa *n, EfeitoNefasto **cabeca):&#160;funcoes.c']]],
+  ['adicionacasaefeitonefasto_1',['AdicionaCasaEfeitoNefasto',['../funcoes_8c.html#a47965736c62f46020cb3183a275edf86',1,'AdicionaCasaEfeitoNefasto(EfeitoNefasto *cabeca, EfeitoNefasto *n):&#160;funcoes.c'],['../funcoes_8h.html#a47965736c62f46020cb3183a275edf86',1,'AdicionaCasaEfeitoNefasto(EfeitoNefasto *cabeca, EfeitoNefasto *n):&#160;funcoes.c']]],
+  ['adicionacasasemcausarnefasto_2',['AdicionaCasaSemCausarNefasto',['../funcoes_8c.html#acdf82a4f86eecfad326f7b543b7d4f25',1,'AdicionaCasaSemCausarNefasto(Casa *mapa, Casa *n, EfeitoNefasto *cabeca):&#160;funcoes.c'],['../funcoes_8h.html#acdf82a4f86eecfad326f7b543b7d4f25',1,'AdicionaCasaSemCausarNefasto(Casa *mapa, Casa *n, EfeitoNefasto *cabeca):&#160;funcoes.c']]],
+  ['adicionacasasemsobreposicao_3',['AdicionaCasaSemSobreposicao',['../funcoes_8c.html#a04e92ae67c065eb6773ee065aa5a2732',1,'AdicionaCasaSemSobreposicao(Casa *mapa, Casa *n, EfeitoNefasto *cabeca):&#160;funcoes.c'],['../funcoes_8h.html#a04e92ae67c065eb6773ee065aa5a2732',1,'AdicionaCasaSemSobreposicao(Casa *mapa, Casa *n, EfeitoNefasto *cabeca):&#160;funcoes.c']]]
+];

@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['casa_0',['Casa',['../structCasa.html',1,'Casa'],['../dados_8h.html#af4ccc2561d374f893768d3c71b9091eb',1,'Casa:&#160;dados.h']]],
+  ['casaf_1',['CasaF',['../structCasaF.html',1,'CasaF'],['../dados_8h.html#a2f27fdf8e9050d443126debc9f29366f',1,'CasaF:&#160;dados.h']]],
+  ['criaadiciona_2',['CriaAdiciona',['../funcoes_8c.html#ab271e06653f850456c8bb6d6c8be0555',1,'CriaAdiciona(Casa *mapa, char c, int linha, int coluna, EfeitoNefasto **cabeca):&#160;funcoes.c'],['../funcoes_8h.html#ab271e06653f850456c8bb6d6c8be0555',1,'CriaAdiciona(Casa *mapa, char c, int linha, int coluna, EfeitoNefasto **cabeca):&#160;funcoes.c']]],
+  ['criaadicionaefeito_3',['CriaAdicionaEfeito',['../funcoes_8c.html#add96e8555a1fa4ce7049a1f12c4aa03c',1,'CriaAdicionaEfeito(EfeitoNefasto *cabeca, int linha, int coluna, Casa *x1, Casa *x2):&#160;funcoes.c'],['../funcoes_8h.html#add96e8555a1fa4ce7049a1f12c4aa03c',1,'CriaAdicionaEfeito(EfeitoNefasto *cabeca, int linha, int coluna, Casa *x1, Casa *x2):&#160;funcoes.c']]],
+  ['criacasa_4',['CriaCasa',['../funcoes_8c.html#adaf457eee17c8a537cfa5d6f1c079d37',1,'CriaCasa(char c, int linha, int coluna):&#160;funcoes.c'],['../funcoes_8h.html#adaf457eee17c8a537cfa5d6f1c079d37',1,'CriaCasa(char c, int linha, int coluna):&#160;funcoes.c']]],
+  ['criaefeitonefasto_5',['CriaEfeitoNefasto',['../funcoes_8c.html#afc8624f491f409a238fac8478fe49201',1,'CriaEfeitoNefasto(int linha, int coluna, Casa *x1, Casa *x2):&#160;funcoes.c'],['../funcoes_8h.html#afc8624f491f409a238fac8478fe49201',1,'CriaEfeitoNefasto(int linha, int coluna, Casa *x1, Casa *x2):&#160;funcoes.c']]],
+  ['crialistaefeitoefeitonefasto_6',['CriaListaEfeitoEfeitoNefasto',['../funcoes_8c.html#aab1e64b8be3669c4102e89eb0b077f60',1,'CriaListaEfeitoEfeitoNefasto(EfeitoNefasto *cabeca, Casa *mapa):&#160;funcoes.c'],['../funcoes_8h.html#aab1e64b8be3669c4102e89eb0b077f60',1,'CriaListaEfeitoEfeitoNefasto(EfeitoNefasto *cabeca, Casa *mapa):&#160;funcoes.c']]],
+  ['criamapacasas_7',['CriaMapaCasas',['../funcoes_8c.html#a1c8b8099d4e4db9da99f6573596e35e4',1,'CriaMapaCasas(char *nome, Casa *mapa, EfeitoNefasto **hE):&#160;funcoes.c'],['../funcoes_8h.html#a1c8b8099d4e4db9da99f6573596e35e4',1,'CriaMapaCasas(char *nome, Casa *mapa, EfeitoNefasto **hE):&#160;funcoes.c']]],
+  ['criamapaficheiro_8',['criaMapaFicheiro',['../funcoes_8c.html#aa4605e798ac2fd2c97202449584eca0b',1,'criaMapaFicheiro(Casa *mapa):&#160;funcoes.c'],['../funcoes_8h.html#aa4605e798ac2fd2c97202449584eca0b',1,'criaMapaFicheiro(Casa *mapa):&#160;funcoes.c']]]
+];

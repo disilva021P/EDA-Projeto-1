@@ -1,0 +1,424 @@
+\doxysection{funcoes.\+c}
+\hypertarget{funcoes_8c_source}{}\label{funcoes_8c_source}\index{/home/disilva021/UNI/EDA/Projeto1/src/funcoes.c@{/home/disilva021/UNI/EDA/Projeto1/src/funcoes.c}}
+\mbox{\hyperlink{funcoes_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00012}00012\ \textcolor{preprocessor}{\#define\ vazio\ '.'}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00013}00013\ \textcolor{preprocessor}{\#include"{}\mbox{\hyperlink{funcoes_8h}{funcoes.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00014}00014\ \textcolor{preprocessor}{\#include<stdio.h>}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00015}00015\ \textcolor{preprocessor}{\#include<stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00017}00017\ \textcolor{keywordtype}{int}\ x=0,y=1;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00019}00019\ \textcolor{preprocessor}{\#pragma\ region\ Criacao}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00020}\mbox{\hyperlink{funcoes_8c_adaf457eee17c8a537cfa5d6f1c079d37}{00020}}\ \mbox{\hyperlink{structCasa}{Casa}}\ *\mbox{\hyperlink{funcoes_8c_adaf457eee17c8a537cfa5d6f1c079d37}{CriaCasa}}(\textcolor{keywordtype}{char}\ c,\textcolor{keywordtype}{int}\ linha,\textcolor{keywordtype}{int}\ coluna)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{if}(coluna<1\ ||\ coluna>x\ ||\ linha<1\ ||\ linha>y)\textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{if}(c==\textcolor{charliteral}{'.'}||\ c==\textcolor{charliteral}{'\#'})\textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{structCasa}{Casa}}*\ aux\ =\ (\mbox{\hyperlink{structCasa}{Casa}}*)malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structCasa}{Casa}}));}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{if}(aux!=NULL)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00025}00025\ \ \ \ \ \ \ \ \ aux-\/>c=c;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00026}00026\ \ \ \ \ \ \ \ \ aux-\/>linha=linha;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00027}00027\ \ \ \ \ \ \ \ \ aux-\/>coluna=coluna;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00028}00028\ \ \ \ \ \ \ \ \ aux-\/>prox=NULL;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{return}\ aux;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00032}\mbox{\hyperlink{funcoes_8c_afc8624f491f409a238fac8478fe49201}{00032}}\ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}\ *\mbox{\hyperlink{funcoes_8c_afc8624f491f409a238fac8478fe49201}{CriaEfeitoNefasto}}(\textcolor{keywordtype}{int}\ linha,\textcolor{keywordtype}{int}\ coluna,\mbox{\hyperlink{structCasa}{Casa}}*\ x1,\ \mbox{\hyperlink{structCasa}{Casa}}*\ x2)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{if}(coluna<1\ ||\ coluna>x\ ||\ linha<1\ ||\ linha>y)\textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{if}(!x1\ ||\ !x2)\textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ aux\ =\ (\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*)malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}));}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00036}00036\ \ \ \ \ \textcolor{keywordflow}{if}(aux!=NULL)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00037}00037\ \ \ \ \ \ \ \ \ aux-\/>linha=\ linha;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00038}00038\ \ \ \ \ \ \ \ \ aux-\/>coluna=\ coluna;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00039}00039\ \ \ \ \ \ \ \ \ aux-\/>antenas[0]=\ x1;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00040}00040\ \ \ \ \ \ \ \ \ aux-\/>antenas[1]=\ x2;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00041}00041\ \ \ \ \ \ \ \ \ aux-\/>prox=NULL;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{return}\ aux;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00044}00044\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00045}00045\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00048}\mbox{\hyperlink{funcoes_8c_a3eac0f7ac01dfccf0368f829bbf4a0c9}{00048}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{funcoes_8c_a3eac0f7ac01dfccf0368f829bbf4a0c9}{ExisteEfeitoEfeitoNefasto}}(\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}\ *cabeca,\ \textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00049}00049\ \ \ \ \ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ atual=\ cabeca;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00050}00050\ \ \ \ \ \textcolor{keywordflow}{while}(atual)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(atual-\/>linha==linha\ \&\&\ atual-\/>coluna\ ==\ coluna)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//verifica\ se\ existe\ efeito\ nefasto\ na\ linha\ e\ coluna\ indicada}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ atual=atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00058}00058\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00059}\mbox{\hyperlink{funcoes_8c_aab1e64b8be3669c4102e89eb0b077f60}{00059}}\ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ \mbox{\hyperlink{funcoes_8c_aab1e64b8be3669c4102e89eb0b077f60}{CriaListaEfeitoEfeitoNefasto}}(\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ cabeca,\ \mbox{\hyperlink{structCasa}{Casa}}\ *mapa)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00060}00060\ \ \ \ \ cabeca=\mbox{\hyperlink{funcoes_8c_aafb91a30a66792a37dfa04968a207468}{LimpaMemoriaEfeito}}(cabeca);\ \textcolor{comment}{//dá\ reset\ ao\ efeito\ nefasto}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00061}00061\ \ \ \ \ \mbox{\hyperlink{structCasa}{Casa}}*\ atual=\ mapa,*prox\ =\ atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00062}00062\ \ \ \ \ \textcolor{keywordtype}{int}\ difC,\ difL;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{while}(atual)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ prox=atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (prox)}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(prox-\/>c==atual-\/>c)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ difL=prox-\/>linha-\/atual-\/>linha;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ difC=abs(atual-\/>coluna-\/prox-\/>coluna);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(atual-\/>coluna<prox-\/>coluna)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(prox-\/>coluna+difC<=x\ \&\&\ prox-\/>linha+difL<=y)\{\textcolor{comment}{//efeito\ nefasto\ para\ frente}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cabeca=\mbox{\hyperlink{funcoes_8c_add96e8555a1fa4ce7049a1f12c4aa03c}{CriaAdicionaEfeito}}(cabeca,prox-\/>linha+difL,prox-\/>coluna+difC,atual,prox);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(atual-\/>coluna-\/difC>0\ \&\&\ atual-\/>linha-\/difL>0)\{\textcolor{comment}{//efeito\ nefasto\ para\ trás}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cabeca=\mbox{\hyperlink{funcoes_8c_add96e8555a1fa4ce7049a1f12c4aa03c}{CriaAdicionaEfeito}}(cabeca,atual-\/>linha-\/difL,atual-\/>coluna-\/difC,atual,prox);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(prox-\/>coluna-\/difC>0\ \&\&\ prox-\/>linha+difL<=y)\{\textcolor{comment}{//efeito\ nefasto\ para\ frente}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cabeca=\mbox{\hyperlink{funcoes_8c_add96e8555a1fa4ce7049a1f12c4aa03c}{CriaAdicionaEfeito}}(cabeca,prox-\/>linha+difL,prox-\/>coluna-\/difC,atual,prox);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(atual-\/>coluna+difC<=x\ \&\&\ atual-\/>linha-\/difL>0)\{\textcolor{comment}{//efeito\ nefasto\ para\ trás}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cabeca=\mbox{\hyperlink{funcoes_8c_add96e8555a1fa4ce7049a1f12c4aa03c}{CriaAdicionaEfeito}}(cabeca,atual-\/>linha-\/difL,atual-\/>coluna+difC,atual,prox);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ prox=prox-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00088}00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00089}00089\ \ \ \ \ \ \ \ \ atual=atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00090}00090\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00091}00091\ \ \ \ \ \textcolor{keywordflow}{return}\ cabeca;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00092}00092\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00093}00093\ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ AntenaCausaNefasto(\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}\ *cabeca,\ \mbox{\hyperlink{structCasa}{Casa}}*\ c)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00094}00094\ \ \ \ \ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ atual=\ cabeca;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00095}00095\ \ \ \ \ \textcolor{keywordflow}{while}(atual)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((atual-\/>antenas[0]-\/>linha==c-\/>linha\ \&\&\ atual-\/>antenas[0]-\/>coluna==c-\/>coluna)\ ||\ (atual-\/>antenas[1]-\/>linha==c-\/>linha\ \&\&\ atual-\/>antenas[1]-\/>coluna==c-\/>coluna))\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//verifica\ se\ antena\ está\ guardada\ nas\ antenas\ dos\ efeitos\ nefastos}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ atual;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00099}00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00100}00100\ \ \ \ \ \ \ \ \ atual=atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00101}00101\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00102}00102\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00103}00103\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00104}\mbox{\hyperlink{funcoes_8c_a04e92ae67c065eb6773ee065aa5a2732}{00104}}\ \mbox{\hyperlink{structCasa}{Casa}}*\ \mbox{\hyperlink{funcoes_8c_a04e92ae67c065eb6773ee065aa5a2732}{AdicionaCasaSemSobreposicao}}(\mbox{\hyperlink{structCasa}{Casa}}\ *mapa,\mbox{\hyperlink{structCasa}{Casa}}*\ n,\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ cabeca)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00105}00105\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00106}00106\ \ \ \ \ \textcolor{keywordflow}{if}(!n)\ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00107}00107\ \ \ \ \ \textcolor{keywordflow}{if}(!mapa)\{\textcolor{comment}{//cria\ mapa}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00108}00108\ \ \ \ \ \ \ \ \ mapa=n;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00110}00110\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00111}00111\ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{funcoes_8c_a3eac0f7ac01dfccf0368f829bbf4a0c9}{ExisteEfeitoEfeitoNefasto}}(cabeca,n-\/>linha,n-\/>coluna))\{\textcolor{comment}{//nao\ deixa\ adicionar\ caso\ exista\ efeito\ nefasto}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00112}00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00113}00113\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00114}00114\ \ \ \ \ mapa=\mbox{\hyperlink{funcoes_8c_a547e745c0d5dd6e76884bbb1c2514ace}{AdicionaCasa}}(mapa,n,\ \&cabeca);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00115}00115\ \ \ \ \ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00116}00116\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00117}\mbox{\hyperlink{funcoes_8c_a547e745c0d5dd6e76884bbb1c2514ace}{00117}}\ \mbox{\hyperlink{structCasa}{Casa}}*\ \mbox{\hyperlink{funcoes_8c_a547e745c0d5dd6e76884bbb1c2514ace}{AdicionaCasa}}(\mbox{\hyperlink{structCasa}{Casa}}\ *mapa,\mbox{\hyperlink{structCasa}{Casa}}*\ n,\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}**\ cabeca)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00118}00118\ \ \ \ \ \textcolor{keywordflow}{if}(!n)\ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00119}00119\ \ \ \ \ \textcolor{keywordflow}{if}(!mapa)\{\textcolor{comment}{//cria\ mapa}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00120}00120\ \ \ \ \ \ \ \ \ mapa=n;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00121}00121\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00122}00122\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00123}00123\ \ \ \ \ \mbox{\hyperlink{structCasa}{Casa}}\ *atual=mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00124}00124\ \ \ \ \ \textcolor{keywordflow}{while}\ (atual)}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00125}00125\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00126}00126\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{funcoes_8c_a4bda839cdef05932876ae4612622e531}{Posicao}}(n)==\mbox{\hyperlink{funcoes_8c_a4bda839cdef05932876ae4612622e531}{Posicao}}(atual))\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Erro,\ já\ existe\ antena\ na\ posição\ (\%d,\%d)\(\backslash\)n"{}},n-\/>linha,n-\/>coluna);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00129}00129\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00130}00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{funcoes_8c_a4bda839cdef05932876ae4612622e531}{Posicao}}(n)<\mbox{\hyperlink{funcoes_8c_a4bda839cdef05932876ae4612622e531}{Posicao}}(atual))\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//adicionar\ inicio}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ n-\/>prox=atual;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ mapa=n;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ *cabeca=\mbox{\hyperlink{funcoes_8c_aab1e64b8be3669c4102e89eb0b077f60}{CriaListaEfeitoEfeitoNefasto}}(*cabeca,mapa);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00136}00136\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(atual-\/>prox\ \&\&\ \mbox{\hyperlink{funcoes_8c_a4bda839cdef05932876ae4612622e531}{Posicao}}(n)<\mbox{\hyperlink{funcoes_8c_a4bda839cdef05932876ae4612622e531}{Posicao}}(atual-\/>prox))\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//adicionar\ ao\ meio}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ n-\/>prox=atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ atual-\/>prox=n;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ *cabeca=\mbox{\hyperlink{funcoes_8c_aab1e64b8be3669c4102e89eb0b077f60}{CriaListaEfeitoEfeitoNefasto}}(*cabeca,mapa);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00142}00142\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00143}00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(atual-\/>prox==NULL)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//adicionar\ ao\ fim}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ atual-\/>prox=n;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ *cabeca=\mbox{\hyperlink{funcoes_8c_aab1e64b8be3669c4102e89eb0b077f60}{CriaListaEfeitoEfeitoNefasto}}(*cabeca,mapa);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00148}00148\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00149}00149\ \ \ \ \ \ \ \ \ atual=atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00150}00150\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00151}00151\ \ \ \ \ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00152}00152\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00153}\mbox{\hyperlink{funcoes_8c_acdf82a4f86eecfad326f7b543b7d4f25}{00153}}\ \mbox{\hyperlink{structCasa}{Casa}}*\ \mbox{\hyperlink{funcoes_8c_acdf82a4f86eecfad326f7b543b7d4f25}{AdicionaCasaSemCausarNefasto}}(\mbox{\hyperlink{structCasa}{Casa}}\ *mapa,\mbox{\hyperlink{structCasa}{Casa}}*\ n,\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ cabeca)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00154}00154\ \ \ \ \ mapa=\mbox{\hyperlink{funcoes_8c_ab271e06653f850456c8bb6d6c8be0555}{CriaAdiciona}}(mapa,n-\/>c,n-\/>linha,n-\/>coluna,\&cabeca);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00155}00155\ \ \ \ \ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ e\ =\ AntenaCausaNefasto(cabeca,n);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00156}00156\ \ \ \ \ \textcolor{keywordflow}{if}(e)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00157}00157\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Erro,\ esta\ antena\ causa\ ruido\ em\ (\%d,\%d)"{}},e-\/>linha,e-\/>coluna);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00158}00158\ \ \ \ \ \ \ \ \ mapa=\mbox{\hyperlink{funcoes_8c_aeace5f1282a34495044ffe7ec32f923f}{RemoverCasa}}(mapa,n-\/>linha,n-\/>coluna,\&cabeca);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00159}00159\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00160}00160\ \ \ \ \ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00161}00161\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00162}\mbox{\hyperlink{funcoes_8c_a47965736c62f46020cb3183a275edf86}{00162}}\ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ \mbox{\hyperlink{funcoes_8c_a47965736c62f46020cb3183a275edf86}{AdicionaCasaEfeitoNefasto}}(\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ cabeca,\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ n)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00163}00163\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00164}00164\ \ \ \ \ \textcolor{keywordflow}{if}(!n)\ \textcolor{keywordflow}{return}\ cabeca;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00165}00165\ \ \ \ \ \textcolor{keywordflow}{if}(!cabeca)\{\textcolor{comment}{//cria\ mapa}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00166}00166\ \ \ \ \ \ \ \ \ cabeca=n;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00167}00167\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cabeca;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00168}00168\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00169}00169\ \ \ \ \ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}\ *atual=cabeca;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00170}00170\ \ \ \ \ \textcolor{keywordflow}{while}\ (atual)}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00171}00171\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00172}00172\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{funcoes_8c_ac23460e361b882e6156a1929ac4b5532}{PosicaoEfeitoNefasto}}(n)==\mbox{\hyperlink{funcoes_8c_ac23460e361b882e6156a1929ac4b5532}{PosicaoEfeitoNefasto}}(atual))\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ n-\/>prox\ =atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ atual-\/>prox\ =\ n;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cabeca;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00177}00177\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00178}00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{funcoes_8c_ac23460e361b882e6156a1929ac4b5532}{PosicaoEfeitoNefasto}}(n)<\mbox{\hyperlink{funcoes_8c_ac23460e361b882e6156a1929ac4b5532}{PosicaoEfeitoNefasto}}(atual))\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//adicionar\ inicio}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ n-\/>prox=atual;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ cabeca=n;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cabeca;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00183}00183\ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(atual-\/>prox\ \&\&\ \mbox{\hyperlink{funcoes_8c_ac23460e361b882e6156a1929ac4b5532}{PosicaoEfeitoNefasto}}(n)<\mbox{\hyperlink{funcoes_8c_ac23460e361b882e6156a1929ac4b5532}{PosicaoEfeitoNefasto}}(atual-\/>prox))\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//adicionar\ ao\ meio}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ n-\/>prox=atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ atual-\/>prox=n;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cabeca;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00188}00188\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00189}00189\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(atual-\/>prox==NULL)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//adicionar\ ao\ fim}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ atual-\/>prox=n;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cabeca;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00193}00193\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00194}00194\ \ \ \ \ \ \ \ \ atual=atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00195}00195\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00196}00196\ \ \ \ \ \textcolor{keywordflow}{return}\ cabeca;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00197}00197\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00198}00198\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00199}\mbox{\hyperlink{funcoes_8c_ab271e06653f850456c8bb6d6c8be0555}{00199}}\ \mbox{\hyperlink{structCasa}{Casa}}\ *\mbox{\hyperlink{funcoes_8c_ab271e06653f850456c8bb6d6c8be0555}{CriaAdiciona}}(\mbox{\hyperlink{structCasa}{Casa}}\ *mapa,\textcolor{keywordtype}{char}\ c,\ \textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna,\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}**\ cabeca)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00200}00200\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{funcoes_8c_a547e745c0d5dd6e76884bbb1c2514ace}{AdicionaCasa}}(mapa,\mbox{\hyperlink{funcoes_8c_adaf457eee17c8a537cfa5d6f1c079d37}{CriaCasa}}(c,linha,coluna),cabeca);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00201}00201\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00202}\mbox{\hyperlink{funcoes_8c_add96e8555a1fa4ce7049a1f12c4aa03c}{00202}}\ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}\ *\mbox{\hyperlink{funcoes_8c_add96e8555a1fa4ce7049a1f12c4aa03c}{CriaAdicionaEfeito}}(\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}\ *cabeca,\ \textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna,\ \mbox{\hyperlink{structCasa}{Casa}}*\ x1,\mbox{\hyperlink{structCasa}{Casa}}*\ x2)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00203}00203\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{funcoes_8c_a47965736c62f46020cb3183a275edf86}{AdicionaCasaEfeitoNefasto}}(cabeca,\mbox{\hyperlink{funcoes_8c_afc8624f491f409a238fac8478fe49201}{CriaEfeitoNefasto}}(linha,coluna,x1,x2));}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00204}00204\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00205}00205\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00206}\mbox{\hyperlink{funcoes_8c_aeace5f1282a34495044ffe7ec32f923f}{00206}}\ \mbox{\hyperlink{structCasa}{Casa}}\ *\mbox{\hyperlink{funcoes_8c_aeace5f1282a34495044ffe7ec32f923f}{RemoverCasa}}(\mbox{\hyperlink{structCasa}{Casa}}\ *mapa,\ \textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna,\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}**\ \ cabeca)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00207}00207\ \ \ \ \ \textcolor{keywordflow}{if}(coluna<1\ ||\ coluna>x\ ||\ linha<1\ ||\ linha>y)\textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00208}00208\ \ \ \ \ \mbox{\hyperlink{structCasa}{Casa}}\ *atual=mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00209}00209\ \ \ \ \ \textcolor{keywordflow}{if}(atual\ \&\&\ atual-\/>coluna==coluna\ \&\&\ atual-\/>linha==linha)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00210}00210\ \ \ \ \ \ \ \ \ *cabeca\ =\ \mbox{\hyperlink{funcoes_8c_a56c88f4c5181a3856ab46b20a80d3b3c}{RemoverNefasto}}(*cabeca,\ linha,\ coluna);\ \ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00211}00211\ \ \ \ \ \ \ \ \ mapa\ =\ atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00212}00212\ \ \ \ \ \ \ \ \ free(atual);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00213}00213\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00214}00214\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00215}00215\ \ \ \ \ \textcolor{keywordflow}{while}\ (atual)}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00216}00216\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00217}00217\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(atual-\/>prox\ \&\&\ atual-\/>prox-\/>coluna==coluna\ \&\&\ atual-\/>prox-\/>linha==linha)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ *cabeca\ =\ \mbox{\hyperlink{funcoes_8c_a56c88f4c5181a3856ab46b20a80d3b3c}{RemoverNefasto}}(*cabeca,\ linha,\ coluna);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structCasa}{Casa}}\ *temp\ =\ atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ atual-\/>prox\ =\ temp-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ free(temp);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00223}00223\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00224}00224\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00225}00225\ \ \ \ \ \ \ \ \ atual=atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00226}00226\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00227}00227\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Antena\ não\ localizada\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00228}00228\ \ \ \ \ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00229}00229\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00230}00230\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00231}\mbox{\hyperlink{funcoes_8c_a56c88f4c5181a3856ab46b20a80d3b3c}{00231}}\ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}\ *\mbox{\hyperlink{funcoes_8c_a56c88f4c5181a3856ab46b20a80d3b3c}{RemoverNefasto}}(\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ cabeca,\ \textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00232}00232\ \ \ \ \ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}\ *atual=cabeca;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00233}00233\ \ \ \ \ \textcolor{keywordflow}{if}((atual)\ \&\&\ (((atual-\/>antenas[0]-\/>coluna==coluna)\ \&\&\ (atual-\/>antenas[0]-\/>linha==linha))\ ||}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00234}00234\ \ \ \ \ \ ((atual-\/>antenas[1]-\/>coluna==coluna)\ \&\&\ (atual-\/>antenas[1]-\/>linha==linha))))\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00235}00235\ \ \ \ \ \ \ \ \ \textcolor{comment}{//verifica\ se\ as\ antenas\ que\ o\ causaram\ estão\ na\ linha\ e\ coluna\ da\ casa\ que\ se\ vai\ remover}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00236}00236\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}\ *temp\ =\ atual;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00237}00237\ \ \ \ \ \ \ \ \ atual\ =\ atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00238}00238\ \ \ \ \ \ \ \ \ free(temp);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00239}00239\ \ \ \ \ \ \ \ \ cabeca\ =\ atual;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00240}00240\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00241}00241\ \ \ \ \ \textcolor{keywordflow}{while}\ (atual)}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00242}00242\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00243}00243\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((atual-\/>prox)\ \&\&\ (((atual-\/>prox-\/>antenas[0]-\/>coluna==coluna)\ \&\&\ (atual-\/>prox-\/>antenas[0]-\/>linha==linha))\ ||\ ((atual-\/>prox-\/>antenas[1]-\/>linha==linha)\ \&\&\ (atual-\/>prox-\/>antenas[1]-\/>coluna==coluna))))\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00244}00244\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//verifica\ se\ existe\ proximo\ e\ se\ existir\ verificar\ se\ as\ antenas\ que\ o\ causaram\ estão\ na\ linha\ e\ coluna\ da\ casa\ que\ se\ vai\ remover}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00245}00245\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}\ *temp\ =\ atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00246}00246\ \ \ \ \ \ \ \ \ \ \ \ \ atual-\/>prox\ =\ temp-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00247}00247\ \ \ \ \ \ \ \ \ \ \ \ \ free(temp);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00248}00248\ \ \ \ \ \ \ \ \ \ \ \ \ cabeca=\mbox{\hyperlink{funcoes_8c_a56c88f4c5181a3856ab46b20a80d3b3c}{RemoverNefasto}}(cabeca,linha,coluna);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00249}00249\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}((!atual-\/>prox)\ \&\&\ (((atual-\/>antenas[0]-\/>coluna==coluna)\ \&\&\ (atual-\/>antenas[0]-\/>linha==linha))\ ||}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00250}00250\ \ \ \ \ \ \ \ \ ((atual-\/>antenas[1]-\/>coluna==coluna)\ \&\&\ (atual-\/>antenas[1]-\/>linha==linha))))\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//é\ o\ ultima}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00252}00252\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(cabeca==atual)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00253}00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cabeca=NULL;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00254}00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ cabeca;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00255}00255\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ free(atual);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00257}00257\ \ \ \ \ \ \ \ \ \ \ \ \ cabeca=\ \mbox{\hyperlink{funcoes_8c_a56c88f4c5181a3856ab46b20a80d3b3c}{RemoverNefasto}}(cabeca,linha,coluna);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00258}00258\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00259}00259\ \ \ \ \ \ \ \ \ atual=atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00260}00260\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00261}00261\ \ \ \ \ \textcolor{keywordflow}{return}\ cabeca;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00262}00262\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00263}00263\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00264}00264\ \textcolor{preprocessor}{\#pragma\ region\ Prints}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00265}\mbox{\hyperlink{funcoes_8c_a71229908ffc3c2ec1671978310aba197}{00265}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{funcoes_8c_a71229908ffc3c2ec1671978310aba197}{MostraListaNovo}}(\mbox{\hyperlink{structCasa}{Casa}}\ *mapa,\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ cabeca)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00266}00266\ \ \ \ \ \mbox{\hyperlink{structCasa}{Casa}}*\ atual=mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00267}00267\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=1;i<=y;i++)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00268}00268\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 1;\ j\ <=\ x;\ j++)}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00269}00269\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00270}00270\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(atual\ \&\&\ atual-\/>linha==i\ \&\&\ atual-\/>coluna==j)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00271}00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{funcoes_8c_a3eac0f7ac01dfccf0368f829bbf4a0c9}{ExisteEfeitoEfeitoNefasto}}(cabeca,i,j))\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00272}00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)033[0;33m\%c\(\backslash\)033[0m"{}},atual-\/>c);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%c"{}},atual-\/>c);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00275}00275\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00276}00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ atual=atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00277}00277\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00278}00278\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{funcoes_8c_a3eac0f7ac01dfccf0368f829bbf4a0c9}{ExisteEfeitoEfeitoNefasto}}(cabeca,i,j))\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00279}00279\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\#"{}});}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00280}00280\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00281}00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%c"{}},vazio);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00283}00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00284}00284\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00285}00285\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(j==x)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00286}00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00289}00289\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00290}00290\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00291}00291\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00292}00292\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00293}\mbox{\hyperlink{funcoes_8c_a4914b094e27584ea7ff257408c302ee8}{00293}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{funcoes_8c_a4914b094e27584ea7ff257408c302ee8}{MostraListaCasas}}(\mbox{\hyperlink{structCasa}{Casa}}\ *mapa,\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ cabeca)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00294}00294\ \ \ \ \ \mbox{\hyperlink{structCasa}{Casa}}*\ atual=mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00295}00295\ \ \ \ \ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ \ efeito=cabeca;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00296}00296\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Frequência\ |\ Linha\ |\ Coluna\ |\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00297}00297\ \ \ \ \ \textcolor{keywordflow}{while}\ (atual)}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00298}00298\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00299}00299\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \ \ \ \ \%c\ \ \ \ \ |\ \ \%d\ \ \ |\ \ \ \%d\ \ \ |\(\backslash\)n"{}},atual-\/>c,atual-\/>linha,atual-\/>coluna);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00300}00300\ \ \ \ \ \ \ \ \ atual=atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00301}00301\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00302}00302\ \ \ \ \ \textcolor{keywordflow}{while}\ (efeito)}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00303}00303\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00304}00304\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\ \ \ \ \ \%c\ \ \ \ \ |\ \ \%d\ \ \ |\ \ \ \%d\ \ \ |\ Casa\ 1:\%c(\%d,\%d)|\ Casa\ 2:\%c(\%d,\%d)\ \(\backslash\)n"{}},\textcolor{charliteral}{'\#'},efeito-\/>linha,efeito-\/>coluna,efeito-\/>antenas[0]-\/>c,efeito-\/>antenas[0]-\/>linha,efeito-\/>antenas[0]-\/>coluna,efeito-\/>antenas[1]-\/>c,efeito-\/>antenas[1]-\/>linha,efeito-\/>antenas[1]-\/>coluna);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00305}00305\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00306}00306\ \ \ \ \ \ \ \ \ efeito=efeito-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00307}00307\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00308}00308\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00309}00309\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00310}00310\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00311}00311\ \textcolor{preprocessor}{\#pragma\ region\ LerEscreverFicheiros}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00312}00312\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00313}\mbox{\hyperlink{funcoes_8c_a1c8b8099d4e4db9da99f6573596e35e4}{00313}}\ \mbox{\hyperlink{structCasa}{Casa}}*\ \mbox{\hyperlink{funcoes_8c_a1c8b8099d4e4db9da99f6573596e35e4}{CriaMapaCasas}}(\textcolor{keywordtype}{char}*\ nome,\mbox{\hyperlink{structCasa}{Casa}}\ *mapa,\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}**\ hE)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00314}00314\ \ \ \ \ FILE*\ ficheiro\ =\ fopen(nome,\ \textcolor{stringliteral}{"{}r"{}});}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00315}00315\ \ \ \ \ \textcolor{keywordflow}{if}\ (ficheiro\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00316}00316\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Erro\ ao\ abrir\ o\ arquivo\ \%s\(\backslash\)n"{}},\ nome);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00317}00317\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00318}00318\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00319}00319\ \ \ \ \ \textcolor{keywordflow}{if}(mapa!=NULL)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00320}00320\ \ \ \ \ \ \ \ \ mapa=\mbox{\hyperlink{funcoes_8c_ac3047c35234c5d91be31629239e8a94d}{LimpaMemoria}}(mapa);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00321}00321\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00322}00322\ \ \ \ \ \textcolor{keywordtype}{int}\ c=0;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00323}00323\ \ \ \ \ \textcolor{keywordflow}{while}\ ((c\ =\ fgetc(ficheiro))\ !=\ EOF)\ \{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00324}00324\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (c\ ==\ \textcolor{charliteral}{'\(\backslash\)n'})\ \{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00325}00325\ \ \ \ \ \ \ \ \ \ \ \ \ y++;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00326}00326\ \ \ \ \ \ \ \ \ \ \ \ \ x=0;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00327}00327\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00328}00328\ \ \ \ \ \ \ \ \ \ \ \ \ x++;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00329}00329\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(c!=vazio)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00330}00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mapa=\mbox{\hyperlink{funcoes_8c_ab271e06653f850456c8bb6d6c8be0555}{CriaAdiciona}}(mapa,c,y,x,hE);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00331}00331\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00332}00332\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00333}00333\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00334}00334\ \ \ \ \ fclose(ficheiro);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00335}00335\ \ \ \ \ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00336}00336\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00337}\mbox{\hyperlink{funcoes_8c_aa4605e798ac2fd2c97202449584eca0b}{00337}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{funcoes_8c_aa4605e798ac2fd2c97202449584eca0b}{criaMapaFicheiro}}(\mbox{\hyperlink{structCasa}{Casa}}\ *mapa)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00338}00338\ \ \ \ \ FILE*\ ficheiro;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00339}00339\ \ \ \ \ \mbox{\hyperlink{structCasa}{Casa}}*\ atual=mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00340}00340\ \ \ \ \ ficheiro\ =\ fopen(\textcolor{stringliteral}{"{}mapa.txt"{}},\ \textcolor{stringliteral}{"{}w"{}});}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00341}00341\ \ \ \ \ \textcolor{keywordflow}{if}\ (ficheiro\ ==\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00342}00342\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Erro\ ao\ abrir\ o\ ficheiro.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00343}00343\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00344}00344\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00345}00345\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=1;i<=y;i++)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00346}00346\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 1;\ j\ <=\ x;\ j++)}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00347}00347\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00348}00348\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(atual\ \&\&\ atual-\/>linha==i\ \&\&\ atual-\/>coluna==j)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00349}00349\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(ficheiro,\textcolor{stringliteral}{"{}\%c"{}},atual-\/>c);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00350}00350\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ atual=atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00351}00351\ \ \ \ \ \ \ \ \ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00352}00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(ficheiro,\ \textcolor{stringliteral}{"{}\%c"{}},vazio);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00353}00353\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00354}00354\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(j==x\ \&\&\ i!=y)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00355}00355\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fprintf(ficheiro,\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00356}00356\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00357}00357\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00358}00358\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00359}00359\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00360}00360\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00361}00361\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00362}00362\ \ \ \ \ fclose(ficheiro);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00363}00363\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00364}\mbox{\hyperlink{funcoes_8c_af8d3c506f21e8f02909dc64f438b9eff}{00364}}\ \mbox{\hyperlink{structCasa}{Casa}}*\ \mbox{\hyperlink{funcoes_8c_af8d3c506f21e8f02909dc64f438b9eff}{LerListaFicheiro}}(\mbox{\hyperlink{structCasa}{Casa}}\ *mapa,\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ cabeca)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00365}00365\ \ \ \ \ mapa=\mbox{\hyperlink{funcoes_8c_ac3047c35234c5d91be31629239e8a94d}{LimpaMemoria}}(mapa);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00366}00366\ \ \ \ \ FILE*\ ficheiro=\ fopen(\textcolor{stringliteral}{"{}ListaCasas.bin"{}},\textcolor{stringliteral}{"{}rb"{}});}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00367}00367\ \ \ \ \ \mbox{\hyperlink{structCasaF}{CasaF}}\ aux;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00368}00368\ \ \ \ \ \textcolor{keywordflow}{while}\ (fread(\&aux,\textcolor{keyword}{sizeof}(aux),1,ficheiro)==1)}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00369}00369\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00370}00370\ \ \ \ \ \ \ \ \ mapa=\ \mbox{\hyperlink{funcoes_8c_ab271e06653f850456c8bb6d6c8be0555}{CriaAdiciona}}(mapa,aux.c,aux.linha,aux.coluna,\&cabeca);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00371}00371\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00372}00372\ \ \ \ \ fclose(ficheiro);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00373}00373\ \ \ \ \ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00374}00374\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00375}\mbox{\hyperlink{funcoes_8c_a89b623810060cd11fd075aa3605593d2}{00375}}\ \mbox{\hyperlink{structCasa}{Casa}}*\ \mbox{\hyperlink{funcoes_8c_a89b623810060cd11fd075aa3605593d2}{EscreverListaFicheiro}}(\mbox{\hyperlink{structCasa}{Casa}}\ *mapa)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00376}00376\ \ \ \ \ FILE*\ ficheiro=\ fopen(\textcolor{stringliteral}{"{}ListaCasas.bin"{}},\textcolor{stringliteral}{"{}wb"{}});}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00377}00377\ \ \ \ \ \mbox{\hyperlink{structCasa}{Casa}}*\ atual=\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00378}00378\ \ \ \ \ \mbox{\hyperlink{structCasaF}{CasaF}}\ aux;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00379}00379\ \ \ \ \ \textcolor{keywordflow}{while}\ (atual)}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00380}00380\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00381}00381\ \ \ \ \ \ \ \ \ aux.c=atual-\/>c;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00382}00382\ \ \ \ \ \ \ \ \ aux.coluna\ =atual-\/>coluna;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00383}00383\ \ \ \ \ \ \ \ \ aux.linha\ =\ atual-\/>linha;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00384}00384\ \ \ \ \ \ \ \ \ fwrite(\&aux,\textcolor{keyword}{sizeof}(aux),1,ficheiro);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00385}00385\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00386}00386\ \ \ \ \ fclose(ficheiro);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00387}00387\ \ \ \ \ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00388}00388\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00389}00389\ \textcolor{preprocessor}{\#pragma\ endregion}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00390}00390\ }
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00391}00391\ \textcolor{preprocessor}{\#pragma\ region\ CálculoPosições}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00392}\mbox{\hyperlink{funcoes_8c_a4bda839cdef05932876ae4612622e531}{00392}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{funcoes_8c_a4bda839cdef05932876ae4612622e531}{Posicao}}(\mbox{\hyperlink{structCasa}{Casa}}*\ c)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00393}00393\ \ \ \ \ \textcolor{keywordtype}{int}\ posicao=0,\ linha=\ c-\/>linha,\ coluna=\ c-\/>coluna;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00394}00394\ \ \ \ \ posicao=((linha-\/1)*x)+coluna-\/1;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00395}00395\ \ \ \ \ \textcolor{keywordflow}{return}\ posicao;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00396}00396\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00397}\mbox{\hyperlink{funcoes_8c_ac23460e361b882e6156a1929ac4b5532}{00397}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{funcoes_8c_ac23460e361b882e6156a1929ac4b5532}{PosicaoEfeitoNefasto}}(\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ c)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00398}00398\ \ \ \ \ \textcolor{keywordtype}{int}\ posicao=0,\ linha=\ c-\/>linha,\ coluna=\ c-\/>coluna;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00399}00399\ \ \ \ \ posicao=((linha-\/1)*x)+coluna-\/1;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00400}00400\ \ \ \ \ \textcolor{keywordflow}{return}\ posicao;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00401}00401\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00402}00402\ \textcolor{preprocessor}{\#pragma\ endregion\ }}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00403}00403\ \textcolor{preprocessor}{\#pragma\ region\ LimpaMemória}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00404}\mbox{\hyperlink{funcoes_8c_ac3047c35234c5d91be31629239e8a94d}{00404}}\ \mbox{\hyperlink{structCasa}{Casa}}*\ \mbox{\hyperlink{funcoes_8c_ac3047c35234c5d91be31629239e8a94d}{LimpaMemoria}}(\mbox{\hyperlink{structCasa}{Casa}}*\ mapa)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00405}00405\ \ \ \ \ \mbox{\hyperlink{structCasa}{Casa}}\ *atual\ =\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00406}00406\ \ \ \ \ \mbox{\hyperlink{structCasa}{Casa}}\ *proximo=NULL;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00407}00407\ \ \ \ \ \textcolor{keywordflow}{while}\ (atual)}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00408}00408\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00409}00409\ \ \ \ \ \ \ \ \ proximo=atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00410}00410\ \ \ \ \ \ \ \ \ free(atual);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00411}00411\ \ \ \ \ \ \ \ \ atual\ =\ proximo;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00412}00412\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00413}00413\ \ \ \ \ mapa=NULL;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00414}00414\ \ \ \ \ \textcolor{keywordflow}{return}\ mapa;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00415}00415\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00416}\mbox{\hyperlink{funcoes_8c_aafb91a30a66792a37dfa04968a207468}{00416}}\ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ \mbox{\hyperlink{funcoes_8c_aafb91a30a66792a37dfa04968a207468}{LimpaMemoriaEfeito}}(\mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}*\ efeito)\{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00417}00417\ \ \ \ \ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}\ *atual\ =\ efeito;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00418}00418\ \ \ \ \ \mbox{\hyperlink{structEfeitoNefasto}{EfeitoNefasto}}\ *proximo=NULL;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00419}00419\ \ \ \ \ \textcolor{keywordflow}{while}\ (atual)}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00420}00420\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00421}00421\ \ \ \ \ \ \ \ \ proximo=atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00422}00422\ \ \ \ \ \ \ \ \ free(atual);}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00423}00423\ \ \ \ \ \ \ \ \ atual\ =\ proximo;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00424}00424\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00425}00425\ \ \ \ \ efeito=NULL;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00426}00426\ \ \ \ \ \textcolor{keywordflow}{return}\ efeito;}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00427}00427\ \}}
+\DoxyCodeLine{\Hypertarget{funcoes_8c_source_l00428}00428\ \textcolor{preprocessor}{\#pragma\ endregion}}
+
+\end{DoxyCode}

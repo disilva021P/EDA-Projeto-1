@@ -1,0 +1,28 @@
+<map id="AdicionaCasaSemCausarNefasto" name="AdicionaCasaSemCausarNefasto">
+<area shape="rect" id="Node000001" title="Função que vai adicionar uma casa apenas se não causar efeito nefasto." alt="" coords="5,169,223,196"/>
+<area shape="rect" id="Node000002" href="$funcoes_8c.html#ab271e06653f850456c8bb6d6c8be0555" title="Função que simplifica o processo de criar e adicionar antenas." alt="" coords="276,132,371,159"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,166,260,154,261,159,193,171"/>
+<area shape="rect" id="Node000012" href="$funcoes_8c.html#aeace5f1282a34495044ffe7ec32f923f" title="Função que remove uma casa da lista de antenas." alt="" coords="271,195,376,221"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="223,193,255,197,255,202,223,198"/>
+<area shape="rect" id="Node000003" href="$funcoes_8c.html#a547e745c0d5dd6e76884bbb1c2514ace" title="Função que adiciona uma dada casa à lista de antenas." alt="" coords="433,81,535,108"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="367,129,424,111,426,116,369,134"/>
+<area shape="rect" id="Node000011" href="$funcoes_8c.html#adaf457eee17c8a537cfa5d6f1c079d37" title="Função que cria um espaço de memória para as antenas." alt="" coords="446,132,522,159"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="371,143,431,143,431,148,371,148"/>
+<area shape="rect" id="Node000004" href="$funcoes_8c.html#aab1e64b8be3669c4102e89eb0b077f60" title="Função que verifica se existe efeito nefaste em certa linha e coluna." alt="" coords="592,56,780,83"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="535,86,576,80,577,86,536,91"/>
+<area shape="rect" id="Node000010" href="$funcoes_8c.html#a4bda839cdef05932876ae4612622e531" title="Devolve a posição da antena no mapa [1&#45;n*m]." alt="" coords="652,107,720,133"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="536,98,637,111,636,116,535,104"/>
+<area shape="rect" id="Node000005" href="$funcoes_8c.html#add96e8555a1fa4ce7049a1f12c4aa03c" title="Função que simplifica o processo de criar e adicionar efeitos nefastos." alt="" coords="833,31,962,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="780,55,817,51,818,56,781,61"/>
+<area shape="rect" id="Node000009" href="$funcoes_8c.html#aafb91a30a66792a37dfa04968a207468" title="Função que Limpa a memória da lista de efejto nefasto." alt="" coords="828,81,968,108"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="781,78,812,82,812,87,780,83"/>
+<area shape="rect" id="Node000006" href="$funcoes_8c.html#a47965736c62f46020cb3183a275edf86" title="Função que adiciona efeito nefasto á lista." alt="" coords="1016,5,1198,32"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="963,34,1000,29,1001,34,963,39"/>
+<area shape="rect" id="Node000008" href="$funcoes_8c.html#afc8624f491f409a238fac8478fe49201" title="Função que cria um espaço na mememória para guardar o efeito nefasto." alt="" coords="1044,56,1170,83"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="963,49,1030,57,1029,63,963,54"/>
+<area shape="rect" id="Node000007" href="$funcoes_8c.html#ac23460e361b882e6156a1929ac4b5532" title="Devolve a posição do efeito nefasto no mapa [1&#45;n*m]." alt="" coords="1246,5,1395,32"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1198,16,1231,16,1231,21,1198,21"/>
+<area shape="rect" id="Node000013" href="$funcoes_8c.html#a56c88f4c5181a3856ab46b20a80d3b3c" title="Função que remove efeito nefasto que foi causado por uma antena que estava na coluna linha,..." alt="" coords="424,207,544,233"/>
+<area shape="poly" id="edge12_Node000012_Node000013" title=" " alt="" coords="377,209,409,212,408,217,376,215"/>
+<area shape="poly" id="edge13_Node000013_Node000013" title=" " alt="" coords="456,207,451,198,455,188,466,182,484,180,504,183,514,189,511,194,502,188,484,185,468,187,459,192,457,197,461,205"/>
+</map>

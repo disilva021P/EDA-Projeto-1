@@ -1,0 +1,11 @@
+<map id="/home/disilva021/UNI/EDA/Projeto1/src/main.c" name="/home/disilva021/UNI/EDA/Projeto1/src/main.c">
+<area shape="rect" id="Node000001" title="Ficheiro principal." alt="" coords="37,5,208,48"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,96,69,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="102,51,63,87,59,83,99,47"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="92,96,152,123"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="125,49,125,80,120,80,120,49"/>
+<area shape="rect" id="Node000004" href="$funcoes_8h.html" title="HEADER da biblioteca funcoes que contêm as funções para as operações da lista linkada." alt="" coords="176,96,255,123"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="148,47,191,84,188,88,145,51"/>
+<area shape="rect" id="Node000005" href="$dados_8h.html" title="Ficheiro de estrutura de dados." alt="" coords="182,171,249,197"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="218,123,218,155,213,155,213,123"/>
+</map>

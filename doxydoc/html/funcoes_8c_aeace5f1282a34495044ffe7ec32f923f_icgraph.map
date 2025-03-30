@@ -1,0 +1,5 @@
+<map id="RemoverCasa" name="RemoverCasa">
+<area shape="rect" id="Node000001" title="Função que remove uma casa da lista de antenas." alt="" coords="271,5,376,32"/>
+<area shape="rect" id="Node000002" href="$funcoes_8c.html#acdf82a4f86eecfad326f7b543b7d4f25" title="Função que vai adicionar uma casa apenas se não causar efeito nefasto." alt="" coords="5,5,223,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="255,21,223,21,223,16,255,16"/>
+</map>

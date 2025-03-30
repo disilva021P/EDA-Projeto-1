@@ -1,0 +1,7 @@
+<map id="ExisteEfeitoEfeitoNefasto" name="ExisteEfeitoEfeitoNefasto">
+<area shape="rect" id="Node000001" title="Função que verifica se existe efeito nefaste em certa linha e coluna." alt="" coords="262,31,434,57"/>
+<area shape="rect" id="Node000002" href="$funcoes_8c.html#a04e92ae67c065eb6773ee065aa5a2732" title="Função que vai adicionar uma casa apenas se não estiver com efeito nefasto na casa." alt="" coords="5,5,214,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="246,36,214,32,214,27,246,31"/>
+<area shape="rect" id="Node000003" href="$funcoes_8c.html#a71229908ffc3c2ec1671978310aba197" title="Função que printa o mapa com antenas e efeito nefasto." alt="" coords="49,56,170,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="246,57,170,66,170,60,246,52"/>
+</map>
