@@ -22,11 +22,16 @@ int main(int argc, char const *argv[])
         h=CriaMapaCasas((char*)argv[1],h,&hE);
     }
     MostraListaNovo(h,hE);
-    MostraListaCasas(h,hE);
+    h=CriaAdiciona(h,'F',1,2,&hE);
+    MostraListaNovo(h,hE);
+    h=RemoverCasa(h,1,2,&hE);
+    MostraListaNovo(h,hE);
+    h=CriaAdiciona(h,'F',1,2,&hE);
+    criaMapaFicheiro(h);
     h=EscreverListaFicheiro(h);
     h=LerListaFicheiro(h,&hE);
-    MostraListaNovo(h,hE);
-    hE=LimpaMemoriaEfeito(hE);           
+    MostraListaCasas(h,hE);
+    hE=LimpaMemoriaEfeito(hE);      
     h=LimpaMemoria(h);    
     return 0;
 }

@@ -44,4 +44,4 @@ typedef struct EfeitoNefasto
     struct Casa *antenas[2];//Antenas que causam o efeito
     struct EfeitoNefasto* prox; // //proximo efeito nefasto na lista
 }EfeitoNefasto;
-#endif DADOS_H
+#endif 
