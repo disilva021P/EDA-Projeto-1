@@ -1,17 +1,18 @@
 <map id="CriaAdicionaEfeito" name="CriaAdicionaEfeito">
-<area shape="rect" id="Node000001" title="Função que simplifica o processo de criar e adicionar efeitos nefastos." alt="" coords="913,31,1042,57"/>
-<area shape="rect" id="Node000002" href="$funcoes_8c.html#aab1e64b8be3669c4102e89eb0b077f60" title="Função que verifica se existe efeito nefaste em certa linha e coluna." alt="" coords="677,31,865,57"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="897,47,865,47,865,41,897,41"/>
-<area shape="rect" id="Node000003" href="$funcoes_8c.html#a547e745c0d5dd6e76884bbb1c2514ace" title="Função que adiciona uma dada casa à lista de antenas." alt="" coords="527,31,629,57"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="662,47,630,47,630,41,662,41"/>
+<area shape="rect" id="Node000001" title="Função que simplifica o processo de criar e adicionar efeitos nefastos." alt="" coords="913,81,1042,108"/>
+<area shape="rect" id="Node000002" href="$funcoes_8c.html#aab1e64b8be3669c4102e89eb0b077f60" title="Função que verifica se existe efeito nefaste em certa linha e coluna." alt="" coords="677,81,865,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="897,97,865,97,865,92,897,92"/>
+<area shape="rect" id="Node000003" href="$funcoes_8c.html#a547e745c0d5dd6e76884bbb1c2514ace" title="Função que adiciona uma dada casa à lista de antenas." alt="" coords="527,56,629,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="661,83,629,79,630,73,662,78"/>
+<area shape="rect" id="Node000008" href="$funcoes_8c.html#ab6a962a9190367f7f9f902b37a097195" title="Função que le lista de antenas de ficheiros binários." alt="" coords="57,107,171,133"/>
+<area shape="poly" id="edge8_Node000002_Node000008" title=" " alt="" coords="662,102,171,121,171,115,662,96"/>
 <area shape="rect" id="Node000004" href="$funcoes_8c.html#a04e92ae67c065eb6773ee065aa5a2732" title="Função que vai adicionar uma casa apenas se não estiver com efeito nefasto na casa." alt="" coords="271,5,479,32"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="511,38,479,34,480,29,512,33"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="511,55,478,47,433,35,434,30,480,41,513,50"/>
 <area shape="rect" id="Node000005" href="$funcoes_8c.html#ab271e06653f850456c8bb6d6c8be0555" title="Função que simplifica o processo de criar e adicionar antenas." alt="" coords="327,56,422,83"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="512,55,423,66,423,61,511,50"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="512,72,423,72,423,67,512,67"/>
 <area shape="rect" id="Node000006" href="$funcoes_8c.html#acdf82a4f86eecfad326f7b543b7d4f25" title="Função que vai adicionar uma casa apenas se não causar efeito nefasto." alt="" coords="5,5,223,32"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="311,60,186,35,187,30,312,55"/>
 <area shape="rect" id="Node000007" href="$funcoes_8c.html#a1c8b8099d4e4db9da99f6573596e35e4" title="Função que lẽ as antenas de um ficheiro txt com o mapa." alt="" coords="56,56,172,83"/>
 <area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="312,72,172,72,172,67,312,67"/>
-<area shape="rect" id="Node000008" href="$funcoes_8c.html#af8d3c506f21e8f02909dc64f438b9eff" title="Função que le lista de antenas de ficheiros binários." alt="" coords="57,107,171,133"/>
 <area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="313,84,172,112,171,106,312,79"/>
 </map>
