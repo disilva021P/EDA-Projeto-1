@@ -1,0 +1,11 @@
+<map id="insereAdjacencias" name="insereAdjacencias">
+<area shape="rect" id="Node000001" title="Função que insere adjacencias automaticamente dando um grafo." alt="" coords="5,81,133,108"/>
+<area shape="rect" id="Node000002" href="$grafos_8c.html#a7163f5f525c96e360f72362a0654f037" title="Função que cria a adjacência." alt="" coords="227,5,295,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,78,180,42,211,31,213,36,182,46,99,83"/>
+<area shape="rect" id="Node000003" href="$grafos_8c.html#ada891fc51999a8dfe2a9dca318d1d40c" title="Funcção que verifica se uma coordenada esta no radar de outras coordenadas." alt="" coords="212,56,310,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="133,84,196,75,197,80,134,89"/>
+<area shape="rect" id="Node000004" href="$grafos_8c.html#a17df99b47c94a07be1074fad89516411" title="Insere Adjacencia num vértice fornecido." alt="" coords="181,107,341,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="134,100,165,105,165,110,133,106"/>
+<area shape="rect" id="Node000005" href="$grafos_8c.html#a8e65dc419049666aca33a364af6ea39d" title="Limpa adjacências de um grafo." alt="" coords="225,157,296,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="99,106,182,143,211,153,209,158,180,148,97,111"/>
+</map>

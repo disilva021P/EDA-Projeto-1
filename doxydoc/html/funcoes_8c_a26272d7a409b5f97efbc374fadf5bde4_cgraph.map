@@ -1,0 +1,9 @@
+<map id="CriaAdicionaEfeito" name="CriaAdicionaEfeito">
+<area shape="rect" id="Node000001" title="Função que simplifica o processo de criar e adicionar efeitos nefastos." alt="" coords="5,31,135,57"/>
+<area shape="rect" id="Node000002" href="$funcoes_8c.html#a6a441734f81c2b548820ec5de70b26f3" title="Função que adiciona efeito nefasto á lista." alt="" coords="183,5,365,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,33,167,29,167,35,135,39"/>
+<area shape="rect" id="Node000004" href="$funcoes_8c.html#a0262044df784d47f758bd6414bc18753" title="Função que cria um espaço na mememória para guardar o efeito nefasto." alt="" coords="211,56,336,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="135,49,196,57,195,62,135,55"/>
+<area shape="rect" id="Node000003" href="$funcoes_8c.html#a733598fde5ded4a87019d96bd26d5dd1" title="Devolve a posição do efeito nefasto no mapa [1&#45;n*m]." alt="" coords="413,5,561,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="365,16,398,16,398,21,365,21"/>
+</map>

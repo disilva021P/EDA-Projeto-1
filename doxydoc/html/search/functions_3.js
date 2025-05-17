@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['lerlistaficheiro_0',['LerListaFicheiro',['../funcoes_8c.html#ab6a962a9190367f7f9f902b37a097195',1,'LerListaFicheiro(Casa *mapa, EfeitoNefasto **cabeca):&#160;funcoes.c'],['../funcoes_8h.html#ab6a962a9190367f7f9f902b37a097195',1,'LerListaFicheiro(Casa *mapa, EfeitoNefasto **cabeca):&#160;funcoes.c']]],
-  ['limpamemoria_1',['LimpaMemoria',['../funcoes_8c.html#ac3047c35234c5d91be31629239e8a94d',1,'LimpaMemoria(Casa *mapa):&#160;funcoes.c'],['../funcoes_8h.html#ac3047c35234c5d91be31629239e8a94d',1,'LimpaMemoria(Casa *mapa):&#160;funcoes.c']]],
-  ['limpamemoriaefeito_2',['LimpaMemoriaEfeito',['../funcoes_8c.html#aafb91a30a66792a37dfa04968a207468',1,'LimpaMemoriaEfeito(EfeitoNefasto *efeito):&#160;funcoes.c'],['../funcoes_8h.html#aafb91a30a66792a37dfa04968a207468',1,'LimpaMemoriaEfeito(EfeitoNefasto *efeito):&#160;funcoes.c']]]
+  ['definirlingua_0',['definirLingua',['../erros_8c.html#a4d6943162fdc54ed79a8b980985f43dc',1,'definirLingua(char *lingua):&#160;erros.c'],['../erros_8h.html#a4d6943162fdc54ed79a8b980985f43dc',1,'definirLingua(char *lingua):&#160;erros.c']]],
+  ['detectarcruzamentogeral_1',['detectarCruzamentoGeral',['../grafos_8c.html#a6f3361506dde25dd11fbd12e10d161b5',1,'detectarCruzamentoGeral(Grafo *g, char freq1, char freq2, int linhas[], int colunas[]):&#160;grafos.c'],['../grafos_8h.html#a6f3361506dde25dd11fbd12e10d161b5',1,'detectarCruzamentoGeral(Grafo *g, char freq1, char freq2, int linhas[], int colunas[]):&#160;grafos.c']]],
+  ['dfs_5fcaminhografo_2',['DFS_CaminhoGrafo',['../grafos_8c.html#a2d23d9740ca62793d52b9c969ec5c8bd',1,'DFS_CaminhoGrafo(Grafo *original, int linha, int coluna, int *erro):&#160;grafos.c'],['../grafos_8h.html#a2d23d9740ca62793d52b9c969ec5c8bd',1,'DFS_CaminhoGrafo(Grafo *original, int linha, int coluna, int *erro):&#160;grafos.c']]],
+  ['dfsutil_3',['DFSUtil',['../grafos_8c.html#aa7f03076bc8721f0922eb084146d8bc3',1,'DFSUtil(Vertice *v, Grafo *caminho, int *erro):&#160;grafos.c'],['../grafos_8h.html#aa7f03076bc8721f0922eb084146d8bc3',1,'DFSUtil(Vertice *v, Grafo *caminho, int *erro):&#160;grafos.c']]]
 ];

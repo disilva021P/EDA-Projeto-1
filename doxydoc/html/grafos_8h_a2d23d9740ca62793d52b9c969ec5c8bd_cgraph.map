@@ -1,0 +1,17 @@
+<map id="DFS_CaminhoGrafo" name="DFS_CaminhoGrafo">
+<area shape="rect" id="Node000001" title="Função principal DFS." alt="" coords="5,81,145,108"/>
+<area shape="rect" id="Node000002" href="$grafos_8c.html#aa7f03076bc8721f0922eb084146d8bc3" title="Função de recursividade do algoritmo DFS." alt="" coords="211,56,279,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="145,82,195,74,196,79,146,87"/>
+<area shape="rect" id="Node000007" href="$grafos_8c.html#a9233e3e7a3ca8cf7f680148f5b6ed137" title="Função que serve inicializar um grafo." alt="" coords="193,107,297,133"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="146,102,177,107,177,113,145,108"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="219,57,214,47,217,38,228,32,245,29,263,32,273,39,270,43,261,37,245,35,230,37,222,41,220,47,224,54"/>
+<area shape="rect" id="Node000003" href="$grafos_8c.html#a73b759ff770de9592d74a5362cc26834" title="Função que cria espaço para vertice." alt="" coords="349,5,438,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="278,55,337,35,338,40,280,60"/>
+<area shape="rect" id="Node000004" href="$grafos_8c.html#a78f4a9fb030b555f73874430443944d8" title="Função que insere um vértice num grafo." alt="" coords="345,56,442,83"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="279,67,330,67,330,72,279,72"/>
+<area shape="rect" id="Node000006" href="$grafos_8c.html#a2efbfabcf1e00bc4aedfb3d40bf26595" title="Verifica se um vertice já existe na posição de um novo vertice." alt="" coords="491,107,598,133"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="280,76,346,92,476,111,475,116,344,97,279,82"/>
+<area shape="rect" id="Node000005" href="$grafos_8c.html#a30909cb6d14b8a01a95cfbee8053a227" title="Devolve a posição de um vertice no mapa." alt="" coords="490,56,599,83"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="443,67,475,67,475,72,443,72"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="437,81,489,99,487,104,435,86"/>
+</map>

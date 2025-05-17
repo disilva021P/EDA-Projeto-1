@@ -1,0 +1,7 @@
+<map id="LinguaDicionario" name="LinguaDicionario">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,96,123,123"/>
+<area shape="poly" id="edge3_Node000001_Node000001" title=" " alt="" coords="139,101,149,109,141,117,123,120,123,115,139,113,144,109,136,105"/>
+<area shape="rect" id="Node000002" href="$structMensagem.html" title=" " alt="" coords="21,5,107,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,48,67,95,61,95,61,48"/>
+<area shape="poly" id="edge2_Node000002_Node000002" title=" " alt="" coords="124,10,133,19,125,27,107,30,107,25,123,22,128,19,120,14"/>
+</map>

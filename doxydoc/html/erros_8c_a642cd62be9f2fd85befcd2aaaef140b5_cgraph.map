@@ -1,0 +1,21 @@
+<map id="preencheDicionario" name="preencheDicionario">
+<area shape="rect" id="Node000001" title="Função a ser chamada pelo utilizador para preencher o dicionario." alt="" coords="5,107,138,133"/>
+<area shape="rect" id="Node000002" href="$erros_8c.html#afe2bab1951298c255781427272a6e7b7" title="Le o ficheiro e preenche o dicionario." alt="" coords="186,107,263,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,117,170,117,170,123,138,123"/>
+<area shape="rect" id="Node000003" href="$erros_8c.html#a43a1170ebe8ba0a673d013010f982cb2" title="Resume o processo de criação e adicionar Linguas." alt="" coords="324,56,457,83"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="263,106,330,85,331,90,264,111"/>
+<area shape="rect" id="Node000006" href="$erros_8c.html#a56e1c798d5f64d1bbf2454e7f24befbd" title="Resume o processo de criação e adicionar Mensagens." alt="" coords="311,107,470,133"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="264,117,296,117,296,123,264,123"/>
+<area shape="rect" id="Node000010" href="$erros_8c.html#aa816828cc84d06c46c2663da3ecbc616" title="Procura uma lingua pelo código." alt="" coords="336,157,445,184"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="264,129,331,150,330,155,263,134"/>
+<area shape="rect" id="Node000004" href="$erros_8c.html#aaee631d202180319047a97d8a1b8e5b1" title="Adiciona Lingua ao dicionário." alt="" coords="531,5,645,32"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="445,53,518,34,519,39,446,58"/>
+<area shape="rect" id="Node000005" href="$erros_8c.html#ad49bb34a78779836e39eff31e8296880" title="Função que cria linguas." alt="" coords="546,56,630,83"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="458,67,531,67,531,72,458,72"/>
+<area shape="rect" id="Node000007" href="$erros_8c.html#a34fa04bf42ae17b05e1dc6c14177f97b" title="Adiciona mensagem ao dicionário." alt="" coords="518,107,658,133"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="471,117,502,117,502,123,471,123"/>
+<area shape="rect" id="Node000009" href="$erros_8c.html#aff277e5be26233876090f0f6b5e1b6d0" title="Cria espaço para uma mensagem." alt="" coords="533,157,643,184"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="446,131,519,150,518,155,445,137"/>
+<area shape="rect" id="Node000008" href="$erros_8c.html#ad65bcf85dfb3535aeb539a688a74686d" title="Adicionar Mensagens a uma lista de Mensagens." alt="" coords="706,107,873,133"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="658,117,690,117,690,123,658,123"/>
+</map>

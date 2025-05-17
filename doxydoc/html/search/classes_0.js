@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['casa_0',['Casa',['../structCasa.html',1,'']]],
-  ['casaf_1',['CasaF',['../structCasaF.html',1,'']]]
+  ['adj_0',['Adj',['../structAdj.html',1,'']]]
 ];

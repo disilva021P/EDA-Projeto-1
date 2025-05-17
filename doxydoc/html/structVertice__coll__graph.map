@@ -1,0 +1,10 @@
+<map id="Vertice" name="Vertice">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,96,67,123"/>
+<area shape="poly" id="edge5_Node000001_Node000001" title=" " alt="" coords="83,100,90,103,93,110,85,119,67,120,67,115,82,114,88,109,86,107,81,105"/>
+<area shape="rect" id="Node000003" href="$structAdj.html" title=" " alt="" coords="16,203,56,229"/>
+<area shape="poly" id="edge3_Node000003_Node000001" title=" " alt="" coords="20,137,15,147,12,163,15,178,28,201,23,204,10,180,7,163,10,146,15,135"/>
+<area shape="rect" id="Node000002" href="$structCasaF.html" title="Struct que ajuda a salvar as antenas." alt="" coords="6,5,66,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="39,48,39,95,33,95,33,48"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="33,187,33,123,39,123,39,187"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="73,205,80,209,83,216,80,223,74,227,57,228,56,223,72,222,76,220,78,216,76,212,70,209"/>
+</map>

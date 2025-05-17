@@ -1,0 +1,5 @@
+<map id="CriarAntena" name="CriarAntena">
+<area shape="rect" id="Node000001" title="Função que cria Antena." alt="" coords="143,5,233,32"/>
+<area shape="rect" id="Node000002" href="$grafos_8c.html#a7d37a5c396341d8db7e7e2e4bd9f164a" title="Função que le o mapa em formato TXT." alt="" coords="5,5,95,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,21,95,21,95,16,127,16"/>
+</map>

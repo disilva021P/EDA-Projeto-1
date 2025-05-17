@@ -1,0 +1,7 @@
+<map id="InsereVertice" name="InsereVertice">
+<area shape="rect" id="Node000001" title="Função que insere um vértice num grafo." alt="" coords="5,31,103,57"/>
+<area shape="rect" id="Node000002" href="$grafos_8c.html#a30909cb6d14b8a01a95cfbee8053a227" title="Devolve a posição de um vertice no mapa." alt="" coords="151,5,259,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,33,135,28,136,33,103,38"/>
+<area shape="rect" id="Node000003" href="$grafos_8c.html#a2efbfabcf1e00bc4aedfb3d40bf26595" title="Verifica se um vertice já existe na posição de um novo vertice." alt="" coords="152,56,258,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="103,50,137,55,136,60,103,55"/>
+</map>

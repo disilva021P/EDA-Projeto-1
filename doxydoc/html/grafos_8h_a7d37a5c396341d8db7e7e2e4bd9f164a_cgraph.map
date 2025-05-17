@@ -1,0 +1,19 @@
+<map id="leTxtGrafos" name="leTxtGrafos">
+<area shape="rect" id="Node000001" title="Função que le o mapa em formato TXT." alt="" coords="5,81,95,108"/>
+<area shape="rect" id="Node000002" href="$grafos_8c.html#a5d39aec566276a1681d2f70c0e3e6754" title="Função que cria Antena." alt="" coords="168,5,258,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,78,142,42,155,36,157,41,144,46,75,83"/>
+<area shape="rect" id="Node000003" href="$grafos_8c.html#a73b759ff770de9592d74a5362cc26834" title="Função que cria espaço para vertice." alt="" coords="168,56,258,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="95,85,153,76,153,81,96,90"/>
+<area shape="rect" id="Node000004" href="$grafos_8c.html#a78f4a9fb030b555f73874430443944d8" title="Função que insere um vértice num grafo." alt="" coords="164,107,262,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="96,99,149,107,149,113,95,104"/>
+<area shape="rect" id="Node000007" href="$grafos_8c.html#a5fb1e8458fafa37541843b06d42ebe2e" title="Limpa o conteúdo no grafo." alt="" coords="143,157,283,184"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="75,106,144,143,157,149,155,154,142,148,73,111"/>
+<area shape="rect" id="Node000005" href="$grafos_8c.html#a30909cb6d14b8a01a95cfbee8053a227" title="Devolve a posição de um vertice no mapa." alt="" coords="331,56,439,83"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="260,103,322,85,324,90,262,109"/>
+<area shape="rect" id="Node000006" href="$grafos_8c.html#a2efbfabcf1e00bc4aedfb3d40bf26595" title="Verifica se um vertice já existe na posição de um novo vertice." alt="" coords="332,107,438,133"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="262,117,317,117,317,123,262,123"/>
+<area shape="rect" id="Node000008" href="$grafos_8c.html#a8e65dc419049666aca33a364af6ea39d" title="Limpa adjacências de um grafo." alt="" coords="350,157,421,184"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="284,168,334,168,334,173,284,173"/>
+<area shape="rect" id="Node000009" href="$grafos_8c.html#a2517222fbb3a09a0919174f9da4b9f9e" title="Limpa os vértives de um grafo." alt="" coords="354,208,416,235"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="262,182,340,206,339,211,260,187"/>
+</map>

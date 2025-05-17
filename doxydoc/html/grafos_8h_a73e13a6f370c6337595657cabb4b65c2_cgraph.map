@@ -1,0 +1,21 @@
+<map id="leFicheiroBinario" name="leFicheiroBinario">
+<area shape="rect" id="Node000001" title="le o grafo e as adjacencias de um ficheiro binario" alt="" coords="5,107,123,133"/>
+<area shape="rect" id="Node000002" href="$grafos_8c.html#a7163f5f525c96e360f72362a0654f037" title="Função que cria a adjacência." alt="" coords="217,5,285,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,104,119,73,169,42,201,29,203,34,172,46,122,78,83,108"/>
+<area shape="rect" id="Node000003" href="$grafos_8c.html#a73b759ff770de9592d74a5362cc26834" title="Função que cria espaço para vertice." alt="" coords="206,56,296,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="115,103,191,83,192,88,117,109"/>
+<area shape="rect" id="Node000004" href="$grafos_8c.html#a17df99b47c94a07be1074fad89516411" title="Insere Adjacencia num vértice fornecido." alt="" coords="171,107,331,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="123,117,155,117,155,123,123,123"/>
+<area shape="rect" id="Node000005" href="$grafos_8c.html#a78f4a9fb030b555f73874430443944d8" title="Função que insere um vértice num grafo." alt="" coords="202,157,300,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="117,131,188,151,187,156,115,137"/>
+<area shape="rect" id="Node000008" href="$grafos_8c.html#a5fb1e8458fafa37541843b06d42ebe2e" title="Limpa o conteúdo no grafo." alt="" coords="181,208,321,235"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="83,132,122,162,172,194,185,200,183,205,169,198,119,167,79,136"/>
+<area shape="rect" id="Node000006" href="$grafos_8c.html#a30909cb6d14b8a01a95cfbee8053a227" title="Devolve a posição de um vertice no mapa." alt="" coords="379,107,487,133"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="299,155,368,135,369,140,301,160"/>
+<area shape="rect" id="Node000007" href="$grafos_8c.html#a2efbfabcf1e00bc4aedfb3d40bf26595" title="Verifica se um vertice já existe na posição de um novo vertice." alt="" coords="380,157,486,184"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="300,168,364,168,364,173,300,173"/>
+<area shape="rect" id="Node000009" href="$grafos_8c.html#a8e65dc419049666aca33a364af6ea39d" title="Limpa adjacências de um grafo." alt="" coords="398,208,469,235"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="322,219,382,219,382,224,322,224"/>
+<area shape="rect" id="Node000010" href="$grafos_8c.html#a2517222fbb3a09a0919174f9da4b9f9e" title="Limpa os vértives de um grafo." alt="" coords="402,259,464,285"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="302,233,388,257,387,262,301,238"/>
+</map>

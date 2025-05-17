@@ -1,0 +1,11 @@
+<map id="limpaV" name="limpaV">
+<area shape="rect" id="Node000001" title="Limpa os vértives de um grafo." alt="" coords="359,56,420,83"/>
+<area shape="rect" id="Node000002" href="$grafos_8c.html#a5fb1e8458fafa37541843b06d42ebe2e" title="Limpa o conteúdo no grafo." alt="" coords="171,31,311,57"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="343,64,311,59,312,53,344,59"/>
+<area shape="rect" id="Node000005" href="$grafos_8c.html#aea25a9f6ca810fa1dda9a80b28c62d51" title="Limpa o conteúdo e o espaço do grafo." alt="" coords="199,81,283,108"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="344,80,284,90,283,85,343,74"/>
+<area shape="rect" id="Node000003" href="$grafos_8c.html#a73e13a6f370c6337595657cabb4b65c2" title="le o grafo e as adjacencias de um ficheiro binario" alt="" coords="5,5,123,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="155,34,123,30,124,24,155,29"/>
+<area shape="rect" id="Node000004" href="$grafos_8c.html#a7d37a5c396341d8db7e7e2e4bd9f164a" title="Função que le o mapa em formato TXT." alt="" coords="19,56,109,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="156,59,109,66,108,60,155,54"/>
+</map>

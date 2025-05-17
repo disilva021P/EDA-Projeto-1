@@ -1,0 +1,7 @@
+<map id="limpaGrafo" name="limpaGrafo">
+<area shape="rect" id="Node000001" title="Limpa o conteúdo e o espaço do grafo." alt="" coords="5,31,90,57"/>
+<area shape="rect" id="Node000002" href="$grafos_8c.html#a8e65dc419049666aca33a364af6ea39d" title="Limpa adjacências de um grafo." alt="" coords="138,5,209,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,33,122,26,123,32,91,38"/>
+<area shape="rect" id="Node000003" href="$grafos_8c.html#a2517222fbb3a09a0919174f9da4b9f9e" title="Limpa os vértives de um grafo." alt="" coords="143,56,204,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="91,50,128,58,127,63,90,55"/>
+</map>

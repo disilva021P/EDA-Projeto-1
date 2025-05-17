@@ -1,5 +1,7 @@
 {
     "files.associations": {
-        "funcoes.h": "c"
+        "funcoes.h": "c",
+        "erros.h": "c",
+        "stdio.h": "c"
     }
 }

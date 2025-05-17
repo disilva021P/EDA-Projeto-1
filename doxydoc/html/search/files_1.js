@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['funcoes_2ec_0',['funcoes.c',['../funcoes_8c.html',1,'']]],
-  ['funcoes_2eh_1',['funcoes.h',['../funcoes_8h.html',1,'']]]
+  ['erros_2ec_0',['erros.c',['../erros_8c.html',1,'']]],
+  ['erros_2eh_1',['erros.h',['../erros_8h.html',1,'']]]
 ];

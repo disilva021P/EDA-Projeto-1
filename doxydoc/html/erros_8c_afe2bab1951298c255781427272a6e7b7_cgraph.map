@@ -1,0 +1,19 @@
+<map id="leFicheiro" name="leFicheiro">
+<area shape="rect" id="Node000001" title="Le o ficheiro e preenche o dicionario." alt="" coords="5,107,83,133"/>
+<area shape="rect" id="Node000002" href="$erros_8c.html#a43a1170ebe8ba0a673d013010f982cb2" title="Resume o processo de criação e adicionar Linguas." alt="" coords="144,56,277,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="83,106,149,85,151,90,84,111"/>
+<area shape="rect" id="Node000005" href="$erros_8c.html#a56e1c798d5f64d1bbf2454e7f24befbd" title="Resume o processo de criação e adicionar Mensagens." alt="" coords="131,107,290,133"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="83,117,116,117,116,123,83,123"/>
+<area shape="rect" id="Node000009" href="$erros_8c.html#aa816828cc84d06c46c2663da3ecbc616" title="Procura uma lingua pelo código." alt="" coords="156,157,264,184"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="84,129,151,150,149,155,83,134"/>
+<area shape="rect" id="Node000003" href="$erros_8c.html#aaee631d202180319047a97d8a1b8e5b1" title="Adiciona Lingua ao dicionário." alt="" coords="351,5,464,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="265,53,337,34,339,39,266,58"/>
+<area shape="rect" id="Node000004" href="$erros_8c.html#ad49bb34a78779836e39eff31e8296880" title="Função que cria linguas." alt="" coords="366,56,449,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="278,67,350,67,350,72,278,72"/>
+<area shape="rect" id="Node000006" href="$erros_8c.html#a34fa04bf42ae17b05e1dc6c14177f97b" title="Adiciona mensagem ao dicionário." alt="" coords="338,107,477,133"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="290,117,322,117,322,123,290,123"/>
+<area shape="rect" id="Node000008" href="$erros_8c.html#aff277e5be26233876090f0f6b5e1b6d0" title="Cria espaço para uma mensagem." alt="" coords="353,157,462,184"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="266,131,339,150,337,155,265,137"/>
+<area shape="rect" id="Node000007" href="$erros_8c.html#ad65bcf85dfb3535aeb539a688a74686d" title="Adicionar Mensagens a uma lista de Mensagens." alt="" coords="525,107,693,133"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="478,117,510,117,510,123,478,123"/>
+</map>

@@ -1,0 +1,280 @@
+\doxysection{erros.\+c}
+\hypertarget{erros_8c_source}{}\label{erros_8c_source}\index{/home/disilva021/UNI/EDA/Projeto1/src/erros.c@{/home/disilva021/UNI/EDA/Projeto1/src/erros.c}}
+\mbox{\hyperlink{erros_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00012}00012\ \textcolor{preprocessor}{\#include"{}\mbox{\hyperlink{erros_8h}{erros.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00013}00013\ \textcolor{preprocessor}{\#include<stdio.h>}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00014}00014\ \textcolor{preprocessor}{\#include<stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00015}00015\ \textcolor{preprocessor}{\#include<stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00016}00016\ \textcolor{preprocessor}{\#include<string.h>}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00017}00017\ \textcolor{comment}{//mensagem\ com\ id}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00018}\mbox{\hyperlink{structMensagem}{00018}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structMensagem}{Mensagem}}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00019}00019\ \{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00020}00020\ \ \ \ \ \textcolor{keywordtype}{int}\ idMensagem;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00021}00021\ \ \ \ \ \textcolor{keywordtype}{char}*\ mensagem;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structMensagem}{Mensagem}}*\ proxima;\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00023}00023\ \}\mbox{\hyperlink{structMensagem}{Mensagem}};}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00024}00024\ \textcolor{comment}{//keys}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00025}\mbox{\hyperlink{structLinguaDicionario}{00025}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}\ \{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00027}00027\ \ \ \ \ \textcolor{keywordtype}{char}\ linguaCod[6];}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00028}00028\ \ \ \ \ \mbox{\hyperlink{structMensagem}{Mensagem}}\ *mensagens;\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00029}00029\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}*\ prox;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00030}00030\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00031}00031\ \}\ \mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}};}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00033}00033\ \textcolor{comment}{//\ Funções\ para\ manipulação\ de\ línguas}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00034}00034\ \mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}*\ \mbox{\hyperlink{erros_8c_ad49bb34a78779836e39eff31e8296880}{CriaLingua}}(\textcolor{keywordtype}{char}*\ cod,\ \textcolor{keywordtype}{int}*\ erro);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00035}00035\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{erros_8c_aaee631d202180319047a97d8a1b8e5b1}{AdicionarLingua}}(\mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}*\ lingua);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00036}00036\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{erros_8c_a43a1170ebe8ba0a673d013010f982cb2}{CriaAdicionaLingua}}(\textcolor{keywordtype}{char}*\ cod);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00037}00037\ \mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}*\ \mbox{\hyperlink{erros_8c_aa816828cc84d06c46c2663da3ecbc616}{ProcurarLingua}}(\textcolor{keywordtype}{char}\ *cod);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00039}00039\ \textcolor{comment}{//\ Funções\ para\ manipulação\ de\ mensagens}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00040}00040\ \mbox{\hyperlink{structMensagem}{Mensagem}}*\ \mbox{\hyperlink{erros_8c_aff277e5be26233876090f0f6b5e1b6d0}{CriaMensagem}}(\textcolor{keywordtype}{int}\ cod,\ \textcolor{keywordtype}{char}*\ mensagem,\ \textcolor{keywordtype}{int}*\ erro);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00041}00041\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{erros_8c_a34fa04bf42ae17b05e1dc6c14177f97b}{AdicionarMensagem}}(\mbox{\hyperlink{structMensagem}{Mensagem}}*\ mensagem,\ \textcolor{keywordtype}{char}*\ codPais);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00042}00042\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{erros_8c_ad65bcf85dfb3535aeb539a688a74686d}{AdicionarMensagemLista}}(\mbox{\hyperlink{structMensagem}{Mensagem}}**\ h,\ \mbox{\hyperlink{structMensagem}{Mensagem}}*\ mensagem);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00043}00043\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{erros_8c_a56e1c798d5f64d1bbf2454e7f24befbd}{CriaAdicionaMensagem}}(\textcolor{keywordtype}{int}\ cod,\ \textcolor{keywordtype}{char}*\ mensagem,\ \textcolor{keywordtype}{char}*\ codPais);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00044}00044\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{erros_8c_afe2bab1951298c255781427272a6e7b7}{leFicheiro}}(FILE*\ f);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00045}00045\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{erros_8c_aaee631d202180319047a97d8a1b8e5b1}{AdicionarLingua}}(\mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}*\ lingua);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00046}00046\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{erros_8c_a43a1170ebe8ba0a673d013010f982cb2}{CriaAdicionaLingua}}(\textcolor{keywordtype}{char}*\ cod);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00047}00047\ \mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}*\ \mbox{\hyperlink{erros_8c_aa816828cc84d06c46c2663da3ecbc616}{ProcurarLingua}}(\textcolor{keywordtype}{char}\ *cod);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00052}00052\ \mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}\ *dicionario=NULL;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00053}00053\ \textcolor{keywordtype}{char}*\ linguadefinida;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00054}00054\ \textcolor{keywordtype}{int}\ ids=0;\ \textcolor{comment}{//ids\ de\ linguas}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00062}\mbox{\hyperlink{erros_8c_ad49bb34a78779836e39eff31e8296880}{00062}}\ \mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}\ *\mbox{\hyperlink{erros_8c_ad49bb34a78779836e39eff31e8296880}{CriaLingua}}(\textcolor{keywordtype}{char}*\ cod,\textcolor{keywordtype}{int}*erro)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{if}(!cod)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ *erro=150;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;\ \textcolor{comment}{//validação\ localização}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00066}00066\ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00067}00067\ \ \ \ \ \mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}*\ aux\ =\ (\mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}*)malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}));\ \textcolor{comment}{//alocação\ de\ memória}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00068}00068\ \ \ \ \ \textcolor{keywordflow}{if}(aux)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00069}00069\ \ \ \ \ \ \ \ \ strncpy(aux-\/>linguaCod,\ cod,\ 5);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00070}00070\ \ \ \ \ \ \ \ \ aux-\/>linguaCod[\textcolor{keyword}{sizeof}(aux-\/>linguaCod)\ -\/\ 1]\ =\ \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00071}00071\ \ \ \ \ \ \ \ \ aux-\/>id\ =\ ids;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00072}00072\ \ \ \ \ \ \ \ \ aux-\/>mensagens\ =NULL;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ aux;\textcolor{comment}{//retorna\ o\ apontador\ para\ a\ memório\ preenchida/NULL}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00074}00074\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00075}00075\ \ \ \ \ *erro\ =\ 149;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00076}00076\ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00077}00077\ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00085}\mbox{\hyperlink{erros_8c_aaee631d202180319047a97d8a1b8e5b1}{00085}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{erros_8c_aaee631d202180319047a97d8a1b8e5b1}{AdicionarLingua}}(\mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}*\ lingua)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00086}00086\ \ \ \ \ \textcolor{keywordflow}{if}(!lingua)\textcolor{keywordflow}{return}\ 151;\ \textcolor{comment}{//validação\ localização}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00087}00087\ \ \ \ \ \textcolor{keywordflow}{if}(!dicionario)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00088}00088\ \ \ \ \ \ \ \ \ dicionario\ =\ lingua;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00090}00090\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00091}00091\ \ \ \ \ \mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}\ *aux=\ dicionario;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00092}00092\ \ \ \ \ \textcolor{keywordflow}{while}\ (aux-\/>prox)}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00093}00093\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00094}00094\ \ \ \ \ \ \ \ \ aux=aux-\/>prox;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00095}00095\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00096}00096\ \ \ \ \ aux-\/>prox=\ lingua;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00097}00097\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00098}00098\ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00106}\mbox{\hyperlink{erros_8c_a43a1170ebe8ba0a673d013010f982cb2}{00106}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{erros_8c_a43a1170ebe8ba0a673d013010f982cb2}{CriaAdicionaLingua}}(\textcolor{keywordtype}{char}*\ cod)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00107}00107\ \ \ \ \ \textcolor{keywordtype}{int}\ erro=1;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00108}00108\ \ \ \ \ \mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}*\ lingua=\mbox{\hyperlink{erros_8c_ad49bb34a78779836e39eff31e8296880}{CriaLingua}}(cod,\&erro);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00109}00109\ \ \ \ \ \textcolor{keywordflow}{if}(erro\ !=\ 1)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00110}00110\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ erro;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00111}00111\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00112}00112\ \ \ \ \ erro\ =\ \mbox{\hyperlink{erros_8c_aaee631d202180319047a97d8a1b8e5b1}{AdicionarLingua}}(lingua);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00113}00113\ \ \ \ \ \textcolor{keywordflow}{return}\ erro;\textcolor{comment}{//retorna\ o\ apontador\ para\ a\ memório\ preenchida/NULL}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00114}00114\ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00122}\mbox{\hyperlink{erros_8c_aa816828cc84d06c46c2663da3ecbc616}{00122}}\ \mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}*\ \mbox{\hyperlink{erros_8c_aa816828cc84d06c46c2663da3ecbc616}{ProcurarLingua}}(\textcolor{keywordtype}{char}\ *cod)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00123}00123\ \ \ \ \ \textcolor{keywordflow}{if}(!cod)\textcolor{keywordflow}{return}\ NULL;\ \textcolor{comment}{//validação\ localização}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00124}00124\ \ \ \ \ \mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}*\ aux=\ dicionario;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00125}00125\ \ \ \ \ \textcolor{keywordflow}{while}\ (aux)}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00126}00126\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00127}00127\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(strcmp(aux-\/>linguaCod,cod)==0)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ aux;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00129}00129\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00130}00130\ \ \ \ \ \ \ \ \ aux=\ aux-\/>prox;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00131}00131\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00132}00132\ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00133}00133\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00134}00134\ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00142}\mbox{\hyperlink{erros_8c_a642cd62be9f2fd85befcd2aaaef140b5}{00142}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{erros_8c_a642cd62be9f2fd85befcd2aaaef140b5}{preencheDicionario}}(\textcolor{keywordtype}{char}*\ nomeFicheiro)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00143}00143\ \ \ \ \ FILE*\ f;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00144}00144\ \ \ \ \ \textcolor{keywordflow}{if}(!nomeFicheiro)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00145}00145\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((f\ =\ fopen(\textcolor{stringliteral}{"{}erros.txt"{}},\textcolor{stringliteral}{"{}r"{}}))==NULL)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 101;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00147}00147\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00149}00149\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}((f=fopen(nomeFicheiro,\textcolor{stringliteral}{"{}r"{}}))==NULL)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00150}00150\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 100;\ \textcolor{comment}{//ficheiro\ não\ existe}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00151}00151\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00152}00152\ \ \ \ \ \mbox{\hyperlink{erros_8c_afe2bab1951298c255781427272a6e7b7}{leFicheiro}}(f);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00153}00153\ \ \ \ \ fclose(f);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00154}00154\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00155}00155\ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00163}\mbox{\hyperlink{erros_8c_ac84569b82adfaf9587ec123850210495}{00163}}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{erros_8c_ac84569b82adfaf9587ec123850210495}{ErroPorCod}}(\textcolor{keywordtype}{int}\ codErro)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00164}00164\ \ \ \ \ \textcolor{keywordflow}{if}(linguadefinida==NULL)\textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00165}00165\ \ \ \ \ \mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}*\ keys\ =\ dicionario;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00166}00166\ \ \ \ \ \mbox{\hyperlink{structMensagem}{Mensagem}}*\ mensagens\ =\ dicionario-\/>mensagens;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00167}00167\ \ \ \ \ \textcolor{keywordflow}{while}\ (keys)}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00168}00168\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00169}00169\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(strcmp(keys-\/>linguaCod,linguadefinida)==0)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (mensagens)}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(mensagens-\/>idMensagem==codErro)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mensagens-\/>mensagem;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mensagens=mensagens-\/>proxima;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00177}00177\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00178}00178\ \ \ \ \ \ \ \ \ keys\ =\ keys-\/>prox;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00179}00179\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00180}00180\ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00181}00181\ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00182}00182\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00190}\mbox{\hyperlink{erros_8c_a5cb546f777b7f6031db48e5a9f0bf9c3}{00190}}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{erros_8c_a5cb546f777b7f6031db48e5a9f0bf9c3}{ErroPorPais\_Cod}}(\textcolor{keywordtype}{char}*\ lingua,\ \textcolor{keywordtype}{int}\ codErro)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00191}00191\ \ \ \ \ \mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}*\ keys\ =\ dicionario;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00192}00192\ \ \ \ \ \mbox{\hyperlink{structMensagem}{Mensagem}}*\ mensagens\ =\ dicionario-\/>mensagens;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00193}00193\ \ \ \ \ \textcolor{keywordflow}{while}\ (keys)}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00194}00194\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00195}00195\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(strcmp(keys-\/>linguaCod,lingua)==0)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (mensagens)}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(mensagens-\/>idMensagem==codErro)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ mensagens-\/>mensagem;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mensagens=mensagens-\/>proxima;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00203}00203\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00204}00204\ \ \ \ \ \ \ \ \ keys\ =\ keys-\/>prox;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00205}00205\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00206}00206\ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00207}00207\ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00208}00208\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00215}\mbox{\hyperlink{erros_8c_afe2bab1951298c255781427272a6e7b7}{00215}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{erros_8c_afe2bab1951298c255781427272a6e7b7}{leFicheiro}}(FILE*\ f)\ \{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00216}00216\ \ \ \ \ \textcolor{keywordflow}{if}(!f)\ \textcolor{keywordflow}{return}\ 103;\ \textcolor{comment}{//\ ficheiro\ inválido}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00217}00217\ \ \ \ \ \textcolor{keywordtype}{int}\ cod\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00218}00218\ \ \ \ \ \textcolor{keywordtype}{char}\ codPais[6],\ erro[255];}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00219}00219\ \ \ \ \ \mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}*\ linguas;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00220}00220\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00221}00221\ \ \ \ \ \textcolor{keywordflow}{while}\ (fscanf(f,\ \textcolor{stringliteral}{"{}\%5[\string^;];\%d;\%255[\string^\(\backslash\)n]\(\backslash\)n"{}},\ codPais,\ \&cod,\ erro)\ ==\ 3)\ \{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00222}00222\ \ \ \ \ \ \ \ \ linguas\ =\ \mbox{\hyperlink{erros_8c_aa816828cc84d06c46c2663da3ecbc616}{ProcurarLingua}}(codPais);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00223}00223\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!linguas)\ \{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ ids++;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ resultado\ =\ \mbox{\hyperlink{erros_8c_a43a1170ebe8ba0a673d013010f982cb2}{CriaAdicionaLingua}}(codPais);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(resultado\ !=\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ resultado;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00229}00229\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00230}00230\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00231}00231\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ resultado\ =\ \mbox{\hyperlink{erros_8c_a56e1c798d5f64d1bbf2454e7f24befbd}{CriaAdicionaMensagem}}(cod,\ erro,\ codPais);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00232}00232\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(resultado\ !=\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ resultado;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00234}00234\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00235}00235\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00236}00236\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00237}00237\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;\ \textcolor{comment}{//\ sucesso}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00238}00238\ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00239}00239\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00248}\mbox{\hyperlink{erros_8c_aff277e5be26233876090f0f6b5e1b6d0}{00248}}\ \mbox{\hyperlink{structMensagem}{Mensagem}}\ *\mbox{\hyperlink{erros_8c_aff277e5be26233876090f0f6b5e1b6d0}{CriaMensagem}}(\textcolor{keywordtype}{int}\ cod,\textcolor{keywordtype}{char}*\ mensagem,\textcolor{keywordtype}{int}*erro)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00249}00249\ \ \ \ \ \textcolor{keywordflow}{if}(!cod)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00250}00250\ \ \ \ \ \ \ \ \ *erro=150;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00251}00251\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;\ \textcolor{comment}{//validação\ localização}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00252}00252\ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00253}00253\ \ \ \ \ \mbox{\hyperlink{structMensagem}{Mensagem}}*\ aux\ =\ (\mbox{\hyperlink{structMensagem}{Mensagem}}*)malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structMensagem}{Mensagem}}));\ \textcolor{comment}{//alocação\ de\ memória}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00254}00254\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00255}00255\ \ \ \ \ \textcolor{keywordflow}{if}(aux)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00256}00256\ \ \ \ \ \ \ \ \ aux-\/>idMensagem=cod;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00257}00257\ \ \ \ \ \ \ \ \ aux-\/>mensagem\ =\ (\textcolor{keywordtype}{char}*)malloc(strlen(mensagem)+1);\ \textcolor{comment}{//alocação\ de\ memória}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00258}00258\ \ \ \ \ \ \ \ \ strcpy(aux-\/>mensagem,\ mensagem);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00259}00259\ \ \ \ \ \ \ \ \ aux-\/>proxima\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00260}00260\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ aux;\textcolor{comment}{//retorna\ o\ apontador\ para\ a\ memório\ preenchida/NULL}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00261}00261\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00262}00262\ \ \ \ \ *erro=\ 149;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00263}00263\ \ \ \ \ \textcolor{keywordflow}{return}\ NULL;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00264}00264\ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00265}00265\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00273}\mbox{\hyperlink{erros_8c_a34fa04bf42ae17b05e1dc6c14177f97b}{00273}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{erros_8c_a34fa04bf42ae17b05e1dc6c14177f97b}{AdicionarMensagem}}(\mbox{\hyperlink{structMensagem}{Mensagem}}*\ mensagem,\textcolor{keywordtype}{char}*\ codPais)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00274}00274\ \ \ \ \ \textcolor{keywordflow}{if}(!mensagem)\textcolor{keywordflow}{return}\ 151;\ \textcolor{comment}{//validação\ localização}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00275}00275\ \ \ \ \ \textcolor{keywordflow}{if}(!dicionario)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00276}00276\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 901;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00277}00277\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00278}00278\ \ \ \ \ \mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}\ *aux=\ dicionario;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00279}00279\ \ \ \ \ \textcolor{keywordflow}{while}\ (aux)}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00280}00280\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00281}00281\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(strcmp(aux-\/>linguaCod,codPais)==0)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00282}00282\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{erros_8c_ad65bcf85dfb3535aeb539a688a74686d}{AdicionarMensagemLista}}(\&aux-\/>mensagens,mensagem);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00283}00283\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00284}00284\ \ \ \ \ \ \ \ \ aux=aux-\/>prox;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00285}00285\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00286}00286\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00287}00287\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00288}00288\ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00289}00289\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00297}\mbox{\hyperlink{erros_8c_ad65bcf85dfb3535aeb539a688a74686d}{00297}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{erros_8c_ad65bcf85dfb3535aeb539a688a74686d}{AdicionarMensagemLista}}(\mbox{\hyperlink{structMensagem}{Mensagem}}**\ h,\ \mbox{\hyperlink{structMensagem}{Mensagem}}*\ mensagem)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00298}00298\ \ \ \ \ \textcolor{keywordflow}{if}(!mensagem)\textcolor{keywordflow}{return}\ 151;\ \textcolor{comment}{//validação\ localização}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00299}00299\ \ \ \ \ \textcolor{keywordflow}{if}(!dicionario)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00300}00300\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 901;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00301}00301\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00302}00302\ \ \ \ \ \textcolor{keywordflow}{if}(!*h)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00303}00303\ \ \ \ \ \ \ \ \ *h=mensagem;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00304}00304\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00305}00305\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00306}00306\ \ \ \ \ \mbox{\hyperlink{structMensagem}{Mensagem}}\ *aux=\ *h;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00307}00307\ \ \ \ \ \textcolor{keywordflow}{while}\ (aux-\/>proxima)}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00308}00308\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00309}00309\ \ \ \ \ \ \ \ \ aux=aux-\/>proxima;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00310}00310\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00311}00311\ \ \ \ \ aux-\/>proxima=mensagem;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00312}00312\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00313}00313\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00314}00314\ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00315}00315\ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00324}\mbox{\hyperlink{erros_8c_a56e1c798d5f64d1bbf2454e7f24befbd}{00324}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{erros_8c_a56e1c798d5f64d1bbf2454e7f24befbd}{CriaAdicionaMensagem}}(\textcolor{keywordtype}{int}\ cod,\textcolor{keywordtype}{char}*\ mensagem,\textcolor{keywordtype}{char}*\ codPais)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00325}00325\ \ \ \ \ \textcolor{keywordtype}{int}\ erro=1;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00326}00326\ \ \ \ \ \mbox{\hyperlink{structMensagem}{Mensagem}}*\ m=\mbox{\hyperlink{erros_8c_aff277e5be26233876090f0f6b5e1b6d0}{CriaMensagem}}(cod,mensagem,\&erro);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00327}00327\ \ \ \ \ \textcolor{keywordflow}{if}(erro\ !=1\ )\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00328}00328\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ erro;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00329}00329\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00330}00330\ \ \ \ \ erro\ =\ \mbox{\hyperlink{erros_8c_a34fa04bf42ae17b05e1dc6c14177f97b}{AdicionarMensagem}}(m,codPais);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00331}00331\ \ \ \ \ \textcolor{keywordflow}{return}\ erro;\textcolor{comment}{//retorna\ o\ apontador\ para\ a\ memório\ preenchida/NULL}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00332}00332\ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00338}\mbox{\hyperlink{erros_8c_ab3d01b5d5518e8005f94570d005457ac}{00338}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{erros_8c_ab3d01b5d5518e8005f94570d005457ac}{limpaMemoriaErros}}()\ \{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00339}00339\ \ \ \ \ \mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}*\ atual\ =\ dicionario;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00340}00340\ \ \ \ \ \mbox{\hyperlink{structLinguaDicionario}{LinguaDicionario}}*\ proximo\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00341}00341\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00342}00342\ \ \ \ \ \textcolor{keywordflow}{while}\ (atual\ !=\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00343}00343\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structMensagem}{Mensagem}}*\ msg\_atual\ =\ atual-\/>mensagens;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00344}00344\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structMensagem}{Mensagem}}*\ msg\_proximo\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00345}00345\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00346}00346\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (msg\_atual\ !=\ NULL)\ \{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00347}00347\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00348}00348\ \ \ \ \ \ \ \ \ \ \ \ \ msg\_proximo\ =\ msg\_atual-\/>proxima;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00349}00349\ \ \ \ \ \ \ \ \ \ \ \ \ free(msg\_atual-\/>mensagem);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00350}00350\ \ \ \ \ \ \ \ \ \ \ \ \ free(msg\_atual);\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00351}00351\ \ \ \ \ \ \ \ \ \ \ \ \ msg\_atual\ =\ msg\_proximo;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00352}00352\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00353}00353\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00354}00354\ \ \ \ \ \ \ \ \ proximo\ =\ atual-\/>prox;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00355}00355\ \ \ \ \ \ \ \ \ free(atual);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00356}00356\ \ \ \ \ \ \ \ \ atual\ =\ proximo;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00357}00357\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00358}00358\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00359}00359\ \ \ \ \ dicionario\ =\ NULL;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00360}00360\ \ \ \ \ ids\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00361}00361\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00362}00362\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;\ \ \textcolor{comment}{//\ Indica\ sucesso}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00363}00363\ \}}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00370}\mbox{\hyperlink{erros_8c_a4d6943162fdc54ed79a8b980985f43dc}{00370}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{erros_8c_a4d6943162fdc54ed79a8b980985f43dc}{definirLingua}}(\textcolor{keywordtype}{char}*\ lingua)\{}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00371}00371\ \ \ \ \ linguadefinida\ =\ (\textcolor{keywordtype}{char}*)malloc(strlen(lingua)+1);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00372}00372\ \ \ \ \ \textcolor{keywordflow}{if}(!linguadefinida)\ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00373}00373\ \ \ \ \ strcpy(linguadefinida,lingua);}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00374}00374\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{erros_8c_source_l00375}00375\ \}}
+
+\end{DoxyCode}

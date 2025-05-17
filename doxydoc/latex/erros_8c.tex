@@ -1,0 +1,564 @@
+\doxysection{/home/disilva021/\+UNI/\+EDA/\+Projeto1/src/erros.c File Reference}
+\hypertarget{erros_8c}{}\label{erros_8c}\index{/home/disilva021/UNI/EDA/Projeto1/src/erros.c@{/home/disilva021/UNI/EDA/Projeto1/src/erros.c}}
+
+
+Ficheiro para tratar de erros no trabalho.  
+
+
+{\ttfamily \#include "{}erros.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+Include dependency graph for erros.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{erros_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structMensagem}{Mensagem}}
+\item 
+struct \mbox{\hyperlink{structLinguaDicionario}{Lingua\+Dicionario}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{erros_8c_a6dc162632f90f2260098a64c917004e4}\label{erros_8c_a6dc162632f90f2260098a64c917004e4} 
+typedef struct Mensagem {\bfseries Mensagem}
+\item 
+\Hypertarget{erros_8c_ad876b39275a386f1d0713abfb46c7fb4}\label{erros_8c_ad876b39275a386f1d0713abfb46c7fb4} 
+typedef struct Lingua\+Dicionario {\bfseries Lingua\+Dicionario}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structLinguaDicionario}{Lingua\+Dicionario}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{erros_8c_ad49bb34a78779836e39eff31e8296880}{Cria\+Lingua}} (char \texorpdfstring{$\ast$}{*}cod, int \texorpdfstring{$\ast$}{*}erro)
+\begin{DoxyCompactList}\small\item\em Função que cria linguas. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{erros_8c_aaee631d202180319047a97d8a1b8e5b1}{Adicionar\+Lingua}} (\mbox{\hyperlink{structLinguaDicionario}{Lingua\+Dicionario}} \texorpdfstring{$\ast$}{*}lingua)
+\begin{DoxyCompactList}\small\item\em Adiciona Lingua ao dicionário. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{erros_8c_a43a1170ebe8ba0a673d013010f982cb2}{Cria\+Adiciona\+Lingua}} (char \texorpdfstring{$\ast$}{*}cod)
+\begin{DoxyCompactList}\small\item\em Resume o processo de criação e adicionar Linguas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structLinguaDicionario}{Lingua\+Dicionario}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{erros_8c_aa816828cc84d06c46c2663da3ecbc616}{Procurar\+Lingua}} (char \texorpdfstring{$\ast$}{*}cod)
+\begin{DoxyCompactList}\small\item\em Procura uma lingua pelo código. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structMensagem}{Mensagem}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{erros_8c_aff277e5be26233876090f0f6b5e1b6d0}{Cria\+Mensagem}} (int cod, char \texorpdfstring{$\ast$}{*}mensagem, int \texorpdfstring{$\ast$}{*}erro)
+\begin{DoxyCompactList}\small\item\em Cria espaço para uma mensagem. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{erros_8c_a34fa04bf42ae17b05e1dc6c14177f97b}{Adicionar\+Mensagem}} (\mbox{\hyperlink{structMensagem}{Mensagem}} \texorpdfstring{$\ast$}{*}mensagem, char \texorpdfstring{$\ast$}{*}cod\+Pais)
+\begin{DoxyCompactList}\small\item\em Adiciona mensagem ao dicionário. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{erros_8c_ad65bcf85dfb3535aeb539a688a74686d}{Adicionar\+Mensagem\+Lista}} (\mbox{\hyperlink{structMensagem}{Mensagem}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}h, \mbox{\hyperlink{structMensagem}{Mensagem}} \texorpdfstring{$\ast$}{*}mensagem)
+\begin{DoxyCompactList}\small\item\em Adicionar Mensagens a uma lista de Mensagens. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{erros_8c_a56e1c798d5f64d1bbf2454e7f24befbd}{Cria\+Adiciona\+Mensagem}} (int cod, char \texorpdfstring{$\ast$}{*}mensagem, char \texorpdfstring{$\ast$}{*}cod\+Pais)
+\begin{DoxyCompactList}\small\item\em Resume o processo de criação e adicionar Mensagens. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{erros_8c_afe2bab1951298c255781427272a6e7b7}{le\+Ficheiro}} (FILE \texorpdfstring{$\ast$}{*}f)
+\begin{DoxyCompactList}\small\item\em Le o ficheiro e preenche o dicionario. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{erros_8c_a642cd62be9f2fd85befcd2aaaef140b5}{preenche\+Dicionario}} (char \texorpdfstring{$\ast$}{*}nome\+Ficheiro)
+\begin{DoxyCompactList}\small\item\em Função a ser chamada pelo utilizador para preencher o dicionario. \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{erros_8c_ac84569b82adfaf9587ec123850210495}{Erro\+Por\+Cod}} (int cod\+Erro)
+\begin{DoxyCompactList}\small\item\em Procura o erro pelo código da mensagem (por uma lingua definida) \end{DoxyCompactList}\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{erros_8c_a5cb546f777b7f6031db48e5a9f0bf9c3}{Erro\+Por\+Pais\+\_\+\+Cod}} (char \texorpdfstring{$\ast$}{*}lingua, int cod\+Erro)
+\begin{DoxyCompactList}\small\item\em Procura o erro pelo código do país e da mensagem. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{erros_8c_ab3d01b5d5518e8005f94570d005457ac}{limpa\+Memoria\+Erros}} ()
+\begin{DoxyCompactList}\small\item\em Limpa o dicionário da mensagem. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{erros_8c_a4d6943162fdc54ed79a8b980985f43dc}{definir\+Lingua}} (char \texorpdfstring{$\ast$}{*}lingua)
+\begin{DoxyCompactList}\small\item\em Define uma linguagem (para utilizar Erro\+Por\+Cod) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structLinguaDicionario}{Lingua\+Dicionario}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{erros_8c_a12056cec30aeb8268407995cf2238817}{dicionario}} =NULL
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{erros_8c_a3abde4ea524dda29608a7dbff0c500ae}{linguadefinida}}
+\item 
+int \mbox{\hyperlink{erros_8c_afd62e5731afb916847cef0652c0fbc83}{ids}} =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ficheiro para tratar de erros no trabalho. 
+
+\begin{DoxyAuthor}{Author}
+Diogo Silva (\href{mailto:a31504@alunos.ipca.pt}{\texttt{ a31504@alunos.\+ipca.\+pt}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/05-\/06
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{erros_8c_source}{erros.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{erros_8c_aaee631d202180319047a97d8a1b8e5b1}\index{erros.c@{erros.c}!AdicionarLingua@{AdicionarLingua}}
+\index{AdicionarLingua@{AdicionarLingua}!erros.c@{erros.c}}
+\doxysubsubsection{\texorpdfstring{AdicionarLingua()}{AdicionarLingua()}}
+{\footnotesize\ttfamily \label{erros_8c_aaee631d202180319047a97d8a1b8e5b1} 
+int Adicionar\+Lingua (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structLinguaDicionario}{Lingua\+Dicionario}} \texorpdfstring{$\ast$}{*}}]{lingua}{}\end{DoxyParamCaption})}
+
+
+
+Adiciona Lingua ao dicionário. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lingua} & -\/\texorpdfstring{$>$}{>} Lingua a adicionar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int)Erro 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{erros_8c_source_l00085}{85}} of file \mbox{\hyperlink{erros_8c_source}{erros.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{erros_8c_aaee631d202180319047a97d8a1b8e5b1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{erros_8c_a34fa04bf42ae17b05e1dc6c14177f97b}\index{erros.c@{erros.c}!AdicionarMensagem@{AdicionarMensagem}}
+\index{AdicionarMensagem@{AdicionarMensagem}!erros.c@{erros.c}}
+\doxysubsubsection{\texorpdfstring{AdicionarMensagem()}{AdicionarMensagem()}}
+{\footnotesize\ttfamily \label{erros_8c_a34fa04bf42ae17b05e1dc6c14177f97b} 
+int Adicionar\+Mensagem (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMensagem}{Mensagem}} \texorpdfstring{$\ast$}{*}}]{mensagem}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{cod\+Pais}{}\end{DoxyParamCaption})}
+
+
+
+Adiciona mensagem ao dicionário. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mensagem} & -\/\texorpdfstring{$>$}{>} mensagem a adicionar \\
+\hline
+{\em cod\+Pais} & -\/\texorpdfstring{$>$}{>} cod do pais a que a mensagem pertence \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) Erro 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{erros_8c_source_l00273}{273}} of file \mbox{\hyperlink{erros_8c_source}{erros.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{erros_8c_a34fa04bf42ae17b05e1dc6c14177f97b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{erros_8c_a34fa04bf42ae17b05e1dc6c14177f97b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{erros_8c_ad65bcf85dfb3535aeb539a688a74686d}\index{erros.c@{erros.c}!AdicionarMensagemLista@{AdicionarMensagemLista}}
+\index{AdicionarMensagemLista@{AdicionarMensagemLista}!erros.c@{erros.c}}
+\doxysubsubsection{\texorpdfstring{AdicionarMensagemLista()}{AdicionarMensagemLista()}}
+{\footnotesize\ttfamily \label{erros_8c_ad65bcf85dfb3535aeb539a688a74686d} 
+int Adicionar\+Mensagem\+Lista (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structMensagem}{Mensagem}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{h}{, }\item[{\mbox{\hyperlink{structMensagem}{Mensagem}} \texorpdfstring{$\ast$}{*}}]{mensagem}{}\end{DoxyParamCaption})}
+
+
+
+Adicionar Mensagens a uma lista de Mensagens. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/\texorpdfstring{$>$}{>} cabeça das mensagens \\
+\hline
+{\em mensagem} & -\/\texorpdfstring{$>$}{>} mensagem a adicionar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) Erro 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{erros_8c_source_l00297}{297}} of file \mbox{\hyperlink{erros_8c_source}{erros.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{erros_8c_ad65bcf85dfb3535aeb539a688a74686d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{erros_8c_a43a1170ebe8ba0a673d013010f982cb2}\index{erros.c@{erros.c}!CriaAdicionaLingua@{CriaAdicionaLingua}}
+\index{CriaAdicionaLingua@{CriaAdicionaLingua}!erros.c@{erros.c}}
+\doxysubsubsection{\texorpdfstring{CriaAdicionaLingua()}{CriaAdicionaLingua()}}
+{\footnotesize\ttfamily \label{erros_8c_a43a1170ebe8ba0a673d013010f982cb2} 
+int Cria\+Adiciona\+Lingua (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{cod}{}\end{DoxyParamCaption})}
+
+
+
+Resume o processo de criação e adicionar Linguas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cod} & -\/\texorpdfstring{$>$}{>} cod Lingua \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int)Erro 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{erros_8c_source_l00106}{106}} of file \mbox{\hyperlink{erros_8c_source}{erros.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{erros_8c_a43a1170ebe8ba0a673d013010f982cb2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{erros_8c_a43a1170ebe8ba0a673d013010f982cb2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{erros_8c_a56e1c798d5f64d1bbf2454e7f24befbd}\index{erros.c@{erros.c}!CriaAdicionaMensagem@{CriaAdicionaMensagem}}
+\index{CriaAdicionaMensagem@{CriaAdicionaMensagem}!erros.c@{erros.c}}
+\doxysubsubsection{\texorpdfstring{CriaAdicionaMensagem()}{CriaAdicionaMensagem()}}
+{\footnotesize\ttfamily \label{erros_8c_a56e1c798d5f64d1bbf2454e7f24befbd} 
+int Cria\+Adiciona\+Mensagem (\begin{DoxyParamCaption}\item[{int}]{cod}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{mensagem}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{cod\+Pais}{}\end{DoxyParamCaption})}
+
+
+
+Resume o processo de criação e adicionar Mensagens. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cod} & -\/\texorpdfstring{$>$}{>} cod da mensagem \\
+\hline
+{\em mensagem} & -\/\texorpdfstring{$>$}{>} mensagem \\
+\hline
+{\em cod\+Pais} & -\/\texorpdfstring{$>$}{>} pais da mensagem \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int) Erro 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{erros_8c_source_l00324}{324}} of file \mbox{\hyperlink{erros_8c_source}{erros.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{erros_8c_a56e1c798d5f64d1bbf2454e7f24befbd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{erros_8c_a56e1c798d5f64d1bbf2454e7f24befbd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{erros_8c_ad49bb34a78779836e39eff31e8296880}\index{erros.c@{erros.c}!CriaLingua@{CriaLingua}}
+\index{CriaLingua@{CriaLingua}!erros.c@{erros.c}}
+\doxysubsubsection{\texorpdfstring{CriaLingua()}{CriaLingua()}}
+{\footnotesize\ttfamily \label{erros_8c_ad49bb34a78779836e39eff31e8296880} 
+\mbox{\hyperlink{structLinguaDicionario}{Lingua\+Dicionario}} \texorpdfstring{$\ast$}{*} Cria\+Lingua (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{cod}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{}\end{DoxyParamCaption})}
+
+
+
+Função que cria linguas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cod} & -\/\texorpdfstring{$>$}{>} código da lingua \\
+\hline
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lingua\+Dicionario\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{erros_8c_source_l00062}{62}} of file \mbox{\hyperlink{erros_8c_source}{erros.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{erros_8c_ad49bb34a78779836e39eff31e8296880_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{erros_8c_aff277e5be26233876090f0f6b5e1b6d0}\index{erros.c@{erros.c}!CriaMensagem@{CriaMensagem}}
+\index{CriaMensagem@{CriaMensagem}!erros.c@{erros.c}}
+\doxysubsubsection{\texorpdfstring{CriaMensagem()}{CriaMensagem()}}
+{\footnotesize\ttfamily \label{erros_8c_aff277e5be26233876090f0f6b5e1b6d0} 
+\mbox{\hyperlink{structMensagem}{Mensagem}} \texorpdfstring{$\ast$}{*} Cria\+Mensagem (\begin{DoxyParamCaption}\item[{int}]{cod}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{mensagem}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{}\end{DoxyParamCaption})}
+
+
+
+Cria espaço para uma mensagem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cod} & -\/\texorpdfstring{$>$}{>} cod da mensagem \\
+\hline
+{\em mensagem} & -\/\texorpdfstring{$>$}{>} mensagem \\
+\hline
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Mensagem\texorpdfstring{$\ast$}{*} ou NULL 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{erros_8c_source_l00248}{248}} of file \mbox{\hyperlink{erros_8c_source}{erros.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{erros_8c_aff277e5be26233876090f0f6b5e1b6d0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{erros_8c_a4d6943162fdc54ed79a8b980985f43dc}\index{erros.c@{erros.c}!definirLingua@{definirLingua}}
+\index{definirLingua@{definirLingua}!erros.c@{erros.c}}
+\doxysubsubsection{\texorpdfstring{definirLingua()}{definirLingua()}}
+{\footnotesize\ttfamily \label{erros_8c_a4d6943162fdc54ed79a8b980985f43dc} 
+int definir\+Lingua (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{lingua}{}\end{DoxyParamCaption})}
+
+
+
+Define uma linguagem (para utilizar Erro\+Por\+Cod) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lingua} & -\/\texorpdfstring{$>$}{>} cod a definir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Sucesso 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{erros_8c_source_l00370}{370}} of file \mbox{\hyperlink{erros_8c_source}{erros.\+c}}.
+
+\Hypertarget{erros_8c_ac84569b82adfaf9587ec123850210495}\index{erros.c@{erros.c}!ErroPorCod@{ErroPorCod}}
+\index{ErroPorCod@{ErroPorCod}!erros.c@{erros.c}}
+\doxysubsubsection{\texorpdfstring{ErroPorCod()}{ErroPorCod()}}
+{\footnotesize\ttfamily \label{erros_8c_ac84569b82adfaf9587ec123850210495} 
+char \texorpdfstring{$\ast$}{*} Erro\+Por\+Cod (\begin{DoxyParamCaption}\item[{int}]{cod\+Erro}{}\end{DoxyParamCaption})}
+
+
+
+Procura o erro pelo código da mensagem (por uma lingua definida) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cod\+Erro} & -\/\texorpdfstring{$>$}{>} Erro de mensagem \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char\texorpdfstring{$\ast$}{*} mensagem de erro 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{erros_8c_source_l00163}{163}} of file \mbox{\hyperlink{erros_8c_source}{erros.\+c}}.
+
+\Hypertarget{erros_8c_a5cb546f777b7f6031db48e5a9f0bf9c3}\index{erros.c@{erros.c}!ErroPorPais\_Cod@{ErroPorPais\_Cod}}
+\index{ErroPorPais\_Cod@{ErroPorPais\_Cod}!erros.c@{erros.c}}
+\doxysubsubsection{\texorpdfstring{ErroPorPais\_Cod()}{ErroPorPais\_Cod()}}
+{\footnotesize\ttfamily \label{erros_8c_a5cb546f777b7f6031db48e5a9f0bf9c3} 
+char \texorpdfstring{$\ast$}{*} Erro\+Por\+Pais\+\_\+\+Cod (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{lingua}{, }\item[{int}]{cod\+Erro}{}\end{DoxyParamCaption})}
+
+
+
+Procura o erro pelo código do país e da mensagem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lingua} & -\/\texorpdfstring{$>$}{>} cod Lingua \\
+\hline
+{\em cod\+Erro} & -\/\texorpdfstring{$>$}{>} cod erro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+char\texorpdfstring{$\ast$}{*} mensagem de erro 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{erros_8c_source_l00190}{190}} of file \mbox{\hyperlink{erros_8c_source}{erros.\+c}}.
+
+\Hypertarget{erros_8c_afe2bab1951298c255781427272a6e7b7}\index{erros.c@{erros.c}!leFicheiro@{leFicheiro}}
+\index{leFicheiro@{leFicheiro}!erros.c@{erros.c}}
+\doxysubsubsection{\texorpdfstring{leFicheiro()}{leFicheiro()}}
+{\footnotesize\ttfamily \label{erros_8c_afe2bab1951298c255781427272a6e7b7} 
+int le\+Ficheiro (\begin{DoxyParamCaption}\item[{FILE \texorpdfstring{$\ast$}{*}}]{f}{}\end{DoxyParamCaption})}
+
+
+
+Le o ficheiro e preenche o dicionario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & -\/\texorpdfstring{$>$}{>} Ficheiro \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int)Erro 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{erros_8c_source_l00215}{215}} of file \mbox{\hyperlink{erros_8c_source}{erros.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{erros_8c_afe2bab1951298c255781427272a6e7b7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{erros_8c_afe2bab1951298c255781427272a6e7b7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{erros_8c_ab3d01b5d5518e8005f94570d005457ac}\index{erros.c@{erros.c}!limpaMemoriaErros@{limpaMemoriaErros}}
+\index{limpaMemoriaErros@{limpaMemoriaErros}!erros.c@{erros.c}}
+\doxysubsubsection{\texorpdfstring{limpaMemoriaErros()}{limpaMemoriaErros()}}
+{\footnotesize\ttfamily \label{erros_8c_ab3d01b5d5518e8005f94570d005457ac} 
+int limpa\+Memoria\+Erros (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Limpa o dicionário da mensagem. 
+
+\begin{DoxyReturn}{Returns}
+(int)Sucesso 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{erros_8c_source_l00338}{338}} of file \mbox{\hyperlink{erros_8c_source}{erros.\+c}}.
+
+\Hypertarget{erros_8c_a642cd62be9f2fd85befcd2aaaef140b5}\index{erros.c@{erros.c}!preencheDicionario@{preencheDicionario}}
+\index{preencheDicionario@{preencheDicionario}!erros.c@{erros.c}}
+\doxysubsubsection{\texorpdfstring{preencheDicionario()}{preencheDicionario()}}
+{\footnotesize\ttfamily \label{erros_8c_a642cd62be9f2fd85befcd2aaaef140b5} 
+int preenche\+Dicionario (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{nome\+Ficheiro}{}\end{DoxyParamCaption})}
+
+
+
+Função a ser chamada pelo utilizador para preencher o dicionario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+Ficheiro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int)Erro 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{erros_8c_source_l00142}{142}} of file \mbox{\hyperlink{erros_8c_source}{erros.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{erros_8c_a642cd62be9f2fd85befcd2aaaef140b5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{erros_8c_aa816828cc84d06c46c2663da3ecbc616}\index{erros.c@{erros.c}!ProcurarLingua@{ProcurarLingua}}
+\index{ProcurarLingua@{ProcurarLingua}!erros.c@{erros.c}}
+\doxysubsubsection{\texorpdfstring{ProcurarLingua()}{ProcurarLingua()}}
+{\footnotesize\ttfamily \label{erros_8c_aa816828cc84d06c46c2663da3ecbc616} 
+\mbox{\hyperlink{structLinguaDicionario}{Lingua\+Dicionario}} \texorpdfstring{$\ast$}{*} Procurar\+Lingua (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{cod}{}\end{DoxyParamCaption})}
+
+
+
+Procura uma lingua pelo código. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cod} & -\/\texorpdfstring{$>$}{>} cod Lingua \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Lingua\+Dicionario\texorpdfstring{$\ast$}{*} ou NULL 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{erros_8c_source_l00122}{122}} of file \mbox{\hyperlink{erros_8c_source}{erros.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{erros_8c_aa816828cc84d06c46c2663da3ecbc616_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{erros_8c_a12056cec30aeb8268407995cf2238817}\index{erros.c@{erros.c}!dicionario@{dicionario}}
+\index{dicionario@{dicionario}!erros.c@{erros.c}}
+\doxysubsubsection{\texorpdfstring{dicionario}{dicionario}}
+{\footnotesize\ttfamily \label{erros_8c_a12056cec30aeb8268407995cf2238817} 
+\mbox{\hyperlink{structLinguaDicionario}{Lingua\+Dicionario}}\texorpdfstring{$\ast$}{*} dicionario =NULL}
+
+
+
+Definition at line \mbox{\hyperlink{erros_8c_source_l00052}{52}} of file \mbox{\hyperlink{erros_8c_source}{erros.\+c}}.
+
+\Hypertarget{erros_8c_afd62e5731afb916847cef0652c0fbc83}\index{erros.c@{erros.c}!ids@{ids}}
+\index{ids@{ids}!erros.c@{erros.c}}
+\doxysubsubsection{\texorpdfstring{ids}{ids}}
+{\footnotesize\ttfamily \label{erros_8c_afd62e5731afb916847cef0652c0fbc83} 
+int ids =0}
+
+
+
+Definition at line \mbox{\hyperlink{erros_8c_source_l00054}{54}} of file \mbox{\hyperlink{erros_8c_source}{erros.\+c}}.
+
+\Hypertarget{erros_8c_a3abde4ea524dda29608a7dbff0c500ae}\index{erros.c@{erros.c}!linguadefinida@{linguadefinida}}
+\index{linguadefinida@{linguadefinida}!erros.c@{erros.c}}
+\doxysubsubsection{\texorpdfstring{linguadefinida}{linguadefinida}}
+{\footnotesize\ttfamily \label{erros_8c_a3abde4ea524dda29608a7dbff0c500ae} 
+char\texorpdfstring{$\ast$}{*} linguadefinida}
+
+
+
+Definition at line \mbox{\hyperlink{erros_8c_source_l00053}{53}} of file \mbox{\hyperlink{erros_8c_source}{erros.\+c}}.
+

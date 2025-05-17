@@ -1,0 +1,9 @@
+<map id="CriaAdicionaMensagem" name="CriaAdicionaMensagem">
+<area shape="rect" id="Node000001" title="Resume o processo de criação e adicionar Mensagens." alt="" coords="5,31,165,57"/>
+<area shape="rect" id="Node000002" href="$erros_8c.html#a34fa04bf42ae17b05e1dc6c14177f97b" title="Adiciona mensagem ao dicionário." alt="" coords="213,5,352,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,31,197,27,198,32,165,36"/>
+<area shape="rect" id="Node000004" href="$erros_8c.html#aff277e5be26233876090f0f6b5e1b6d0" title="Cria espaço para uma mensagem." alt="" coords="228,56,337,83"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="165,52,213,58,212,63,165,57"/>
+<area shape="rect" id="Node000003" href="$erros_8c.html#ad65bcf85dfb3535aeb539a688a74686d" title="Adicionar Mensagens a uma lista de Mensagens." alt="" coords="400,5,567,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="353,16,384,16,384,21,353,21"/>
+</map>

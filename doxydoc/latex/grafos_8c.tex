@@ -1,0 +1,1068 @@
+\doxysection{/home/disilva021/\+UNI/\+EDA/\+Projeto1/src/grafos.c File Reference}
+\hypertarget{grafos_8c}{}\label{grafos_8c}\index{/home/disilva021/UNI/EDA/Projeto1/src/grafos.c@{/home/disilva021/UNI/EDA/Projeto1/src/grafos.c}}
+{\ttfamily \#include "{}dados.\+h"{}}\newline
+{\ttfamily \#include "{}grafos.\+h"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for grafos.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{grafos_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{grafos_8c_aff18f83815b5bab42f35fdd72f44256a}{vazio}}~\textquotesingle{}.\textquotesingle{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grafos_8c_a9233e3e7a3ca8cf7f680148f5b6ed137}{Inicializa\+Grafo}} (int \texorpdfstring{$\ast$}{*}erro)
+\begin{DoxyCompactList}\small\item\em Função que serve inicializar um grafo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grafos_8c_a73b759ff770de9592d74a5362cc26834}{Criar\+Vertice}} (\mbox{\hyperlink{structCasaF}{CasaF}} \texorpdfstring{$\ast$}{*}antena, int \texorpdfstring{$\ast$}{*}erro)
+\begin{DoxyCompactList}\small\item\em Função que cria espaço para vertice. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structCasaF}{CasaF}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grafos_8c_a5d39aec566276a1681d2f70c0e3e6754}{Criar\+Antena}} (char c, int linha, int coluna, int \texorpdfstring{$\ast$}{*}erro)
+\begin{DoxyCompactList}\small\item\em Função que cria Antena. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structAdj}{Adj}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grafos_8c_a7163f5f525c96e360f72362a0654f037}{Criar\+Adj}} (\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}v1, \mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}v2, int \texorpdfstring{$\ast$}{*}erro)
+\begin{DoxyCompactList}\small\item\em Função que cria a adjacência. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grafos_8c_a2efbfabcf1e00bc4aedfb3d40bf26595}{Procura\+Vertice}} (\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}novo, \mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}cabeca, int \texorpdfstring{$\ast$}{*}erro)
+\begin{DoxyCompactList}\small\item\em Verifica se um vertice já existe na posição de um novo vertice. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grafos_8c_a63f991002f3cf13832a6c8d85583bc32}{Procura\+Vertice\+Antena}} (\mbox{\hyperlink{structCasaF}{CasaF}} \texorpdfstring{$\ast$}{*}novo, \mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}cabeca, int \texorpdfstring{$\ast$}{*}erro)
+\begin{DoxyCompactList}\small\item\em Verifica se um vertice já existe na posição de um novo vertice. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{grafos_8c_a30909cb6d14b8a01a95cfbee8053a227}{Posicao\+Vertice}} (\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}v)
+\begin{DoxyCompactList}\small\item\em Devolve a posição de um vertice no mapa. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grafos_8c_a78f4a9fb030b555f73874430443944d8}{Insere\+Vertice}} (\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}novo, \mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}cabeca, int \texorpdfstring{$\ast$}{*}erro)
+\begin{DoxyCompactList}\small\item\em Função que insere um vértice num grafo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grafos_8c_a7d37a5c396341d8db7e7e2e4bd9f164a}{le\+Txt\+Grafos}} (char \texorpdfstring{$\ast$}{*}nome, \mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}cabeca, int \texorpdfstring{$\ast$}{*}erro)
+\begin{DoxyCompactList}\small\item\em Função que le o mapa em formato TXT. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grafos_8c_acdd64deb71261745dcdd38e55d91f5a1}{insere\+Adjacencias}} (\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}cabeca, int \texorpdfstring{$\ast$}{*}erro)
+\begin{DoxyCompactList}\small\item\em Função que insere adjacencias automaticamente dando um grafo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{grafos_8c_ada891fc51999a8dfe2a9dca318d1d40c}{esta\+No\+Radar}} (int coluna\+Origem, int coluna\+Chegada, int linha\+Origem, int linha\+Chegada)
+\begin{DoxyCompactList}\small\item\em Funcção que verifica se uma coordenada esta no radar de outras coordenadas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grafos_8c_a17df99b47c94a07be1074fad89516411}{insere\+Adjacencia\+Vertice}} (\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}h, \mbox{\hyperlink{structAdj}{Adj}} \texorpdfstring{$\ast$}{*}adj, int \texorpdfstring{$\ast$}{*}erro)
+\begin{DoxyCompactList}\small\item\em Insere Adjacencia num vértice fornecido. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{grafos_8c_a8e65dc419049666aca33a364af6ea39d}{limpa\+Adj}} (\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}cabeca)
+\begin{DoxyCompactList}\small\item\em Limpa adjacências de um grafo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grafos_8c_a2517222fbb3a09a0919174f9da4b9f9e}{limpaV}} (\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}cabeca, int \texorpdfstring{$\ast$}{*}erro)
+\begin{DoxyCompactList}\small\item\em Limpa os vértives de um grafo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{grafos_8c_a5fb1e8458fafa37541843b06d42ebe2e}{limpa\+Conteudo\+Grafo}} (\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}cabeca, int \texorpdfstring{$\ast$}{*}erro)
+\begin{DoxyCompactList}\small\item\em Limpa o conteúdo no grafo. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{grafos_8c_aea25a9f6ca810fa1dda9a80b28c62d51}{limpa\+Grafo}} (\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}cabeca, int \texorpdfstring{$\ast$}{*}erro)
+\begin{DoxyCompactList}\small\item\em Limpa o conteúdo e o espaço do grafo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grafos_8c_aa7f03076bc8721f0922eb084146d8bc3}{DFSUtil}} (\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}v, \mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}caminho, int \texorpdfstring{$\ast$}{*}erro)
+\begin{DoxyCompactList}\small\item\em Função de recursividade do algoritmo DFS. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grafos_8c_a2d23d9740ca62793d52b9c969ec5c8bd}{DFS\+\_\+\+Caminho\+Grafo}} (\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}original, int linha, int coluna, int \texorpdfstring{$\ast$}{*}erro)
+\begin{DoxyCompactList}\small\item\em Função principal DFS. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{grafos_8c_a443c31196d75597945f8c30c9cd357e1}{mostra\+Vertices\+Caminho}} (\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}g)
+\begin{DoxyCompactList}\small\item\em Mostra o caminho do DFS. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{grafos_8c_abbc18af941f1dda53cb0ef962f99b5af}{mostra\+Vertices}} (\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}g)
+\begin{DoxyCompactList}\small\item\em Mostra o grafo com adjacencias. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grafos_8c_af9708d32550e985db42845022bc37396}{escreve\+Ficheiro\+Binario}} (char \texorpdfstring{$\ast$}{*}nome\+Ficheiro, \mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}g, int \texorpdfstring{$\ast$}{*}erro)
+\begin{DoxyCompactList}\small\item\em Escreve o grafo e as adjacencias num grafo num ficheiro binario. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grafos_8c_a73e13a6f370c6337595657cabb4b65c2}{le\+Ficheiro\+Binario}} (char \texorpdfstring{$\ast$}{*}nome\+Ficheiro, \mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}g, int \texorpdfstring{$\ast$}{*}erro)
+\begin{DoxyCompactList}\small\item\em le o grafo e as adjacencias de um ficheiro binario \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{grafos_8c_a87e18597dca7ba7906e50b2792f1730d}{mostra\+Visitados}} (\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}visitados, int count)
+\item 
+\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} \mbox{\hyperlink{grafos_8c_a95b01f63a104cef22b6e84326dbd48a6}{BFS}} (\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}g, int linha, int coluna, int \texorpdfstring{$\ast$}{*}erro, int \texorpdfstring{$\ast$}{*}visitados\+\_\+count)
+\begin{DoxyCompactList}\small\item\em Função de pesquisa BFS. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{grafos_8c_a4c6a5b9d1bd3787f095b7152338dfd94}{caminhos\+Entre\+Dois\+Vertices}} (\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}atual, \mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}destino, \mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}caminho\+Atual, int indice, \mbox{\hyperlink{structListaDeCaminhos}{Lista\+De\+Caminhos}} \texorpdfstring{$\ast$}{*}resultados)
+\begin{DoxyCompactList}\small\item\em Função auxiliar para encontrar os caminhos entre os dois vértices. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structListaDeCaminhos}{Lista\+De\+Caminhos}} \mbox{\hyperlink{grafos_8c_abe9d1f363c11eb7d631afdd531cf488b}{calcular\+Caminhos\+Simples}} (\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}g, int linha\+Origem, int coluna\+Origem, int linha\+Destino, int coluna\+Destino, int \texorpdfstring{$\ast$}{*}erro)
+\begin{DoxyCompactList}\small\item\em Calcula todos os caminhos possiveis. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{grafos_8c_a7f38024743969f2fca501938bf166caf}{imprimir\+Caminhos\+Simples}} (\mbox{\hyperlink{structListaDeCaminhos}{Lista\+De\+Caminhos}} \texorpdfstring{$\ast$}{*}resultados)
+\begin{DoxyCompactList}\small\item\em Mostra os caminhos calculados. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{grafos_8c_a6f3361506dde25dd11fbd12e10d161b5}{detectar\+Cruzamento\+Geral}} (\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}g, char freq1, char freq2, int linhas\mbox{[}$\,$\mbox{]}, int colunas\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Função que calcula cruzamentos feitos por frequencias. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{grafos_8c_a8ef51ad08853e3e3808897fac69593f3}{imprimir\+Cruzamentos\+Gerais}} (int linhas\mbox{[}$\,$\mbox{]}, int colunas\mbox{[}$\,$\mbox{]}, int total)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{grafos_8c_a4e0b83b1846ca118ec600f5a7cb50833}{x\+Mapa}} =0
+\item 
+int \mbox{\hyperlink{grafos_8c_a71ff205121c6908679b0c0af0d1b4536}{y\+Mapa}} =1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Diogo Silva (\href{mailto:a31504@alunos.ipca.pt}{\texttt{ a31504@alunos.\+ipca.\+pt}}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2025-\/05-\/10
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2025 
+\end{DoxyCopyright}
+
+
+Definition in file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{grafos_8c_aff18f83815b5bab42f35fdd72f44256a}\index{grafos.c@{grafos.c}!vazio@{vazio}}
+\index{vazio@{vazio}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{vazio}{vazio}}
+{\footnotesize\ttfamily \label{grafos_8c_aff18f83815b5bab42f35fdd72f44256a} 
+\#define vazio~\textquotesingle{}.\textquotesingle{}}
+
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00015}{15}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{grafos_8c_a95b01f63a104cef22b6e84326dbd48a6}\index{grafos.c@{grafos.c}!BFS@{BFS}}
+\index{BFS@{BFS}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{BFS()}{BFS()}}
+{\footnotesize\ttfamily \label{grafos_8c_a95b01f63a104cef22b6e84326dbd48a6} 
+\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} BFS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int}]{linha}{, }\item[{int}]{coluna}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{visitados\+\_\+count}{}\end{DoxyParamCaption})}
+
+
+
+Função de pesquisa BFS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & -\/\texorpdfstring{$>$}{>} grafo \\
+\hline
+{\em linha} & -\/\texorpdfstring{$>$}{>} linha de inicio \\
+\hline
+{\em coluna} & -\/\texorpdfstring{$>$}{>} coluna de inicio \\
+\hline
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vertice\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} lista de vertices visitados 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00823}{823}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+\Hypertarget{grafos_8c_abe9d1f363c11eb7d631afdd531cf488b}\index{grafos.c@{grafos.c}!calcularCaminhosSimples@{calcularCaminhosSimples}}
+\index{calcularCaminhosSimples@{calcularCaminhosSimples}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{calcularCaminhosSimples()}{calcularCaminhosSimples()}}
+{\footnotesize\ttfamily \label{grafos_8c_abe9d1f363c11eb7d631afdd531cf488b} 
+\mbox{\hyperlink{structListaDeCaminhos}{Lista\+De\+Caminhos}} calcular\+Caminhos\+Simples (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int}]{linha\+Origem}{, }\item[{int}]{coluna\+Origem}{, }\item[{int}]{linha\+Destino}{, }\item[{int}]{coluna\+Destino}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{}\end{DoxyParamCaption})}
+
+
+
+Calcula todos os caminhos possiveis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & -\/\texorpdfstring{$>$}{>} grafo \\
+\hline
+{\em linha\+Origem} & -\/\texorpdfstring{$>$}{>} linha de origem \\
+\hline
+{\em coluna\+Origem} & -\/\texorpdfstring{$>$}{>} coluna de origem \\
+\hline
+{\em linha\+Destino} & -\/\texorpdfstring{$>$}{>} linha de chegada \\
+\hline
+{\em coluna\+Destino} & -\/\texorpdfstring{$>$}{>} coluna de chegada \\
+\hline
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structListaDeCaminhos}{Lista\+De\+Caminhos} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00937}{937}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{grafos_8c_abe9d1f363c11eb7d631afdd531cf488b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafos_8c_a4c6a5b9d1bd3787f095b7152338dfd94}\index{grafos.c@{grafos.c}!caminhosEntreDoisVertices@{caminhosEntreDoisVertices}}
+\index{caminhosEntreDoisVertices@{caminhosEntreDoisVertices}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{caminhosEntreDoisVertices()}{caminhosEntreDoisVertices()}}
+{\footnotesize\ttfamily \label{grafos_8c_a4c6a5b9d1bd3787f095b7152338dfd94} 
+int caminhos\+Entre\+Dois\+Vertices (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}}]{atual}{, }\item[{\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}}]{destino}{, }\item[{\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{caminho\+Atual}{, }\item[{int}]{indice}{, }\item[{\mbox{\hyperlink{structListaDeCaminhos}{Lista\+De\+Caminhos}} \texorpdfstring{$\ast$}{*}}]{resultados}{}\end{DoxyParamCaption})}
+
+
+
+Função auxiliar para encontrar os caminhos entre os dois vértices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em atual} & -\/\texorpdfstring{$>$}{>} vertice inicio \\
+\hline
+{\em destino} & -\/\texorpdfstring{$>$}{>} vertice destino \\
+\hline
+{\em caminho\+Atual} & -\/\texorpdfstring{$>$}{>} caminho atual \\
+\hline
+{\em indice} & -\/\texorpdfstring{$>$}{>} indice array \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int(\+Sucesso) 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00893}{893}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{grafos_8c_a4c6a5b9d1bd3787f095b7152338dfd94_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{grafos_8c_a4c6a5b9d1bd3787f095b7152338dfd94_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafos_8c_a7163f5f525c96e360f72362a0654f037}\index{grafos.c@{grafos.c}!CriarAdj@{CriarAdj}}
+\index{CriarAdj@{CriarAdj}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{CriarAdj()}{CriarAdj()}}
+{\footnotesize\ttfamily \label{grafos_8c_a7163f5f525c96e360f72362a0654f037} 
+\mbox{\hyperlink{structAdj}{Adj}} \texorpdfstring{$\ast$}{*} Criar\+Adj (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}}]{v1}{, }\item[{\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}}]{v2}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{}\end{DoxyParamCaption})}
+
+
+
+Função que cria a adjacência. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v1} & -\/\texorpdfstring{$>$}{>} Vértice 1 \\
+\hline
+{\em v2} & -\/\texorpdfstring{$>$}{>} Vértice 2 \\
+\hline
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Adjacência 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00096}{96}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{grafos_8c_a7163f5f525c96e360f72362a0654f037_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafos_8c_a5d39aec566276a1681d2f70c0e3e6754}\index{grafos.c@{grafos.c}!CriarAntena@{CriarAntena}}
+\index{CriarAntena@{CriarAntena}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{CriarAntena()}{CriarAntena()}}
+{\footnotesize\ttfamily \label{grafos_8c_a5d39aec566276a1681d2f70c0e3e6754} 
+\mbox{\hyperlink{structCasaF}{CasaF}} \texorpdfstring{$\ast$}{*} Criar\+Antena (\begin{DoxyParamCaption}\item[{char}]{c}{, }\item[{int}]{linha}{, }\item[{int}]{coluna}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{}\end{DoxyParamCaption})}
+
+
+
+Função que cria Antena. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/\texorpdfstring{$>$}{>} Frequência \\
+\hline
+{\em linha} & \\
+\hline
+{\em coluna} & \\
+\hline
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Antena 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00071}{71}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{grafos_8c_a5d39aec566276a1681d2f70c0e3e6754_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafos_8c_a73b759ff770de9592d74a5362cc26834}\index{grafos.c@{grafos.c}!CriarVertice@{CriarVertice}}
+\index{CriarVertice@{CriarVertice}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{CriarVertice()}{CriarVertice()}}
+{\footnotesize\ttfamily \label{grafos_8c_a73b759ff770de9592d74a5362cc26834} 
+\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*} Criar\+Vertice (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCasaF}{CasaF}} \texorpdfstring{$\ast$}{*}}]{antena}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{}\end{DoxyParamCaption})}
+
+
+
+Função que cria espaço para vertice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em antena} & \\
+\hline
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structVertice}{Vertice} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00042}{42}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{grafos_8c_a73b759ff770de9592d74a5362cc26834_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafos_8c_a6f3361506dde25dd11fbd12e10d161b5}\index{grafos.c@{grafos.c}!detectarCruzamentoGeral@{detectarCruzamentoGeral}}
+\index{detectarCruzamentoGeral@{detectarCruzamentoGeral}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{detectarCruzamentoGeral()}{detectarCruzamentoGeral()}}
+{\footnotesize\ttfamily \label{grafos_8c_a6f3361506dde25dd11fbd12e10d161b5} 
+int detectar\+Cruzamento\+Geral (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{char}]{freq1}{, }\item[{char}]{freq2}{, }\item[{int}]{linhas}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{colunas}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Função que calcula cruzamentos feitos por frequencias. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & -\/\texorpdfstring{$>$}{>} grafo \\
+\hline
+{\em freq1} & -\/\texorpdfstring{$>$}{>} frequência 1 \\
+\hline
+{\em freq2} & -\/\texorpdfstring{$>$}{>} frequência 2 \\
+\hline
+{\em linhas} & -\/\texorpdfstring{$>$}{>} linhas onde se guarda linhas de cruzamentos \\
+\hline
+{\em colunas} & -\/\texorpdfstring{$>$}{>} colunas onde se guarda colunas de cruzamentos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+total cruzamentos calculados 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l01002}{1002}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+\Hypertarget{grafos_8c_a2d23d9740ca62793d52b9c969ec5c8bd}\index{grafos.c@{grafos.c}!DFS\_CaminhoGrafo@{DFS\_CaminhoGrafo}}
+\index{DFS\_CaminhoGrafo@{DFS\_CaminhoGrafo}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{DFS\_CaminhoGrafo()}{DFS\_CaminhoGrafo()}}
+{\footnotesize\ttfamily \label{grafos_8c_a2d23d9740ca62793d52b9c969ec5c8bd} 
+\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*} DFS\+\_\+\+Caminho\+Grafo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{original}{, }\item[{int}]{linha}{, }\item[{int}]{coluna}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{}\end{DoxyParamCaption})}
+
+
+
+Função principal DFS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em original} & -\/\texorpdfstring{$>$}{>} grafo que vai ser percorrido \\
+\hline
+{\em linha} & -\/\texorpdfstring{$>$}{>} linha vertice de começo \\
+\hline
+{\em coluna} & -\/\texorpdfstring{$>$}{>} coluna vertice de começo \\
+\hline
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structCaminho}{Caminho} percorrido 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00529}{529}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{grafos_8c_a2d23d9740ca62793d52b9c969ec5c8bd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafos_8c_aa7f03076bc8721f0922eb084146d8bc3}\index{grafos.c@{grafos.c}!DFSUtil@{DFSUtil}}
+\index{DFSUtil@{DFSUtil}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{DFSUtil()}{DFSUtil()}}
+{\footnotesize\ttfamily \label{grafos_8c_aa7f03076bc8721f0922eb084146d8bc3} 
+\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*} DFSUtil (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}}]{v}{, }\item[{\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{caminho}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{}\end{DoxyParamCaption})}
+
+
+
+Função de recursividade do algoritmo DFS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/\texorpdfstring{$>$}{>} Vértice que vai ser visitado (para ver as adjacências) \\
+\hline
+{\em caminho} & -\/\texorpdfstring{$>$}{>} \doxylink{structCaminho}{Caminho} que percorreu \\
+\hline
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Grafo\texorpdfstring{$\ast$}{*} \doxylink{structCaminho}{Caminho} que percorreu 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00493}{493}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{grafos_8c_aa7f03076bc8721f0922eb084146d8bc3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{grafos_8c_aa7f03076bc8721f0922eb084146d8bc3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafos_8c_af9708d32550e985db42845022bc37396}\index{grafos.c@{grafos.c}!escreveFicheiroBinario@{escreveFicheiroBinario}}
+\index{escreveFicheiroBinario@{escreveFicheiroBinario}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{escreveFicheiroBinario()}{escreveFicheiroBinario()}}
+{\footnotesize\ttfamily \label{grafos_8c_af9708d32550e985db42845022bc37396} 
+\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*} escreve\+Ficheiro\+Binario (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{nome\+Ficheiro}{, }\item[{\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{}\end{DoxyParamCaption})}
+
+
+
+Escreve o grafo e as adjacencias num grafo num ficheiro binario. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+Ficheiro} & -\/\texorpdfstring{$>$}{>} Nome do ficheiro \\
+\hline
+{\em g} & -\/\texorpdfstring{$>$}{>} grafo a ser escrito \\
+\hline
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Grafo\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00639}{639}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+\Hypertarget{grafos_8c_ada891fc51999a8dfe2a9dca318d1d40c}\index{grafos.c@{grafos.c}!estaNoRadar@{estaNoRadar}}
+\index{estaNoRadar@{estaNoRadar}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{estaNoRadar()}{estaNoRadar()}}
+{\footnotesize\ttfamily \label{grafos_8c_ada891fc51999a8dfe2a9dca318d1d40c} 
+int esta\+No\+Radar (\begin{DoxyParamCaption}\item[{int}]{coluna\+Origem}{, }\item[{int}]{coluna\+Chegada}{, }\item[{int}]{linha\+Origem}{, }\item[{int}]{linha\+Chegada}{}\end{DoxyParamCaption})}
+
+
+
+Funcção que verifica se uma coordenada esta no radar de outras coordenadas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coluna\+Origem} & -\/\texorpdfstring{$>$}{>} coluna da origem do radar \\
+\hline
+{\em coluna\+Chegada} & -\/\texorpdfstring{$>$}{>} coluna da chegada do radar \\
+\hline
+{\em linha\+Origem} & -\/\texorpdfstring{$>$}{>} linha da origem do radar \\
+\hline
+{\em linha\+Chegada} & -\/\texorpdfstring{$>$}{>} linha da chegada do radar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+retorna se as coordenadas recebidas estão ou não do radar 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00355}{355}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{grafos_8c_ada891fc51999a8dfe2a9dca318d1d40c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafos_8c_a7f38024743969f2fca501938bf166caf}\index{grafos.c@{grafos.c}!imprimirCaminhosSimples@{imprimirCaminhosSimples}}
+\index{imprimirCaminhosSimples@{imprimirCaminhosSimples}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{imprimirCaminhosSimples()}{imprimirCaminhosSimples()}}
+{\footnotesize\ttfamily \label{grafos_8c_a7f38024743969f2fca501938bf166caf} 
+int imprimir\+Caminhos\+Simples (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structListaDeCaminhos}{Lista\+De\+Caminhos}} \texorpdfstring{$\ast$}{*}}]{resultados}{}\end{DoxyParamCaption})}
+
+
+
+Mostra os caminhos calculados. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em resultados} & -\/\texorpdfstring{$>$}{>} caminhos calculados anteriormente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int(\+Sucesso) 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00973}{973}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+\Hypertarget{grafos_8c_a8ef51ad08853e3e3808897fac69593f3}\index{grafos.c@{grafos.c}!imprimirCruzamentosGerais@{imprimirCruzamentosGerais}}
+\index{imprimirCruzamentosGerais@{imprimirCruzamentosGerais}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{imprimirCruzamentosGerais()}{imprimirCruzamentosGerais()}}
+{\footnotesize\ttfamily \label{grafos_8c_a8ef51ad08853e3e3808897fac69593f3} 
+int imprimir\+Cruzamentos\+Gerais (\begin{DoxyParamCaption}\item[{int}]{linhas}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{colunas}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{total}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em linhas} & -\/\texorpdfstring{$>$}{>} linhas de cruzamentos \\
+\hline
+{\em colunas} & -\/\texorpdfstring{$>$}{>} colunas de cruzamentos \\
+\hline
+{\em total} & -\/\texorpdfstring{$>$}{>} total de cruzamentos \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int)Sucesso 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l01066}{1066}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+\Hypertarget{grafos_8c_a9233e3e7a3ca8cf7f680148f5b6ed137}\index{grafos.c@{grafos.c}!InicializaGrafo@{InicializaGrafo}}
+\index{InicializaGrafo@{InicializaGrafo}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{InicializaGrafo()}{InicializaGrafo()}}
+{\footnotesize\ttfamily \label{grafos_8c_a9233e3e7a3ca8cf7f680148f5b6ed137} 
+\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*} Inicializa\+Grafo (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{}\end{DoxyParamCaption})}
+
+
+
+Função que serve inicializar um grafo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Ponteiro para grafo para ser utilizado 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00023}{23}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{grafos_8c_a9233e3e7a3ca8cf7f680148f5b6ed137_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafos_8c_acdd64deb71261745dcdd38e55d91f5a1}\index{grafos.c@{grafos.c}!insereAdjacencias@{insereAdjacencias}}
+\index{insereAdjacencias@{insereAdjacencias}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{insereAdjacencias()}{insereAdjacencias()}}
+{\footnotesize\ttfamily \label{grafos_8c_acdd64deb71261745dcdd38e55d91f5a1} 
+\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*} insere\+Adjacencias (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{cabeca}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{}\end{DoxyParamCaption})}
+
+
+
+Função que insere adjacencias automaticamente dando um grafo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cabeca} & -\/\texorpdfstring{$>$}{>} \doxylink{structGrafo}{Grafo} \\
+\hline
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Grafo\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00307}{307}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{grafos_8c_acdd64deb71261745dcdd38e55d91f5a1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafos_8c_a17df99b47c94a07be1074fad89516411}\index{grafos.c@{grafos.c}!insereAdjacenciaVertice@{insereAdjacenciaVertice}}
+\index{insereAdjacenciaVertice@{insereAdjacenciaVertice}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{insereAdjacenciaVertice()}{insereAdjacenciaVertice()}}
+{\footnotesize\ttfamily \label{grafos_8c_a17df99b47c94a07be1074fad89516411} 
+\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*} insere\+Adjacencia\+Vertice (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}}]{h}{, }\item[{\mbox{\hyperlink{structAdj}{Adj}} \texorpdfstring{$\ast$}{*}}]{adj}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{}\end{DoxyParamCaption})}
+
+
+
+Insere Adjacencia num vértice fornecido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/\texorpdfstring{$>$}{>} Vértice recebido \\
+\hline
+{\em adj} & -\/\texorpdfstring{$>$}{>} Adjacência para adicionar \\
+\hline
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structVertice}{Vertice} adicionado 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00373}{373}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{grafos_8c_a17df99b47c94a07be1074fad89516411_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafos_8c_a78f4a9fb030b555f73874430443944d8}\index{grafos.c@{grafos.c}!InsereVertice@{InsereVertice}}
+\index{InsereVertice@{InsereVertice}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{InsereVertice()}{InsereVertice()}}
+{\footnotesize\ttfamily \label{grafos_8c_a78f4a9fb030b555f73874430443944d8} 
+\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*} Insere\+Vertice (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}}]{novo}{, }\item[{\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{cabeca}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{}\end{DoxyParamCaption})}
+
+
+
+Função que insere um vértice num grafo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em novo} & -\/\texorpdfstring{$>$}{>} Vértice a inserir \\
+\hline
+{\em cabeca} & -\/\texorpdfstring{$>$}{>} \doxylink{structGrafo}{Grafo} \\
+\hline
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{structGrafo}{Grafo} com vértice inserido 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00191}{191}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{grafos_8c_a78f4a9fb030b555f73874430443944d8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{grafos_8c_a78f4a9fb030b555f73874430443944d8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafos_8c_a73e13a6f370c6337595657cabb4b65c2}\index{grafos.c@{grafos.c}!leFicheiroBinario@{leFicheiroBinario}}
+\index{leFicheiroBinario@{leFicheiroBinario}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{leFicheiroBinario()}{leFicheiroBinario()}}
+{\footnotesize\ttfamily \label{grafos_8c_a73e13a6f370c6337595657cabb4b65c2} 
+\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*} le\+Ficheiro\+Binario (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{nome\+Ficheiro}{, }\item[{\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{}\end{DoxyParamCaption})}
+
+
+
+le o grafo e as adjacencias de um ficheiro binario 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+Ficheiro} & -\/\texorpdfstring{$>$}{>} Nome do ficheiro \\
+\hline
+{\em g} & -\/\texorpdfstring{$>$}{>} grafo lido \\
+\hline
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Grafo\texorpdfstring{$\ast$}{*} lido 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00689}{689}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{grafos_8c_a73e13a6f370c6337595657cabb4b65c2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafos_8c_a7d37a5c396341d8db7e7e2e4bd9f164a}\index{grafos.c@{grafos.c}!leTxtGrafos@{leTxtGrafos}}
+\index{leTxtGrafos@{leTxtGrafos}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{leTxtGrafos()}{leTxtGrafos()}}
+{\footnotesize\ttfamily \label{grafos_8c_a7d37a5c396341d8db7e7e2e4bd9f164a} 
+\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*} le\+Txt\+Grafos (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{nome}{, }\item[{\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{cabeca}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{}\end{DoxyParamCaption})}
+
+
+
+Função que le o mapa em formato TXT. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & -\/\texorpdfstring{$>$}{>} Nome do ficheiro \\
+\hline
+{\em cabeca} & -\/\texorpdfstring{$>$}{>} \doxylink{structGrafo}{Grafo} \\
+\hline
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Grafo\texorpdfstring{$\ast$}{*} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00246}{246}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{grafos_8c_a7d37a5c396341d8db7e7e2e4bd9f164a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafos_8c_a8e65dc419049666aca33a364af6ea39d}\index{grafos.c@{grafos.c}!limpaAdj@{limpaAdj}}
+\index{limpaAdj@{limpaAdj}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{limpaAdj()}{limpaAdj()}}
+{\footnotesize\ttfamily \label{grafos_8c_a8e65dc419049666aca33a364af6ea39d} 
+int limpa\+Adj (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{cabeca}{}\end{DoxyParamCaption})}
+
+
+
+Limpa adjacências de um grafo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cabeca} & -\/\texorpdfstring{$>$}{>} grafo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int)Erro 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00402}{402}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{grafos_8c_a8e65dc419049666aca33a364af6ea39d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafos_8c_a5fb1e8458fafa37541843b06d42ebe2e}\index{grafos.c@{grafos.c}!limpaConteudoGrafo@{limpaConteudoGrafo}}
+\index{limpaConteudoGrafo@{limpaConteudoGrafo}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{limpaConteudoGrafo()}{limpaConteudoGrafo()}}
+{\footnotesize\ttfamily \label{grafos_8c_a5fb1e8458fafa37541843b06d42ebe2e} 
+int limpa\+Conteudo\+Grafo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{cabeca}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{}\end{DoxyParamCaption})}
+
+
+
+Limpa o conteúdo no grafo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cabeca} & -\/\texorpdfstring{$>$}{>} grafo \\
+\hline
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int)Sucesso 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00453}{453}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{grafos_8c_a5fb1e8458fafa37541843b06d42ebe2e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{grafos_8c_a5fb1e8458fafa37541843b06d42ebe2e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafos_8c_aea25a9f6ca810fa1dda9a80b28c62d51}\index{grafos.c@{grafos.c}!limpaGrafo@{limpaGrafo}}
+\index{limpaGrafo@{limpaGrafo}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{limpaGrafo()}{limpaGrafo()}}
+{\footnotesize\ttfamily \label{grafos_8c_aea25a9f6ca810fa1dda9a80b28c62d51} 
+int limpa\+Grafo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{cabeca}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{}\end{DoxyParamCaption})}
+
+
+
+Limpa o conteúdo e o espaço do grafo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cabeca} & -\/\texorpdfstring{$>$}{>}grafo \\
+\hline
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int)Sucesso 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00469}{469}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=233pt]{grafos_8c_aea25a9f6ca810fa1dda9a80b28c62d51_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafos_8c_a2517222fbb3a09a0919174f9da4b9f9e}\index{grafos.c@{grafos.c}!limpaV@{limpaV}}
+\index{limpaV@{limpaV}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{limpaV()}{limpaV()}}
+{\footnotesize\ttfamily \label{grafos_8c_a2517222fbb3a09a0919174f9da4b9f9e} 
+\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*} limpaV (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{cabeca}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{}\end{DoxyParamCaption})}
+
+
+
+Limpa os vértives de um grafo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cabeca} & -\/\texorpdfstring{$>$}{>} grafo \\
+\hline
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Grafo\texorpdfstring{$\ast$}{*} ~\newline
+ 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00429}{429}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{grafos_8c_a2517222fbb3a09a0919174f9da4b9f9e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafos_8c_abbc18af941f1dda53cb0ef962f99b5af}\index{grafos.c@{grafos.c}!mostraVertices@{mostraVertices}}
+\index{mostraVertices@{mostraVertices}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{mostraVertices()}{mostraVertices()}}
+{\footnotesize\ttfamily \label{grafos_8c_abbc18af941f1dda53cb0ef962f99b5af} 
+int mostra\+Vertices (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+
+
+Mostra o grafo com adjacencias. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & -\/\texorpdfstring{$>$}{>} grafo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sucesso(int) 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00600}{600}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+\Hypertarget{grafos_8c_a443c31196d75597945f8c30c9cd357e1}\index{grafos.c@{grafos.c}!mostraVerticesCaminho@{mostraVerticesCaminho}}
+\index{mostraVerticesCaminho@{mostraVerticesCaminho}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{mostraVerticesCaminho()}{mostraVerticesCaminho()}}
+{\footnotesize\ttfamily \label{grafos_8c_a443c31196d75597945f8c30c9cd357e1} 
+int mostra\+Vertices\+Caminho (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{g}{}\end{DoxyParamCaption})}
+
+
+
+Mostra o caminho do DFS. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & -\/\texorpdfstring{$>$}{>} grafo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Sucesso(int) 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00572}{572}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+\Hypertarget{grafos_8c_a87e18597dca7ba7906e50b2792f1730d}\index{grafos.c@{grafos.c}!mostraVisitados@{mostraVisitados}}
+\index{mostraVisitados@{mostraVisitados}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{mostraVisitados()}{mostraVisitados()}}
+{\footnotesize\ttfamily \label{grafos_8c_a87e18597dca7ba7906e50b2792f1730d} 
+int mostra\+Visitados (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{visitados}{, }\item[{int}]{count}{}\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em visitados} & lista de vertices visitados \\
+\hline
+{\em count} & -\/\texorpdfstring{$>$}{>} nº de visitados \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+(int)Sucesso 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00803}{803}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+\Hypertarget{grafos_8c_a30909cb6d14b8a01a95cfbee8053a227}\index{grafos.c@{grafos.c}!PosicaoVertice@{PosicaoVertice}}
+\index{PosicaoVertice@{PosicaoVertice}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{PosicaoVertice()}{PosicaoVertice()}}
+{\footnotesize\ttfamily \label{grafos_8c_a30909cb6d14b8a01a95cfbee8053a227} 
+int Posicao\+Vertice (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}}]{v}{}\end{DoxyParamCaption})}
+
+
+
+Devolve a posição de um vertice no mapa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/\texorpdfstring{$>$}{>} Vértice \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Posição do vértice 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00172}{172}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{grafos_8c_a30909cb6d14b8a01a95cfbee8053a227_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafos_8c_a2efbfabcf1e00bc4aedfb3d40bf26595}\index{grafos.c@{grafos.c}!ProcuraVertice@{ProcuraVertice}}
+\index{ProcuraVertice@{ProcuraVertice}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{ProcuraVertice()}{ProcuraVertice()}}
+{\footnotesize\ttfamily \label{grafos_8c_a2efbfabcf1e00bc4aedfb3d40bf26595} 
+\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*} Procura\+Vertice (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*}}]{novo}{, }\item[{\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{cabeca}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se um vertice já existe na posição de um novo vertice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em novo} & -\/\texorpdfstring{$>$}{>} \doxylink{structVertice}{Vertice} recente \\
+\hline
+{\em cabeca} & -\/\texorpdfstring{$>$}{>} \doxylink{structGrafo}{Grafo} com os vértices existentes \\
+\hline
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vértice se encontrar e NULL se não encontrar 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00122}{122}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{grafos_8c_a2efbfabcf1e00bc4aedfb3d40bf26595_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{grafos_8c_a63f991002f3cf13832a6c8d85583bc32}\index{grafos.c@{grafos.c}!ProcuraVerticeAntena@{ProcuraVerticeAntena}}
+\index{ProcuraVerticeAntena@{ProcuraVerticeAntena}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{ProcuraVerticeAntena()}{ProcuraVerticeAntena()}}
+{\footnotesize\ttfamily \label{grafos_8c_a63f991002f3cf13832a6c8d85583bc32} 
+\mbox{\hyperlink{structVertice}{Vertice}} \texorpdfstring{$\ast$}{*} Procura\+Vertice\+Antena (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structCasaF}{CasaF}} \texorpdfstring{$\ast$}{*}}]{novo}{, }\item[{\mbox{\hyperlink{structGrafo}{Grafo}} \texorpdfstring{$\ast$}{*}}]{cabeca}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{erro}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se um vertice já existe na posição de um novo vertice. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em novo} & -\/\texorpdfstring{$>$}{>} Antena a verificar \\
+\hline
+{\em cabeca} & -\/\texorpdfstring{$>$}{>} \doxylink{structGrafo}{Grafo} com os vértices existentes \\
+\hline
+{\em \texorpdfstring{$\ast$}{*}erro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vértice se encontrar e NULL se não encontrar 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00148}{148}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{grafos_8c_a4e0b83b1846ca118ec600f5a7cb50833}\index{grafos.c@{grafos.c}!xMapa@{xMapa}}
+\index{xMapa@{xMapa}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{xMapa}{xMapa}}
+{\footnotesize\ttfamily \label{grafos_8c_a4e0b83b1846ca118ec600f5a7cb50833} 
+int x\+Mapa =0}
+
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00016}{16}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+
+\Hypertarget{grafos_8c_a71ff205121c6908679b0c0af0d1b4536}\index{grafos.c@{grafos.c}!yMapa@{yMapa}}
+\index{yMapa@{yMapa}!grafos.c@{grafos.c}}
+\doxysubsubsection{\texorpdfstring{yMapa}{yMapa}}
+{\footnotesize\ttfamily \label{grafos_8c_a71ff205121c6908679b0c0af0d1b4536} 
+int y\+Mapa =1}
+
+
+
+Definition at line \mbox{\hyperlink{grafos_8c_source_l00016}{16}} of file \mbox{\hyperlink{grafos_8c_source}{grafos.\+c}}.
+

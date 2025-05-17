@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['posicao_0',['Posicao',['../funcoes_8c.html#a4bda839cdef05932876ae4612622e531',1,'Posicao(Casa *c):&#160;funcoes.c'],['../funcoes_8h.html#a4bda839cdef05932876ae4612622e531',1,'Posicao(Casa *c):&#160;funcoes.c']]],
-  ['posicaoefeitonefasto_1',['PosicaoEfeitoNefasto',['../funcoes_8c.html#ac23460e361b882e6156a1929ac4b5532',1,'PosicaoEfeitoNefasto(EfeitoNefasto *c):&#160;funcoes.c'],['../funcoes_8h.html#ac23460e361b882e6156a1929ac4b5532',1,'PosicaoEfeitoNefasto(EfeitoNefasto *c):&#160;funcoes.c']]]
+  ['imprimircaminhossimples_0',['imprimirCaminhosSimples',['../grafos_8c.html#a7f38024743969f2fca501938bf166caf',1,'imprimirCaminhosSimples(ListaDeCaminhos *resultados):&#160;grafos.c'],['../grafos_8h.html#a7f38024743969f2fca501938bf166caf',1,'imprimirCaminhosSimples(ListaDeCaminhos *resultados):&#160;grafos.c']]],
+  ['imprimircruzamentosgerais_1',['imprimirCruzamentosGerais',['../grafos_8c.html#a8ef51ad08853e3e3808897fac69593f3',1,'imprimirCruzamentosGerais(int linhas[], int colunas[], int total):&#160;grafos.c'],['../grafos_8h.html#a8ef51ad08853e3e3808897fac69593f3',1,'imprimirCruzamentosGerais(int linhas[], int colunas[], int total):&#160;grafos.c']]],
+  ['inicializagrafo_2',['InicializaGrafo',['../grafos_8c.html#a9233e3e7a3ca8cf7f680148f5b6ed137',1,'InicializaGrafo(int *erro):&#160;grafos.c'],['../grafos_8h.html#a9233e3e7a3ca8cf7f680148f5b6ed137',1,'InicializaGrafo(int *erro):&#160;grafos.c']]],
+  ['insereadjacencias_3',['insereAdjacencias',['../grafos_8c.html#acdd64deb71261745dcdd38e55d91f5a1',1,'insereAdjacencias(Grafo *cabeca, int *erro):&#160;grafos.c'],['../grafos_8h.html#acdd64deb71261745dcdd38e55d91f5a1',1,'insereAdjacencias(Grafo *cabeca, int *erro):&#160;grafos.c']]],
+  ['insereadjacenciavertice_4',['insereAdjacenciaVertice',['../grafos_8c.html#a17df99b47c94a07be1074fad89516411',1,'insereAdjacenciaVertice(Vertice *h, Adj *adj, int *erro):&#160;grafos.c'],['../grafos_8h.html#a17df99b47c94a07be1074fad89516411',1,'insereAdjacenciaVertice(Vertice *h, Adj *adj, int *erro):&#160;grafos.c']]],
+  ['inserevertice_5',['InsereVertice',['../grafos_8c.html#a78f4a9fb030b555f73874430443944d8',1,'InsereVertice(Vertice *novo, Grafo *cabeca, int *erro):&#160;grafos.c'],['../grafos_8h.html#a78f4a9fb030b555f73874430443944d8',1,'InsereVertice(Vertice *novo, Grafo *cabeca, int *erro):&#160;grafos.c']]]
 ];

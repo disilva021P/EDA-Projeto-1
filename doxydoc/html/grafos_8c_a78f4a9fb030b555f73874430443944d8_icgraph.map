@@ -1,0 +1,12 @@
+<map id="InsereVertice" name="InsereVertice">
+<area shape="rect" id="Node000001" title="Função que insere um vértice num grafo." alt="" coords="358,80,455,107"/>
+<area shape="rect" id="Node000002" href="$grafos_8c.html#aa7f03076bc8721f0922eb084146d8bc3" title="Função de recursividade do algoritmo DFS." alt="" coords="217,29,286,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="348,77,285,56,287,51,350,72"/>
+<area shape="rect" id="Node000004" href="$grafos_8c.html#a73e13a6f370c6337595657cabb4b65c2" title="le o grafo e as adjacencias de um ficheiro binario" alt="" coords="193,80,310,107"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="342,96,311,96,311,91,342,91"/>
+<area shape="rect" id="Node000005" href="$grafos_8c.html#a7d37a5c396341d8db7e7e2e4bd9f164a" title="Função que le o mapa em formato TXT." alt="" coords="207,131,296,157"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="349,115,295,133,294,128,348,110"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="277,16,268,10,251,8,235,10,227,15,225,20,229,28,224,30,220,21,223,11,234,5,251,3,270,5,280,12"/>
+<area shape="rect" id="Node000003" href="$grafos_8c.html#a2d23d9740ca62793d52b9c969ec5c8bd" title="Função principal DFS." alt="" coords="5,29,145,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="201,45,145,45,145,40,201,40"/>
+</map>

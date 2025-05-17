@@ -127,7 +127,7 @@ int main(int argc, char const *argv[])
 
     // Teste 5: Caminhos entre dois pontos
     printf("\n=== Teste 5: Caminhos entre vértices ===\n");
-    ListaDeCaminhos caminhos = calcularCaminhosSimples(grafo, 2, 3, 6, 10, &erro);
+    ListaDeCaminhos caminhos = calcularCaminhosSimples(grafo, 2, 3, 6, 11, &erro);
     if(erro != 0){
         printf("%s\n", ErroPorPais_Cod("pt-pt", erro));
     } else {
@@ -135,7 +135,7 @@ int main(int argc, char const *argv[])
         imprimirCaminhosSimples(&caminhos);
     }
 
-    // Teste 6: Detectar cruzamentos
+    // Teste 6: Detetar cruzamentos
     printf("\n=== Teste 6: Cruzamentos entre frequências ===\n");
     int linhas[100], colunas[100];
     int total = detectarCruzamentoGeral(grafo, 'A', 'B', linhas, colunas);

@@ -1,0 +1,79 @@
+\doxysection{grafos.\+h}
+\hypertarget{grafos_8h_source}{}\label{grafos_8h_source}\index{/home/disilva021/UNI/EDA/Projeto1/src/grafos.h@{/home/disilva021/UNI/EDA/Projeto1/src/grafos.h}}
+\mbox{\hyperlink{grafos_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00009}00009\ \textcolor{preprocessor}{\ \#ifndef\ GRAFOS\_H}}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00010}00010\ \textcolor{preprocessor}{\ \#define\ GRAFOS\_H}}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00011}00011\ \ }
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00012}00012\ \textcolor{preprocessor}{\ \#include\ "{}\mbox{\hyperlink{dados_8h}{dados.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00013}00013\ \textcolor{preprocessor}{\ \#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00014}00014\ \textcolor{preprocessor}{\ \#include\ <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00015}00015\ \textcolor{preprocessor}{\ \#define\ MAX\_CAMINHOS\ 100}}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00016}00016\ \textcolor{preprocessor}{\ \#define\ MAX\_VERTICES\_CAMINHO\ 100}}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00017}00017\ \ \textcolor{comment}{//\ adjacencia\ dos\ vertices\ bidirecional}}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00018}\mbox{\hyperlink{structAdj}{00018}}\ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structAdj}{Adj}}\ \{}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00019}00019\ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structVertice}{Vertice}}*\ v1;}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00020}00020\ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structVertice}{Vertice}}*\ v2;}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00021}00021\ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structAdj}{Adj}}*\ prox;}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00022}00022\ \ \}\ \mbox{\hyperlink{structAdj}{Adj}};}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00023}00023\ \ \ \textcolor{comment}{//\ vertice\ básico}}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00024}\mbox{\hyperlink{structVertice}{00024}}\ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structVertice}{Vertice}}\ \{}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00025}00025\ \ \ \ \ \ \mbox{\hyperlink{structCasaF}{CasaF}}*\ antena;}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00026}00026\ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structAdj}{Adj}}*\ adjacencias;}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00027}00027\ \ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structVertice}{Vertice}}*\ prox;}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00028}00028\ \ \ \ \ \ \textcolor{keywordtype}{int}\ visitado;}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00029}00029\ \ \}\ \mbox{\hyperlink{structVertice}{Vertice}};}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00030}00030\ \ \ \textcolor{comment}{//\ grafo}}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00031}\mbox{\hyperlink{structGrafo}{00031}}\ \ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structGrafo}{Grafo}}\ \{}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00032}00032\ \ \ \ \ \ \mbox{\hyperlink{structVertice}{Vertice}}*\ h;}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00033}00033\ \ \}\ \mbox{\hyperlink{structGrafo}{Grafo}};}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00035}00035\ \textcolor{comment}{//estruturas\ para\ calcular\ e\ listar\ caminhos}}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00036}\mbox{\hyperlink{structCaminho}{00036}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{structVertice}{Vertice}}*\ vertices[MAX\_VERTICES\_CAMINHO];}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00038}00038\ \ \ \ \ \textcolor{keywordtype}{int}\ tamanho;}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00039}00039\ \}\ \mbox{\hyperlink{structCaminho}{Caminho}};}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00041}\mbox{\hyperlink{structListaDeCaminhos}{00041}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00042}00042\ \ \ \ \ \mbox{\hyperlink{structCaminho}{Caminho}}\ caminhos[MAX\_CAMINHOS];}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00043}00043\ \ \ \ \ \textcolor{keywordtype}{int}\ total;}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00044}00044\ \}\ \mbox{\hyperlink{structListaDeCaminhos}{ListaDeCaminhos}};}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00046}00046\ \ \textcolor{comment}{//\ Constantes}}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00047}00047\ \textcolor{preprocessor}{\ \#define\ VAZIO\ '.'}}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00049}00049\ \ }
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00050}00050\ \ \textcolor{comment}{//\ Protótipos\ de\ funções}}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00051}00051\ \ \mbox{\hyperlink{structGrafo}{Grafo}}*\ \mbox{\hyperlink{grafos_8h_a9233e3e7a3ca8cf7f680148f5b6ed137}{InicializaGrafo}}(\textcolor{keywordtype}{int}*\ erro);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00052}00052\ \ \mbox{\hyperlink{structVertice}{Vertice}}*\ \mbox{\hyperlink{grafos_8h_a73b759ff770de9592d74a5362cc26834}{CriarVertice}}(\mbox{\hyperlink{structCasaF}{CasaF}}*\ antena,\ \textcolor{keywordtype}{int}*\ erro);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00053}00053\ \ \mbox{\hyperlink{structCasaF}{CasaF}}*\ \mbox{\hyperlink{grafos_8h_a5d39aec566276a1681d2f70c0e3e6754}{CriarAntena}}(\textcolor{keywordtype}{char}\ c,\ \textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna,\ \textcolor{keywordtype}{int}*\ erro);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00054}00054\ \ \mbox{\hyperlink{structAdj}{Adj}}*\ \mbox{\hyperlink{grafos_8h_a7163f5f525c96e360f72362a0654f037}{CriarAdj}}(\mbox{\hyperlink{structVertice}{Vertice}}*\ v1,\ \mbox{\hyperlink{structVertice}{Vertice}}*\ v2,\ \textcolor{keywordtype}{int}*\ erro);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00055}00055\ \ \mbox{\hyperlink{structVertice}{Vertice}}*\ \mbox{\hyperlink{grafos_8h_a2efbfabcf1e00bc4aedfb3d40bf26595}{ProcuraVertice}}(\mbox{\hyperlink{structVertice}{Vertice}}*\ novo,\ \mbox{\hyperlink{structGrafo}{Grafo}}*\ cabeca,\ \textcolor{keywordtype}{int}*\ erro);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00056}00056\ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{grafos_8h_a30909cb6d14b8a01a95cfbee8053a227}{PosicaoVertice}}(\mbox{\hyperlink{structVertice}{Vertice}}*\ v);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00057}00057\ \ \mbox{\hyperlink{structGrafo}{Grafo}}*\ \mbox{\hyperlink{grafos_8h_a78f4a9fb030b555f73874430443944d8}{InsereVertice}}(\mbox{\hyperlink{structVertice}{Vertice}}*\ novo,\ \mbox{\hyperlink{structGrafo}{Grafo}}*\ cabeca,\ \textcolor{keywordtype}{int}*\ erro);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00058}00058\ \ \mbox{\hyperlink{structGrafo}{Grafo}}*\ \mbox{\hyperlink{grafos_8h_a7d37a5c396341d8db7e7e2e4bd9f164a}{leTxtGrafos}}(\textcolor{keywordtype}{char}*\ nome,\ \mbox{\hyperlink{structGrafo}{Grafo}}*\ cabeca,\ \textcolor{keywordtype}{int}*\ erro);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00059}00059\ \ \mbox{\hyperlink{structGrafo}{Grafo}}*\ \mbox{\hyperlink{grafos_8h_acdd64deb71261745dcdd38e55d91f5a1}{insereAdjacencias}}(\mbox{\hyperlink{structGrafo}{Grafo}}*\ cabeca,\ \textcolor{keywordtype}{int}*\ erro);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00060}00060\ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{grafos_8h_ada891fc51999a8dfe2a9dca318d1d40c}{estaNoRadar}}(\textcolor{keywordtype}{int}\ colunaOrigem,\ \textcolor{keywordtype}{int}\ colunaChegada,\ \textcolor{keywordtype}{int}\ linhaOrigem,\ \textcolor{keywordtype}{int}\ linhaChegada);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00061}00061\ \ \mbox{\hyperlink{structVertice}{Vertice}}*\ \mbox{\hyperlink{grafos_8h_a17df99b47c94a07be1074fad89516411}{insereAdjacenciaVertice}}(\mbox{\hyperlink{structVertice}{Vertice}}*\ h,\ \mbox{\hyperlink{structAdj}{Adj}}*\ adj,\ \textcolor{keywordtype}{int}*\ erro);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00062}00062\ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{grafos_8h_a8e65dc419049666aca33a364af6ea39d}{limpaAdj}}(\mbox{\hyperlink{structGrafo}{Grafo}}*\ cabeca);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00063}00063\ \ \mbox{\hyperlink{structGrafo}{Grafo}}*\ \mbox{\hyperlink{grafos_8h_a2517222fbb3a09a0919174f9da4b9f9e}{limpaV}}(\mbox{\hyperlink{structGrafo}{Grafo}}*\ cabeca,\ \textcolor{keywordtype}{int}*\ erro);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00064}00064\ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{grafos_8h_aea25a9f6ca810fa1dda9a80b28c62d51}{limpaGrafo}}(\mbox{\hyperlink{structGrafo}{Grafo}}*\ cabeca,\ \textcolor{keywordtype}{int}*\ erro);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00065}00065\ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{grafos_8h_a5fb1e8458fafa37541843b06d42ebe2e}{limpaConteudoGrafo}}(\mbox{\hyperlink{structGrafo}{Grafo}}*\ cabeca,\textcolor{keywordtype}{int}*erro);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00066}00066\ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{grafos_8h_abbc18af941f1dda53cb0ef962f99b5af}{mostraVertices}}(\mbox{\hyperlink{structGrafo}{Grafo}}*\ g);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00067}00067\ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{grafos_8h_a443c31196d75597945f8c30c9cd357e1}{mostraVerticesCaminho}}(\mbox{\hyperlink{structGrafo}{Grafo}}*\ g);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00068}00068\ \ \mbox{\hyperlink{structGrafo}{Grafo}}*\ \mbox{\hyperlink{grafos_8h_aa7f03076bc8721f0922eb084146d8bc3}{DFSUtil}}(\mbox{\hyperlink{structVertice}{Vertice}}*\ v,\ \mbox{\hyperlink{structGrafo}{Grafo}}*\ caminho,\ \textcolor{keywordtype}{int}*\ erro);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00069}00069\ \ \mbox{\hyperlink{structGrafo}{Grafo}}*\ \mbox{\hyperlink{grafos_8h_a2d23d9740ca62793d52b9c969ec5c8bd}{DFS\_CaminhoGrafo}}(\mbox{\hyperlink{structGrafo}{Grafo}}*\ original,\ \textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna,\ \textcolor{keywordtype}{int}*\ erro);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00070}00070\ \ \mbox{\hyperlink{structGrafo}{Grafo}}*\ \mbox{\hyperlink{grafos_8h_a73e13a6f370c6337595657cabb4b65c2}{leFicheiroBinario}}(\textcolor{keywordtype}{char}*\ nomeFicheiro,\mbox{\hyperlink{structGrafo}{Grafo}}*\ g,\textcolor{keywordtype}{int}*erro);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00071}00071\ \ \mbox{\hyperlink{structGrafo}{Grafo}}*\ \mbox{\hyperlink{grafos_8h_af9708d32550e985db42845022bc37396}{escreveFicheiroBinario}}(\textcolor{keywordtype}{char}*\ nomeFicheiro,\mbox{\hyperlink{structGrafo}{Grafo}}*g,\textcolor{keywordtype}{int}*erro);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00072}00072\ \ \mbox{\hyperlink{structVertice}{Vertice}}*\ \mbox{\hyperlink{grafos_8h_a63f991002f3cf13832a6c8d85583bc32}{ProcuraVerticeAntena}}(\mbox{\hyperlink{structCasaF}{CasaF}}\ *novo,\ \mbox{\hyperlink{structGrafo}{Grafo}}*\ cabeca,\textcolor{keywordtype}{int}*erro);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00073}00073\ \ \mbox{\hyperlink{structListaDeCaminhos}{ListaDeCaminhos}}\ \mbox{\hyperlink{grafos_8h_abe9d1f363c11eb7d631afdd531cf488b}{calcularCaminhosSimples}}(\mbox{\hyperlink{structGrafo}{Grafo}}*\ g,\ \textcolor{keywordtype}{int}\ linhaOrigem,\ \textcolor{keywordtype}{int}\ colunaOrigem,\ \textcolor{keywordtype}{int}\ linhaDestino,\ \textcolor{keywordtype}{int}\ colunaDestino,\ \textcolor{keywordtype}{int}*\ erro);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00074}00074\ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{grafos_8h_a7f38024743969f2fca501938bf166caf}{imprimirCaminhosSimples}}(\mbox{\hyperlink{structListaDeCaminhos}{ListaDeCaminhos}}*\ resultados);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00075}00075\ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{grafos_8h_a87e18597dca7ba7906e50b2792f1730d}{mostraVisitados}}(\mbox{\hyperlink{structVertice}{Vertice}}**\ visitados,\ \textcolor{keywordtype}{int}\ count);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00076}00076\ \ \mbox{\hyperlink{structVertice}{Vertice}}**\ \mbox{\hyperlink{grafos_8h_a95b01f63a104cef22b6e84326dbd48a6}{BFS}}(\mbox{\hyperlink{structGrafo}{Grafo}}*\ g,\ \textcolor{keywordtype}{int}\ linha,\ \textcolor{keywordtype}{int}\ coluna,\ \textcolor{keywordtype}{int}*\ erro,\ \textcolor{keywordtype}{int}*\ visitados\_count);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00077}00077\ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{grafos_8h_a6f3361506dde25dd11fbd12e10d161b5}{detectarCruzamentoGeral}}(\mbox{\hyperlink{structGrafo}{Grafo}}*\ g,\ \textcolor{keywordtype}{char}\ freq1,\ \textcolor{keywordtype}{char}\ freq2,\ \textcolor{keywordtype}{int}\ linhas[],\ \textcolor{keywordtype}{int}\ colunas[])\ ;}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00078}00078\ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{grafos_8h_a8ef51ad08853e3e3808897fac69593f3}{imprimirCruzamentosGerais}}(\textcolor{keywordtype}{int}\ linhas[],\ \textcolor{keywordtype}{int}\ colunas[],\ \textcolor{keywordtype}{int}\ total);}
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{grafos_8h_source_l00080}00080\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+
+\end{DoxyCode}

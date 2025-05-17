@@ -1,5 +1,12 @@
 var searchData=
 [
-  ['funcoes_2ec_0',['funcoes.c',['../funcoes_8c.html',1,'']]],
-  ['funcoes_2eh_1',['funcoes.h',['../funcoes_8h.html',1,'']]]
+  ['efeitonefasto_0',['EfeitoNefasto',['../structEfeitoNefasto.html',1,'EfeitoNefasto'],['../dados_8h.html#a6167db7f1ec0c34503d24b77b3613bfa',1,'EfeitoNefasto:&#160;dados.h']]],
+  ['erroporcod_1',['ErroPorCod',['../erros_8c.html#ac84569b82adfaf9587ec123850210495',1,'ErroPorCod(int codErro):&#160;erros.c'],['../erros_8h.html#ac84569b82adfaf9587ec123850210495',1,'ErroPorCod(int codErro):&#160;erros.c']]],
+  ['erroporpais_5fcod_2',['ErroPorPais_Cod',['../erros_8c.html#a5cb546f777b7f6031db48e5a9f0bf9c3',1,'ErroPorPais_Cod(char *lingua, int codErro):&#160;erros.c'],['../erros_8h.html#a5cb546f777b7f6031db48e5a9f0bf9c3',1,'ErroPorPais_Cod(char *lingua, int codErro):&#160;erros.c']]],
+  ['erros_2ec_3',['erros.c',['../erros_8c.html',1,'']]],
+  ['erros_2eh_4',['erros.h',['../erros_8h.html',1,'']]],
+  ['escreveficheirobinario_5',['escreveFicheiroBinario',['../grafos_8c.html#af9708d32550e985db42845022bc37396',1,'escreveFicheiroBinario(char *nomeFicheiro, Grafo *g, int *erro):&#160;grafos.c'],['../grafos_8h.html#af9708d32550e985db42845022bc37396',1,'escreveFicheiroBinario(char *nomeFicheiro, Grafo *g, int *erro):&#160;grafos.c']]],
+  ['escreverlistaficheiro_6',['EscreverListaFicheiro',['../funcoes_8c.html#ab2c4aa5f70a0beee07c967ccecf760df',1,'EscreverListaFicheiro(Casa *mapa, int *erro):&#160;funcoes.c'],['../funcoes_8h.html#ab2c4aa5f70a0beee07c967ccecf760df',1,'EscreverListaFicheiro(Casa *mapa, int *erro):&#160;funcoes.c']]],
+  ['estanoradar_7',['estaNoRadar',['../grafos_8c.html#ada891fc51999a8dfe2a9dca318d1d40c',1,'estaNoRadar(int colunaOrigem, int colunaChegada, int linhaOrigem, int linhaChegada):&#160;grafos.c'],['../grafos_8h.html#ada891fc51999a8dfe2a9dca318d1d40c',1,'estaNoRadar(int colunaOrigem, int colunaChegada, int linhaOrigem, int linhaChegada):&#160;grafos.c']]],
+  ['existeefeitoefeitonefasto_8',['ExisteEfeitoEfeitoNefasto',['../funcoes_8c.html#a35cab5af5fce296126cf19c206fce37e',1,'ExisteEfeitoEfeitoNefasto(EfeitoNefasto *cabeca, int linha, int coluna, int *erro):&#160;funcoes.c'],['../funcoes_8h.html#a85293443b9773b059ffd74dbb251d14d',1,'ExisteEfeitoEfeitoNefasto(EfeitoNefasto *mapa, int linha, int coluna, int *erro):&#160;funcoes.c']]]
 ];

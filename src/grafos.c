@@ -306,7 +306,6 @@ Grafo* leTxtGrafos(char* nome,Grafo*cabeca,int* erro){
  */
 Grafo* insereAdjacencias(Grafo* cabeca,int* erro){
     int er = limpaAdj(cabeca);
-
     if(er!=1){
         *erro=er;
         return cabeca;
@@ -907,8 +906,7 @@ int caminhosEntreDoisVertices(
             for (int i = 0; i <= indice; i++) {
                 novo->vertices[i] = caminhoAtual[i];
             }
-        }
-        return 1;
+        }       
     } else {
         Adj* adj = atual->adjacencias;
         while (adj) {
@@ -919,7 +917,6 @@ int caminhosEntreDoisVertices(
             adj = adj->prox;
         }
     }
-
     atual->visitado = 0;
 }
 
@@ -1002,7 +999,6 @@ int imprimirCaminhosSimples(ListaDeCaminhos* resultados) {
 int detectarCruzamentoGeral(Grafo* g, char freq1, char freq2, int linhas[], int colunas[]) {
     int total = 0;
     if (!g || !g->h) return 0;
-    int jaexiste=0;
     Vertice* a1 = g->h;
     while (a1) {
         if (a1->antena->c == freq1) {
@@ -1028,18 +1024,21 @@ int detectarCruzamentoGeral(Grafo* g, char freq1, char freq2, int linhas[], int 
                                     ) {
                                         int l=(a1l + a2l + b1l + b2l) / 4;
                                         int c=(a1c + a2c + b1c + b2c) / 4;
-                                        for(int i=0;i<total;i++){
-                                            if(linhas[i]==l && colunas[i]==c){
-                                                jaexiste=1;
+                                        int jaexiste = 0;
+                                        for (int i = 0; i < total; i++) {
+                                            if (linhas[i] == l && colunas[i] == c) {
+                                                jaexiste = 1;
+                                                break; // Sai do loop se encontrar
                                             }
                                         }
+
+                                        // Adiciona apenas se não existir
+                                        if (!jaexiste) {
                                             linhas[total] = l;
                                             colunas[total] = c;
                                             total++;
-                                           jaexiste=0;
-
                                         }
-                                    
+                                    }
                                 }
                                 b2 = b2->prox;
                             }

@@ -1,0 +1,5 @@
+<map id="InicializaGrafo" name="InicializaGrafo">
+<area shape="rect" id="Node000001" title="Função que serve inicializar um grafo." alt="" coords="193,5,297,32"/>
+<area shape="rect" id="Node000002" href="$grafos_8c.html#a2d23d9740ca62793d52b9c969ec5c8bd" title="Função principal DFS." alt="" coords="5,5,145,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="177,21,145,21,145,16,177,16"/>
+</map>

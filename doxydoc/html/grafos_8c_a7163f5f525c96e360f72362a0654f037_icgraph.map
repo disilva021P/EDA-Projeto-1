@@ -1,0 +1,7 @@
+<map id="CriarAdj" name="CriarAdj">
+<area shape="rect" id="Node000001" title="Função que cria a adjacência." alt="" coords="181,31,249,57"/>
+<area shape="rect" id="Node000002" href="$grafos_8c.html#acdd64deb71261745dcdd38e55d91f5a1" title="Função que insere adjacencias automaticamente dando um grafo." alt="" coords="5,5,133,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,38,133,32,134,27,166,33"/>
+<area shape="rect" id="Node000003" href="$grafos_8c.html#a73e13a6f370c6337595657cabb4b65c2" title="le o grafo e as adjacencias de um ficheiro binario" alt="" coords="10,56,128,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="166,55,129,62,128,56,165,50"/>
+</map>

@@ -96,35 +96,209 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include&lt;stdlib.h&gt;</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include&lt;stdio.h&gt;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include&quot;<a class="code" href="funcoes_8h.html">funcoes.h</a>&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> <span class="keyword">const</span> *argv[])</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_struct" href="structCasa.html">Casa</a>* h=NULL;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <a class="code hl_struct" href="structEfeitoNefasto.html">EfeitoNefasto</a>* hE=NULL;</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordflow">if</span>(argc==1){</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        h=<a class="code hl_function" href="funcoes_8c.html#a1c8b8099d4e4db9da99f6573596e35e4">CriaMapaCasas</a>(<span class="stringliteral">&quot;mapa.txt&quot;</span>,h,&amp;hE);</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    }</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordflow">else</span>{</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        h=<a class="code hl_function" href="funcoes_8c.html#a1c8b8099d4e4db9da99f6573596e35e4">CriaMapaCasas</a>((<span class="keywordtype">char</span>*)argv[1],h,&amp;hE);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    }</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <a class="code hl_function" href="funcoes_8c.html#a71229908ffc3c2ec1671978310aba197">MostraListaNovo</a>(h,hE);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <a class="code hl_function" href="funcoes_8c.html#a4914b094e27584ea7ff257408c302ee8">MostraListaCasas</a>(h,hE);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    h=<a class="code hl_function" href="funcoes_8c.html#a89b623810060cd11fd075aa3605593d2">EscreverListaFicheiro</a>(h);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    h=<a class="code hl_function" href="funcoes_8c.html#ab6a962a9190367f7f9f902b37a097195">LerListaFicheiro</a>(h,&amp;hE);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <a class="code hl_function" href="funcoes_8c.html#a71229908ffc3c2ec1671978310aba197">MostraListaNovo</a>(h,hE);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    hE=<a class="code hl_function" href="funcoes_8c.html#aafb91a30a66792a37dfa04968a207468">LimpaMemoriaEfeito</a>(hE);           </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    h=<a class="code hl_function" href="funcoes_8c.html#ac3047c35234c5d91be31629239e8a94d">LimpaMemoria</a>(h);    </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>}</div>
-<div class="ttc" id="afuncoes_8c_html_a1c8b8099d4e4db9da99f6573596e35e4"><div class="ttname"><a href="funcoes_8c.html#a1c8b8099d4e4db9da99f6573596e35e4">CriaMapaCasas</a></div><div class="ttdeci">Casa * CriaMapaCasas(char *nome, Casa *mapa, EfeitoNefasto **hE)</div><div class="ttdoc">Função que lẽ as antenas de um ficheiro txt com o mapa.</div><div class="ttdef"><b>Definition</b> <a href="funcoes_8c_source.html#l00293">funcoes.c:293</a></div></div>
-<div class="ttc" id="afuncoes_8c_html_a4914b094e27584ea7ff257408c302ee8"><div class="ttname"><a href="funcoes_8c.html#a4914b094e27584ea7ff257408c302ee8">MostraListaCasas</a></div><div class="ttdeci">void MostraListaCasas(Casa *mapa, EfeitoNefasto *cabeca)</div><div class="ttdoc">Função que printa de forma tabular as antenas e o efeito nefasto.</div><div class="ttdef"><b>Definition</b> <a href="funcoes_8c_source.html#l00273">funcoes.c:273</a></div></div>
-<div class="ttc" id="afuncoes_8c_html_a71229908ffc3c2ec1671978310aba197"><div class="ttname"><a href="funcoes_8c.html#a71229908ffc3c2ec1671978310aba197">MostraListaNovo</a></div><div class="ttdeci">void MostraListaNovo(Casa *mapa, EfeitoNefasto *cabeca)</div><div class="ttdoc">Função que printa o mapa com antenas e efeito nefasto.</div><div class="ttdef"><b>Definition</b> <a href="funcoes_8c_source.html#l00244">funcoes.c:244</a></div></div>
-<div class="ttc" id="afuncoes_8c_html_a89b623810060cd11fd075aa3605593d2"><div class="ttname"><a href="funcoes_8c.html#a89b623810060cd11fd075aa3605593d2">EscreverListaFicheiro</a></div><div class="ttdeci">Casa * EscreverListaFicheiro(Casa *mapa)</div><div class="ttdoc">Função que escreve lista de antenas em ficheiro binário.</div><div class="ttdef"><b>Definition</b> <a href="funcoes_8c_source.html#l00360">funcoes.c:360</a></div></div>
-<div class="ttc" id="afuncoes_8c_html_aafb91a30a66792a37dfa04968a207468"><div class="ttname"><a href="funcoes_8c.html#aafb91a30a66792a37dfa04968a207468">LimpaMemoriaEfeito</a></div><div class="ttdeci">EfeitoNefasto * LimpaMemoriaEfeito(EfeitoNefasto *efeito)</div><div class="ttdoc">Função que Limpa a memória da lista de efejto nefasto.</div><div class="ttdef"><b>Definition</b> <a href="funcoes_8c_source.html#l00059">funcoes.c:59</a></div></div>
-<div class="ttc" id="afuncoes_8c_html_ab6a962a9190367f7f9f902b37a097195"><div class="ttname"><a href="funcoes_8c.html#ab6a962a9190367f7f9f902b37a097195">LerListaFicheiro</a></div><div class="ttdeci">Casa * LerListaFicheiro(Casa *mapa, EfeitoNefasto **cabeca)</div><div class="ttdoc">Função que le lista de antenas de ficheiros binários.</div><div class="ttdef"><b>Definition</b> <a href="funcoes_8c_source.html#l00344">funcoes.c:344</a></div></div>
-<div class="ttc" id="afuncoes_8c_html_ac3047c35234c5d91be31629239e8a94d"><div class="ttname"><a href="funcoes_8c.html#ac3047c35234c5d91be31629239e8a94d">LimpaMemoria</a></div><div class="ttdeci">Casa * LimpaMemoria(Casa *mapa)</div><div class="ttdoc">Função que Limpa a memória da lista de Antenas.</div><div class="ttdef"><b>Definition</b> <a href="funcoes_8c_source.html#l00047">funcoes.c:47</a></div></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include&quot;<a class="code" href="erros_8h.html">erros.h</a>&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include&quot;<a class="code" href="grafos_8h.html">grafos.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> <span class="keyword">const</span> *argv[])</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{<span class="comment">/*</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">    int erro=1;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">    limpaMemoriaErros();</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">    int erroPreencher = preencheDicionario(&quot;erros.txt&quot;);</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment">    Grafo* grafo = InicializaGrafo(&amp;erro);</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment">    if (erro != 1) {</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment">        printf(&quot;Erro ao inicializar grafo: %d\n&quot;, erro);</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">        return 1;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment">    }</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">    printf(&quot;Grafo inicializado com sucesso!\n&quot;);</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="comment"></span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="comment">    // Carrega mapa de um arquivo (exemplo: &quot;mapa.txt&quot;)</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="comment">    char* filename = &quot;mapa.txt&quot;;</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="comment"></span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="comment">    grafo = leTxtGrafos(filename, grafo, &amp;erro);</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="comment"></span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="comment">    if (erro != 1) {</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">        printf(&quot;Erro ao carregar mapa: %d\n&quot;, erro);</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="comment">        return 2;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">    }</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">    printf(&quot;Mapa carregado com sucesso!\n&quot;);</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">    // Executa DFS a partir de uma antena específica (ex: linha 1, coluna 1)7</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">    insereAdjacencias(grafo,&amp;erro);</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment">    grafo=escreveFicheiroBinario(&quot;grafos.bin&quot;,grafo,&amp;erro);</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="comment">    limpaGrafo(grafo,&amp;erro);</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="comment">    grafo=NULL;</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">    if(erro!=1){</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">        printf(&quot;%s\n&quot;,ErroPorPais_Cod(&quot;pt-pt&quot;,erro));</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment">        return -1;</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="comment">    }</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="comment">    printf(&quot;-------------------------------------------------\n&quot;);</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">    grafo= InicializaGrafo(&amp;erro);</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">    grafo=leFicheiroBinario(&quot;grafos.bin&quot;,grafo,&amp;erro);</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">    mostraVertices(grafo);</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="comment">    if(erro!=1){</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">        printf(&quot;%s\n&quot;,ErroPorPais_Cod(&quot;pt-pt&quot;,erro));</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">        return -1;</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">    }</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="comment">    </span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="comment">    erro = 1;</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">    /*Grafo* caminho = DFS_CaminhoGrafo(grafo, 2, 9, &amp;erro);</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">    if (!caminho) {</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">        printf(&quot;Erro ao executar DFS: %d\n&quot;, erro);</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="comment">        return -1;</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="comment">    }</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">    mostraVerticesCaminho(caminho);</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">    printf(&quot;-------------------------\n&quot;);</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">    int visitados;</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">    BFS(grafo,2,9,&amp;erro);</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="comment">    listarCaminhosSimples(grafo,2,9,5,5);</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">    // Limpa memória do grafo</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">    erro=1;</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">    */</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="comment">/*</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span><span class="comment">    int linhas[100], colunas[100];</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">    int total = detectarCruzamentoGeral(grafo, &#39;A&#39;, &#39;B&#39;, linhas, colunas);</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">    imprimirCruzamentosGerais(linhas, colunas, total);</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment"></span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment">    limpaGrafo(grafo, &amp;erro);</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="comment">    grafo=NULL;</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="comment"></span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="comment">    if (erro != 1) {</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="comment">        printf(&quot;Erro ao limpar grafo: %d\n&quot;, erro);</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">        return 3;</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment">    }</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">    printf(&quot;\nMemória liberada com sucesso!\n&quot;);</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment">    limpaMemoriaErros();*/</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keywordtype">int</span> erro;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keywordtype">int</span> erroPreencher = <a class="code hl_function" href="erros_8c.html#a642cd62be9f2fd85befcd2aaaef140b5">preencheDicionario</a>(<span class="stringliteral">&quot;erros.txt&quot;</span>);</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <a class="code hl_struct" href="structGrafo.html">Grafo</a>* grafo = <a class="code hl_function" href="grafos_8c.html#a9233e3e7a3ca8cf7f680148f5b6ed137">InicializaGrafo</a>(&amp;erro);</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <span class="keywordflow">if</span>(erro != 1){</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        printf(<span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code hl_function" href="erros_8c.html#a5cb546f777b7f6031db48e5a9f0bf9c3">ErroPorPais_Cod</a>(<span class="stringliteral">&quot;pt-pt&quot;</span>, erro));</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    }</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="comment">// Teste 1: Ler mapa de um ficheiro de texto</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    printf(<span class="stringliteral">&quot;=== Teste 1: Ler mapa de texto ===\n&quot;</span>);</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    grafo = <a class="code hl_function" href="grafos_8c.html#a7d37a5c396341d8db7e7e2e4bd9f164a">leTxtGrafos</a>(<span class="stringliteral">&quot;mapa.txt&quot;</span>, grafo, &amp;erro);</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="keywordflow">if</span>(erro != 1){</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        printf(<span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code hl_function" href="erros_8c.html#a5cb546f777b7f6031db48e5a9f0bf9c3">ErroPorPais_Cod</a>(<span class="stringliteral">&quot;pt-pt&quot;</span>, erro));</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    }</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    printf(<span class="stringliteral">&quot;Mapa carregado com sucesso!\n&quot;</span>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <a class="code hl_function" href="grafos_8c.html#acdd64deb71261745dcdd38e55d91f5a1">insereAdjacencias</a>(grafo,&amp;erro);</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    <a class="code hl_function" href="grafos_8c.html#abbc18af941f1dda53cb0ef962f99b5af">mostraVertices</a>(grafo);</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="comment">// Teste 3: DFS a partir de uma posição</span></div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    printf(<span class="stringliteral">&quot;\n=== Teste 3: DFS ===\n&quot;</span>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    <a class="code hl_struct" href="structGrafo.html">Grafo</a>* caminhoDFS = <a class="code hl_function" href="grafos_8c.html#a2d23d9740ca62793d52b9c969ec5c8bd">DFS_CaminhoGrafo</a>(grafo, 1, 1, &amp;erro);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    <span class="keywordflow">if</span>(erro != 1){</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        printf(<span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code hl_function" href="erros_8c.html#a5cb546f777b7f6031db48e5a9f0bf9c3">ErroPorPais_Cod</a>(<span class="stringliteral">&quot;pt-pt&quot;</span>, erro));</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>            printf(<span class="stringliteral">&quot;Caminho DFS encontrado:\n&quot;</span>);</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>            <a class="code hl_function" href="grafos_8c.html#a443c31196d75597945f8c30c9cd357e1">mostraVerticesCaminho</a>(caminhoDFS);</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>    <span class="comment">// Teste 4: BFS a partir de uma posição</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    printf(<span class="stringliteral">&quot;\n=== Teste 4: BFS ===\n&quot;</span>);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keywordtype">int</span> visitados_count;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    <a class="code hl_struct" href="structVertice.html">Vertice</a>** visitadosBFS = <a class="code hl_function" href="grafos_8c.html#a95b01f63a104cef22b6e84326dbd48a6">BFS</a>(grafo, 2, 3, &amp;erro, &amp;visitados_count);</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="keywordflow">if</span>(erro != 1){</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        printf(<span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code hl_function" href="erros_8c.html#a5cb546f777b7f6031db48e5a9f0bf9c3">ErroPorPais_Cod</a>(<span class="stringliteral">&quot;pt-pt&quot;</span>, erro));</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        <a class="code hl_function" href="grafos_8c.html#a87e18597dca7ba7906e50b2792f1730d">mostraVisitados</a>(visitadosBFS, visitados_count);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        free(visitadosBFS);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="comment">// Teste 5: Caminhos entre dois pontos</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>    printf(<span class="stringliteral">&quot;\n=== Teste 5: Caminhos entre vértices ===\n&quot;</span>);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>    <a class="code hl_struct" href="structListaDeCaminhos.html">ListaDeCaminhos</a> caminhos = <a class="code hl_function" href="grafos_8c.html#abe9d1f363c11eb7d631afdd531cf488b">calcularCaminhosSimples</a>(grafo, 2, 3, 6, 10, &amp;erro);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordflow">if</span>(erro != 0){</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>        printf(<span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code hl_function" href="erros_8c.html#a5cb546f777b7f6031db48e5a9f0bf9c3">ErroPorPais_Cod</a>(<span class="stringliteral">&quot;pt-pt&quot;</span>, erro));</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        printf(<span class="stringliteral">&quot;Caminhos encontrados:\n&quot;</span>);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        <a class="code hl_function" href="grafos_8c.html#a7f38024743969f2fca501938bf166caf">imprimirCaminhosSimples</a>(&amp;caminhos);</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    }</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="comment">// Teste 6: Detetar cruzamentos</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    printf(<span class="stringliteral">&quot;\n=== Teste 6: Cruzamentos entre frequências ===\n&quot;</span>);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="keywordtype">int</span> linhas[100], colunas[100];</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    <span class="keywordtype">int</span> total = <a class="code hl_function" href="grafos_8c.html#a6f3361506dde25dd11fbd12e10d161b5">detectarCruzamentoGeral</a>(grafo, <span class="charliteral">&#39;A&#39;</span>, <span class="charliteral">&#39;B&#39;</span>, linhas, colunas);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>    <a class="code hl_function" href="grafos_8c.html#a8ef51ad08853e3e3808897fac69593f3">imprimirCruzamentosGerais</a>(linhas, colunas, total);</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="comment">// Teste 7: Escrever e ler binário</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    printf(<span class="stringliteral">&quot;\n=== Teste 7: Gravar/Ler binário ===\n&quot;</span>);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    grafo = <a class="code hl_function" href="grafos_8c.html#af9708d32550e985db42845022bc37396">escreveFicheiroBinario</a>(<span class="stringliteral">&quot;grafo.bin&quot;</span>, grafo, &amp;erro);</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">if</span>(erro != 1){</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        printf(<span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code hl_function" href="erros_8c.html#a5cb546f777b7f6031db48e5a9f0bf9c3">ErroPorPais_Cod</a>(<span class="stringliteral">&quot;pt-pt&quot;</span>, erro));</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <a class="code hl_struct" href="structGrafo.html">Grafo</a>* grafoBinario = <a class="code hl_function" href="grafos_8c.html#a9233e3e7a3ca8cf7f680148f5b6ed137">InicializaGrafo</a>(&amp;erro);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        grafoBinario = <a class="code hl_function" href="grafos_8c.html#a73e13a6f370c6337595657cabb4b65c2">leFicheiroBinario</a>(<span class="stringliteral">&quot;grafo.bin&quot;</span>, grafoBinario, &amp;erro);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        <span class="keywordflow">if</span>(erro != 1){</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>            printf(<span class="stringliteral">&quot;%s\n&quot;</span>, <a class="code hl_function" href="erros_8c.html#a5cb546f777b7f6031db48e5a9f0bf9c3">ErroPorPais_Cod</a>(<span class="stringliteral">&quot;pt-pt&quot;</span>, erro));</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>            <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            printf(<span class="stringliteral">&quot;Grafo lido do binário:\n&quot;</span>);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            <a class="code hl_function" href="grafos_8c.html#abbc18af941f1dda53cb0ef962f99b5af">mostraVertices</a>(grafoBinario);</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        }</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>        <a class="code hl_function" href="grafos_8c.html#aea25a9f6ca810fa1dda9a80b28c62d51">limpaGrafo</a>(grafoBinario, &amp;erro);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    }</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    <span class="comment">// Limpar recursos</span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>    <a class="code hl_function" href="grafos_8c.html#aea25a9f6ca810fa1dda9a80b28c62d51">limpaGrafo</a>(grafo, &amp;erro);</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <span class="comment">/*Casa* h=NULL;</span></div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="comment">    EfeitoNefasto* hE=NULL;</span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="comment">    if(argc==1){</span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="comment">        h=CriaMapaCasas(&quot;mapa.txt&quot;,h,&amp;hE,&amp;erro);</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><span class="comment"></span> </div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span><span class="comment">        int erroPreencher = preencheDicionario(&quot;erros.txt&quot;);</span></div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span><span class="comment">        if(erroPreencher!=1){</span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="comment">            printf(&quot;Erro a carregar ficheiro de erros (erros.txt)&quot;);</span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="comment">            return -1;</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span><span class="comment">        }</span></div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="comment">        definirLingua(&quot;pt-pt&quot;);</span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment">    }</span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="comment">    else{</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="comment">        h=CriaMapaCasas((char*)argv[1],h,&amp;hE,&amp;erro);</span></div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span><span class="comment">    }</span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="comment">    MostraListaNovo(h,hE);</span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="comment">    h=CriaAdiciona(h,&#39;F&#39;,1,2,&amp;hE,&amp;erro);</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="comment">    MostraListaNovo(h,hE);</span></div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span><span class="comment">    h=RemoverCasa(h,1,2,&amp;hE,&amp;erro);</span></div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span><span class="comment">    MostraListaNovo(h,hE);</span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="comment">    h=CriaAdiciona(h,&#39;F&#39;,1,2,&amp;hE,&amp;erro);</span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="comment">    criaMapaFicheiro(h);</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span><span class="comment">    h=EscreverListaFicheiro(h,&amp;erro);</span></div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span><span class="comment">    h=LerListaFicheiro(h,&amp;hE,&amp;erro);</span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="comment">    MostraListaCasas(h,hE);</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span><span class="comment">    hE=LimpaMemoriaEfeito(hE,&amp;erro);      </span></div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span><span class="comment">    h=LimpaMemoria(h,&amp;erro);*/</span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>}</div>
+<div class="ttc" id="aerros_8c_html_a5cb546f777b7f6031db48e5a9f0bf9c3"><div class="ttname"><a href="erros_8c.html#a5cb546f777b7f6031db48e5a9f0bf9c3">ErroPorPais_Cod</a></div><div class="ttdeci">char * ErroPorPais_Cod(char *lingua, int codErro)</div><div class="ttdoc">Procura o erro pelo código do país e da mensagem.</div><div class="ttdef"><b>Definition</b> <a href="erros_8c_source.html#l00190">erros.c:190</a></div></div>
+<div class="ttc" id="aerros_8c_html_a642cd62be9f2fd85befcd2aaaef140b5"><div class="ttname"><a href="erros_8c.html#a642cd62be9f2fd85befcd2aaaef140b5">preencheDicionario</a></div><div class="ttdeci">int preencheDicionario(char *nomeFicheiro)</div><div class="ttdoc">Função a ser chamada pelo utilizador para preencher o dicionario.</div><div class="ttdef"><b>Definition</b> <a href="erros_8c_source.html#l00142">erros.c:142</a></div></div>
+<div class="ttc" id="aerros_8h_html"><div class="ttname"><a href="erros_8h.html">erros.h</a></div><div class="ttdoc">Header do ficheiro dos tratamentos.</div></div>
 <div class="ttc" id="afuncoes_8h_html"><div class="ttname"><a href="funcoes_8h.html">funcoes.h</a></div><div class="ttdoc">HEADER da biblioteca funcoes que contêm as funções para as operações da lista linkada.</div></div>
-<div class="ttc" id="astructCasa_html"><div class="ttname"><a href="structCasa.html">Casa</a></div><div class="ttdoc">Struct que guarda as antenas.</div><div class="ttdef"><b>Definition</b> <a href="dados_8h_source.html#l00017">dados.h:18</a></div></div>
-<div class="ttc" id="astructEfeitoNefasto_html"><div class="ttname"><a href="structEfeitoNefasto.html">EfeitoNefasto</a></div><div class="ttdoc">Struct que guarda os efeitos nefastos.</div><div class="ttdef"><b>Definition</b> <a href="dados_8h_source.html#l00040">dados.h:41</a></div></div>
+<div class="ttc" id="agrafos_8c_html_a2d23d9740ca62793d52b9c969ec5c8bd"><div class="ttname"><a href="grafos_8c.html#a2d23d9740ca62793d52b9c969ec5c8bd">DFS_CaminhoGrafo</a></div><div class="ttdeci">Grafo * DFS_CaminhoGrafo(Grafo *original, int linha, int coluna, int *erro)</div><div class="ttdoc">Função principal DFS.</div><div class="ttdef"><b>Definition</b> <a href="grafos_8c_source.html#l00529">grafos.c:529</a></div></div>
+<div class="ttc" id="agrafos_8c_html_a443c31196d75597945f8c30c9cd357e1"><div class="ttname"><a href="grafos_8c.html#a443c31196d75597945f8c30c9cd357e1">mostraVerticesCaminho</a></div><div class="ttdeci">int mostraVerticesCaminho(Grafo *g)</div><div class="ttdoc">Mostra o caminho do DFS.</div><div class="ttdef"><b>Definition</b> <a href="grafos_8c_source.html#l00572">grafos.c:572</a></div></div>
+<div class="ttc" id="agrafos_8c_html_a6f3361506dde25dd11fbd12e10d161b5"><div class="ttname"><a href="grafos_8c.html#a6f3361506dde25dd11fbd12e10d161b5">detectarCruzamentoGeral</a></div><div class="ttdeci">int detectarCruzamentoGeral(Grafo *g, char freq1, char freq2, int linhas[], int colunas[])</div><div class="ttdoc">Função que calcula cruzamentos feitos por frequencias.</div><div class="ttdef"><b>Definition</b> <a href="grafos_8c_source.html#l01002">grafos.c:1002</a></div></div>
+<div class="ttc" id="agrafos_8c_html_a73e13a6f370c6337595657cabb4b65c2"><div class="ttname"><a href="grafos_8c.html#a73e13a6f370c6337595657cabb4b65c2">leFicheiroBinario</a></div><div class="ttdeci">Grafo * leFicheiroBinario(char *nomeFicheiro, Grafo *g, int *erro)</div><div class="ttdoc">le o grafo e as adjacencias de um ficheiro binario</div><div class="ttdef"><b>Definition</b> <a href="grafos_8c_source.html#l00689">grafos.c:689</a></div></div>
+<div class="ttc" id="agrafos_8c_html_a7d37a5c396341d8db7e7e2e4bd9f164a"><div class="ttname"><a href="grafos_8c.html#a7d37a5c396341d8db7e7e2e4bd9f164a">leTxtGrafos</a></div><div class="ttdeci">Grafo * leTxtGrafos(char *nome, Grafo *cabeca, int *erro)</div><div class="ttdoc">Função que le o mapa em formato TXT.</div><div class="ttdef"><b>Definition</b> <a href="grafos_8c_source.html#l00246">grafos.c:246</a></div></div>
+<div class="ttc" id="agrafos_8c_html_a7f38024743969f2fca501938bf166caf"><div class="ttname"><a href="grafos_8c.html#a7f38024743969f2fca501938bf166caf">imprimirCaminhosSimples</a></div><div class="ttdeci">int imprimirCaminhosSimples(ListaDeCaminhos *resultados)</div><div class="ttdoc">Mostra os caminhos calculados.</div><div class="ttdef"><b>Definition</b> <a href="grafos_8c_source.html#l00973">grafos.c:973</a></div></div>
+<div class="ttc" id="agrafos_8c_html_a87e18597dca7ba7906e50b2792f1730d"><div class="ttname"><a href="grafos_8c.html#a87e18597dca7ba7906e50b2792f1730d">mostraVisitados</a></div><div class="ttdeci">int mostraVisitados(Vertice **visitados, int count)</div><div class="ttdef"><b>Definition</b> <a href="grafos_8c_source.html#l00803">grafos.c:803</a></div></div>
+<div class="ttc" id="agrafos_8c_html_a8ef51ad08853e3e3808897fac69593f3"><div class="ttname"><a href="grafos_8c.html#a8ef51ad08853e3e3808897fac69593f3">imprimirCruzamentosGerais</a></div><div class="ttdeci">int imprimirCruzamentosGerais(int linhas[], int colunas[], int total)</div><div class="ttdef"><b>Definition</b> <a href="grafos_8c_source.html#l01066">grafos.c:1066</a></div></div>
+<div class="ttc" id="agrafos_8c_html_a9233e3e7a3ca8cf7f680148f5b6ed137"><div class="ttname"><a href="grafos_8c.html#a9233e3e7a3ca8cf7f680148f5b6ed137">InicializaGrafo</a></div><div class="ttdeci">Grafo * InicializaGrafo(int *erro)</div><div class="ttdoc">Função que serve inicializar um grafo.</div><div class="ttdef"><b>Definition</b> <a href="grafos_8c_source.html#l00023">grafos.c:23</a></div></div>
+<div class="ttc" id="agrafos_8c_html_a95b01f63a104cef22b6e84326dbd48a6"><div class="ttname"><a href="grafos_8c.html#a95b01f63a104cef22b6e84326dbd48a6">BFS</a></div><div class="ttdeci">Vertice ** BFS(Grafo *g, int linha, int coluna, int *erro, int *visitados_count)</div><div class="ttdoc">Função de pesquisa BFS.</div><div class="ttdef"><b>Definition</b> <a href="grafos_8c_source.html#l00823">grafos.c:823</a></div></div>
+<div class="ttc" id="agrafos_8c_html_abbc18af941f1dda53cb0ef962f99b5af"><div class="ttname"><a href="grafos_8c.html#abbc18af941f1dda53cb0ef962f99b5af">mostraVertices</a></div><div class="ttdeci">int mostraVertices(Grafo *g)</div><div class="ttdoc">Mostra o grafo com adjacencias.</div><div class="ttdef"><b>Definition</b> <a href="grafos_8c_source.html#l00600">grafos.c:600</a></div></div>
+<div class="ttc" id="agrafos_8c_html_abe9d1f363c11eb7d631afdd531cf488b"><div class="ttname"><a href="grafos_8c.html#abe9d1f363c11eb7d631afdd531cf488b">calcularCaminhosSimples</a></div><div class="ttdeci">ListaDeCaminhos calcularCaminhosSimples(Grafo *g, int linhaOrigem, int colunaOrigem, int linhaDestino, int colunaDestino, int *erro)</div><div class="ttdoc">Calcula todos os caminhos possiveis.</div><div class="ttdef"><b>Definition</b> <a href="grafos_8c_source.html#l00937">grafos.c:937</a></div></div>
+<div class="ttc" id="agrafos_8c_html_acdd64deb71261745dcdd38e55d91f5a1"><div class="ttname"><a href="grafos_8c.html#acdd64deb71261745dcdd38e55d91f5a1">insereAdjacencias</a></div><div class="ttdeci">Grafo * insereAdjacencias(Grafo *cabeca, int *erro)</div><div class="ttdoc">Função que insere adjacencias automaticamente dando um grafo.</div><div class="ttdef"><b>Definition</b> <a href="grafos_8c_source.html#l00307">grafos.c:307</a></div></div>
+<div class="ttc" id="agrafos_8c_html_aea25a9f6ca810fa1dda9a80b28c62d51"><div class="ttname"><a href="grafos_8c.html#aea25a9f6ca810fa1dda9a80b28c62d51">limpaGrafo</a></div><div class="ttdeci">int limpaGrafo(Grafo *cabeca, int *erro)</div><div class="ttdoc">Limpa o conteúdo e o espaço do grafo.</div><div class="ttdef"><b>Definition</b> <a href="grafos_8c_source.html#l00469">grafos.c:469</a></div></div>
+<div class="ttc" id="agrafos_8c_html_af9708d32550e985db42845022bc37396"><div class="ttname"><a href="grafos_8c.html#af9708d32550e985db42845022bc37396">escreveFicheiroBinario</a></div><div class="ttdeci">Grafo * escreveFicheiroBinario(char *nomeFicheiro, Grafo *g, int *erro)</div><div class="ttdoc">Escreve o grafo e as adjacencias num grafo num ficheiro binario.</div><div class="ttdef"><b>Definition</b> <a href="grafos_8c_source.html#l00639">grafos.c:639</a></div></div>
+<div class="ttc" id="agrafos_8h_html"><div class="ttname"><a href="grafos_8h.html">grafos.h</a></div><div class="ttdoc">Definições de estruturas e protótipos para manipulação de grafos.</div></div>
+<div class="ttc" id="astructGrafo_html"><div class="ttname"><a href="structGrafo.html">Grafo</a></div><div class="ttdef"><b>Definition</b> <a href="grafos_8h_source.html#l00031">grafos.h:31</a></div></div>
+<div class="ttc" id="astructListaDeCaminhos_html"><div class="ttname"><a href="structListaDeCaminhos.html">ListaDeCaminhos</a></div><div class="ttdef"><b>Definition</b> <a href="grafos_8h_source.html#l00041">grafos.h:41</a></div></div>
+<div class="ttc" id="astructVertice_html"><div class="ttname"><a href="structVertice.html">Vertice</a></div><div class="ttdef"><b>Definition</b> <a href="grafos_8h_source.html#l00024">grafos.h:24</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,4 +1,22 @@
 var searchData=
 [
-  ['dados_2eh_0',['dados.h',['../dados_8h.html',1,'']]]
+  ['calcularcaminhossimples_0',['calcularCaminhosSimples',['../grafos_8c.html#abe9d1f363c11eb7d631afdd531cf488b',1,'calcularCaminhosSimples(Grafo *g, int linhaOrigem, int colunaOrigem, int linhaDestino, int colunaDestino, int *erro):&#160;grafos.c'],['../grafos_8h.html#abe9d1f363c11eb7d631afdd531cf488b',1,'calcularCaminhosSimples(Grafo *g, int linhaOrigem, int colunaOrigem, int linhaDestino, int colunaDestino, int *erro):&#160;grafos.c']]],
+  ['caminho_1',['Caminho',['../structCaminho.html',1,'']]],
+  ['caminhosentredoisvertices_2',['caminhosEntreDoisVertices',['../grafos_8c.html#a4c6a5b9d1bd3787f095b7152338dfd94',1,'grafos.c']]],
+  ['casa_3',['Casa',['../structCasa.html',1,'Casa'],['../dados_8h.html#af4ccc2561d374f893768d3c71b9091eb',1,'Casa:&#160;dados.h']]],
+  ['casaf_4',['CasaF',['../structCasaF.html',1,'CasaF'],['../dados_8h.html#a2f27fdf8e9050d443126debc9f29366f',1,'CasaF:&#160;dados.h']]],
+  ['criaadiciona_5',['CriaAdiciona',['../funcoes_8c.html#a71c50d756f4bdf0145e78eced7ebb297',1,'CriaAdiciona(Casa *mapa, char c, int linha, int coluna, EfeitoNefasto **cabeca, int *erro):&#160;funcoes.c'],['../funcoes_8h.html#a71c50d756f4bdf0145e78eced7ebb297',1,'CriaAdiciona(Casa *mapa, char c, int linha, int coluna, EfeitoNefasto **cabeca, int *erro):&#160;funcoes.c']]],
+  ['criaadicionaefeito_6',['CriaAdicionaEfeito',['../funcoes_8c.html#a26272d7a409b5f97efbc374fadf5bde4',1,'CriaAdicionaEfeito(EfeitoNefasto *cabeca, int linha, int coluna, Casa *x1, Casa *x2, int *erro):&#160;funcoes.c'],['../funcoes_8h.html#a26272d7a409b5f97efbc374fadf5bde4',1,'CriaAdicionaEfeito(EfeitoNefasto *cabeca, int linha, int coluna, Casa *x1, Casa *x2, int *erro):&#160;funcoes.c']]],
+  ['criaadicionalingua_7',['CriaAdicionaLingua',['../erros_8c.html#a43a1170ebe8ba0a673d013010f982cb2',1,'erros.c']]],
+  ['criaadicionamensagem_8',['CriaAdicionaMensagem',['../erros_8c.html#a56e1c798d5f64d1bbf2454e7f24befbd',1,'erros.c']]],
+  ['criacasa_9',['CriaCasa',['../funcoes_8c.html#a6156767428514531335d864441f6196e',1,'CriaCasa(char c, int linha, int coluna, int *erro):&#160;funcoes.c'],['../funcoes_8h.html#a6156767428514531335d864441f6196e',1,'CriaCasa(char c, int linha, int coluna, int *erro):&#160;funcoes.c']]],
+  ['criaefeitonefasto_10',['CriaEfeitoNefasto',['../funcoes_8c.html#a0262044df784d47f758bd6414bc18753',1,'CriaEfeitoNefasto(int linha, int coluna, Casa *x1, Casa *x2, int *erro):&#160;funcoes.c'],['../funcoes_8h.html#a0262044df784d47f758bd6414bc18753',1,'CriaEfeitoNefasto(int linha, int coluna, Casa *x1, Casa *x2, int *erro):&#160;funcoes.c']]],
+  ['crialingua_11',['CriaLingua',['../erros_8c.html#ad49bb34a78779836e39eff31e8296880',1,'erros.c']]],
+  ['crialistaefeitoefeitonefasto_12',['CriaListaEfeitoEfeitoNefasto',['../funcoes_8c.html#a54f70308cc4ef71b7bbd66ff3d8ec670',1,'CriaListaEfeitoEfeitoNefasto(EfeitoNefasto *cabeca, Casa *mapa, int *erro):&#160;funcoes.c'],['../funcoes_8h.html#a54f70308cc4ef71b7bbd66ff3d8ec670',1,'CriaListaEfeitoEfeitoNefasto(EfeitoNefasto *cabeca, Casa *mapa, int *erro):&#160;funcoes.c']]],
+  ['criamapacasas_13',['CriaMapaCasas',['../funcoes_8c.html#abebb47c27a631cf2ad4373c0f91d5909',1,'CriaMapaCasas(char *nome, Casa *mapa, EfeitoNefasto **hE, int *erro):&#160;funcoes.c'],['../funcoes_8h.html#abebb47c27a631cf2ad4373c0f91d5909',1,'CriaMapaCasas(char *nome, Casa *mapa, EfeitoNefasto **hE, int *erro):&#160;funcoes.c']]],
+  ['criamapaficheiro_14',['criaMapaFicheiro',['../funcoes_8c.html#a218bcdd38e29adad54ec32a0bfd868fc',1,'criaMapaFicheiro(Casa *mapa):&#160;funcoes.c'],['../funcoes_8h.html#a218bcdd38e29adad54ec32a0bfd868fc',1,'criaMapaFicheiro(Casa *mapa):&#160;funcoes.c']]],
+  ['criamensagem_15',['CriaMensagem',['../erros_8c.html#aff277e5be26233876090f0f6b5e1b6d0',1,'erros.c']]],
+  ['criaradj_16',['CriarAdj',['../grafos_8c.html#a7163f5f525c96e360f72362a0654f037',1,'CriarAdj(Vertice *v1, Vertice *v2, int *erro):&#160;grafos.c'],['../grafos_8h.html#a7163f5f525c96e360f72362a0654f037',1,'CriarAdj(Vertice *v1, Vertice *v2, int *erro):&#160;grafos.c']]],
+  ['criarantena_17',['CriarAntena',['../grafos_8c.html#a5d39aec566276a1681d2f70c0e3e6754',1,'CriarAntena(char c, int linha, int coluna, int *erro):&#160;grafos.c'],['../grafos_8h.html#a5d39aec566276a1681d2f70c0e3e6754',1,'CriarAntena(char c, int linha, int coluna, int *erro):&#160;grafos.c']]],
+  ['criarvertice_18',['CriarVertice',['../grafos_8c.html#a73b759ff770de9592d74a5362cc26834',1,'CriarVertice(CasaF *antena, int *erro):&#160;grafos.c'],['../grafos_8h.html#a73b759ff770de9592d74a5362cc26834',1,'CriarVertice(CasaF *antena, int *erro):&#160;grafos.c']]]
 ];
