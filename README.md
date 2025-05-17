@@ -1,6 +1,16 @@
-# 📡 Projeto 1ªFase EDA
+# 📡 Projeto EDA
 
-Este projeto foi desenvolvido no âmbito da disciplina de **Estruturas de Dados Avançadas** e tem como objetivo a manipulação de antenas em uma cidade, utilizando **listas ligadas simples** para armazenar e processar as informações. Além disso, o projeto aborda conceitos como **manipulação de ficheiros**, **modularização** e **documentação do código**.
+Este projeto foi desenvolvido no âmbito da disciplina de **Estruturas de Dados Avançadas** e tem como objetivo a manipulação de antenas em uma cidade, utilizando **listas ligadas simples, Dicionários e Grafos** para armazenar e processar as informações em C. Além disso, o projeto aborda conceitos como **manipulação de ficheiros**, **modularização** e **documentação do código**.
+## ⚙️ 
+ - Lista Ligada Simples.
+ - Grafo com Lista de Adjacências.
+ - Dicionário de Erros (Sistema de Código de Erros).
+ - Leitura e Parsing de Ficheiros de Texto/Binários.
+ - Busca em Largura (BFS).
+ - Busca em Profundidade (DFS).
+ - Deteção de Alinhamentos Geométricos.
+ - Geração de Caminhos Entre Vértices.
+ - Documentação com Doxygen
 
 ## 📌 Estrutura do Projeto
 
@@ -12,12 +22,18 @@ Este projeto foi desenvolvido no âmbito da disciplina de **Estruturas de Dados 
 │   ├── main.c
 │   ├── makefile
 │   ├── mapa.txt
+│   ├── erros.c
+│   ├── erros.h
+│   ├── erros.txt
+│   ├── grafos.h
+│   ├── grafos.c
 ├── doxydox
 │   ├── DoxygenConfig
 │   ├── index.html (gerado pelo Doxygen)
 │   ├── ...
 ├── doc
 │   ├── RelatórioTpEda.pdf
+│   ├── RelatórioTpEda2ªFase.pdf
 └── README.md
 
 ```
@@ -71,4 +87,4 @@ Se houver necessidade de carregar um mapa específico:
 ```
 
 
-🖥 **Desenvolvido por Diogo Silva nº31504**
+🖥 **Programado por Diogo Silva nº31504**
