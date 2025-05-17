@@ -2,8 +2,8 @@
 TARGET = programaCompilado
 
 # Lista de arquivos-fonte e os cabeçalhos
-SRCS = main.c funcoes.c
-HEADERS = funcoes.h dados.h
+SRCS = main.c funcoes.c erros.c grafos.c
+HEADERS = funcoes.h dados.h erros.h grafos.h
 
 # Gerar nomes dos objetos (.o) automaticamente a partir dos fontes (.c)
 OBJS = $(SRCS:.c=.o)
