@@ -9,7 +9,8 @@
  * 
  */
 #include<stdio.h>
-
+#ifndef ERROS_H
+#define ERROS_H
 // Funções principais
 int preencheDicionario(char* nomeFicheiro);
 char* ErroPorCod(int codErro);
@@ -17,3 +18,4 @@ char* ErroPorPais_Cod(char* lingua, int codErro);
 
 int limpaMemoriaErros();
 int definirLingua(char* lingua);
+#endif

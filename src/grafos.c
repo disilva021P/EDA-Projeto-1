@@ -496,7 +496,7 @@ Grafo* DFSUtil(Vertice* v, Grafo* caminho, int* erro) {
     // Marcar como visitado no grafo original
     v->visitado = 1;
 
-    // Adicionar o vértice ao grafo de caminho (sem duplicatas)
+    // Adicionar o vértice ao grafo de caminho (sem duplicados)
     if (ProcuraVertice(v, caminho, erro) == NULL) { // Verifica se o vértice já não está no caminho
         Vertice* aux = CriarVertice(v->antena,erro);
         caminho = InsereVertice(aux, caminho, erro);
@@ -508,7 +508,7 @@ Grafo* DFSUtil(Vertice* v, Grafo* caminho, int* erro) {
     while (adj) {
         Vertice* vizinho = adj->v2;
         if (!vizinho->visitado) {
-            caminho = DFSUtil(vizinho, caminho, erro);
+            caminho = DFSUtil(vizinho, caminho, erro);//Recursividade
         }
         adj = adj->prox;
     }
@@ -793,7 +793,7 @@ Grafo* leFicheiroBinario(char* nomeFicheiro, Grafo* g, int* erro) {
 }
 
 /**
- * @brief 
+ * @brief mostra os vertices visitados no BFS
  * 
  * @param visitados lista de vertices visitados
  * @param count -> nº de visitados
@@ -862,6 +862,7 @@ Vertice** BFS(Grafo* g, int linha, int coluna, int* erro, int* visitados_count) 
 
     origem->visitado = 1;
     *visitados_count = 0;
+    //entra nos vertices e adiciona adjacentes à fila
     while (inicio < fim) {
         Vertice* atual = fila[inicio++];
         Adj* adj = atual->adjacencias;
@@ -904,7 +905,7 @@ int caminhosEntreDoisVertices(
             Caminho* novo = &resultados->caminhos[resultados->total++];
             novo->tamanho = indice + 1;
             for (int i = 0; i <= indice; i++) {
-                novo->vertices[i] = caminhoAtual[i];
+                novo->vertices[i] = caminhoAtual[i];//adicionan caminho aos caminhos
             }
         }       
     } else {
@@ -912,7 +913,7 @@ int caminhosEntreDoisVertices(
         while (adj) {
             Vertice* vizinho = (adj->v1 == atual) ? adj->v2 : adj->v1;
             if (!vizinho->visitado) {
-                caminhosEntreDoisVertices(vizinho, destino, caminhoAtual, indice + 1, resultados);
+                caminhosEntreDoisVertices(vizinho, destino, caminhoAtual, indice + 1, resultados);//rechama função
             }
             adj = adj->prox;
         }
@@ -941,7 +942,7 @@ ListaDeCaminhos calcularCaminhosSimples(Grafo* g, int linhaOrigem, int colunaOri
         return resultados;
     }
 
-    Vertice *origem = NULL, *destino = NULL;
+    Vertice *origem = NULL, *destino = NULL;//procura vertice por coordenadas
     for (Vertice* v = g->h; v != NULL; v = v->prox) {
         if (v->antena->linha == linhaOrigem && v->antena->coluna == colunaOrigem) origem = v;
         if (v->antena->linha == linhaDestino && v->antena->coluna == colunaDestino) destino = v;
@@ -1009,7 +1010,7 @@ int detectarCruzamentoGeral(Grafo* g, char freq1, char freq2, int linhas[], int 
                     while (b1) {
                         if (b1->antena->c == freq2) {
                             Vertice* b2 = g->h;
-                            while (b2) {
+                            while (b2) {//percorre 4 vertices  
                                 if (b2->antena->c == freq2 && b1 != b2) {
                                     // coordenadas
                                     int a1l = a1->antena->linha, a1c = a1->antena->coluna;
@@ -1017,7 +1018,7 @@ int detectarCruzamentoGeral(Grafo* g, char freq1, char freq2, int linhas[], int 
                                     int b1l = b1->antena->linha, b1c = b1->antena->coluna;
                                     int b2l = b2->antena->linha, b2c = b2->antena->coluna;
 
-                                    // Verifica se os As e Bs estão em cantos opostos
+                                    // Verifica se faz um cruzmento
                                     if ((a1l < a2l && a1c < a2c) &&      // a1 acima e à esquerda de a2
                                     (b1l < b2l && b1c > b2c) &&      // b1 acima e à direita de b2
                                     (a2c > b2c && a2l>=b1l && b2l>a1l ) //a2 á esquerda de b2, a2 abaixo de b1,b2 abaixo a1

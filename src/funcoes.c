@@ -228,7 +228,7 @@ Casa *RemoverCasa(Casa *mapa, int linha, int coluna,EfeitoNefasto**  cabeca,int*
 
         atual=atual->prox;
     }
-    printf("Antena não localizada\n");
+    *erro=4;
     return mapa;
     
 }
@@ -316,6 +316,7 @@ int MostraListaCasas(Casa *mapa,EfeitoNefasto* cabeca){
 
         efeito=efeito->prox;
     }
+    return 1;
 }
 #pragma endregion
 
@@ -381,7 +382,7 @@ Casa* LerListaFicheiro(Casa *mapa,EfeitoNefasto** cabeca,int* erro){
     FILE* ficheiro= fopen("ListaCasas.bin","rb");
     CasaF aux;
     if (ficheiro == NULL) {//verifica se abriu corretamente
-        printf("Erro ao abrir o ficheiro.\n");
+        *erro=102;
         return NULL ;
     }
     while (fread(&aux,sizeof(aux),1,ficheiro)==1)
@@ -397,7 +398,7 @@ Casa* EscreverListaFicheiro(Casa *mapa,int* erro){
     Casa* atual= mapa;
     CasaF aux;
     if (ficheiro == NULL) {//verifica se abriu corretamente
-        printf("Erro ao abrir o ficheiro.\n");
+        *erro=102;
         return NULL;
     }
     while (atual)
