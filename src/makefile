@@ -25,8 +25,8 @@ $(TARGET): $(OBJS) $(LIB_NAME)
 	$(CC) $(OBJS) $(LDFLAGS) -o $(TARGET)
 
 # Criar a biblioteca estática
-$(LIB_NAME): funcoes.o
-	$(AR) rcs $(LIB_NAME) funcoes.o 
+$(LIB_NAME): funcoes.o erros.o grafos.o
+	$(AR) rcs $(LIB_NAME) funcoes.o erros.o grafos.o
 
 # Regra genérica para compilar qualquer arquivo .c em .o
 %.o: %.c $(HEADERS)

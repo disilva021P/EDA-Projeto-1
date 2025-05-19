@@ -544,13 +544,11 @@ Grafo* DFS_CaminhoGrafo(Grafo* original, int linha, int coluna, int* erro) {
     while (origem) {
         if (origem->antena->linha == linha && origem->antena->coluna == coluna) break;
         origem = origem->prox;
-    }
-
-    if (origem!=NULL) {
+    }    
+    if (origem==NULL) {
         *erro = 4; // antena não encontrada
         return NULL;
     }
-
     // Criar um novo grafo para guardar o caminho
     Grafo* caminho = InicializaGrafo(erro);
 
@@ -856,7 +854,8 @@ Vertice** BFS(Grafo* g, int linha, int coluna, int* erro, int* visitados_count) 
         return NULL;
     }    
 
-    // Enfileirar origem
+    // Enfileirar origem    printf("olal\n");
+
 
     fila[fim++] = origem;
 
@@ -908,7 +907,8 @@ int caminhosEntreDoisVertices(
                 novo->vertices[i] = caminhoAtual[i];//adicionan caminho aos caminhos
             }
         }       
-    } else {
+    } else {   
+
         Adj* adj = atual->adjacencias;
         while (adj) {
             Vertice* vizinho = (adj->v1 == atual) ? adj->v2 : adj->v1;

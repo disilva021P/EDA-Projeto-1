@@ -52,6 +52,7 @@ LinguaDicionario* ProcurarLingua(char *cod);
 LinguaDicionario *dicionario=NULL;
 char* linguadefinida;
 int ids=0; //ids de linguas
+
 /**
  * @brief Função que cria linguas
  * 

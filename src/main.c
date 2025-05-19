@@ -104,14 +104,13 @@ int main(int argc, char const *argv[])
 
     // Teste 3: DFS a partir de uma posição
     printf("\n=== Teste 3: DFS ===\n");
-    Grafo* caminhoDFS = DFS_CaminhoGrafo(grafo, 1, 1, &erro);
+    Grafo* caminhoDFS = DFS_CaminhoGrafo(grafo, 2, 3, &erro);
     if(erro != 1){
         printf("%s\n", ErroPorPais_Cod("pt-pt", erro));
     } else {
 
             printf("Caminho DFS encontrado:\n");
             mostraVerticesCaminho(caminhoDFS);
- 
     }
 
     // Teste 4: BFS a partir de uma posição
